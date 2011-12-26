@@ -8,7 +8,7 @@ module Jekyll
       s = StringIO.new
       begin
         tags = context['site']['tags']
-        unless tags.nil?
+        unless tags.none?
           sorted = tags.sort {|a, b| b[1].length <=> a[1].length}
           factor = 1
           max_count = sorted[0][1].length
