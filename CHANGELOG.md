@@ -1,5 +1,9 @@
 # Octopress Türkçe
 
+## 1.0.1
+
+- "Ordinal Date" diye birşey olmadığı için başka bir format hazırlandı.
+
 ## 1.0
 
 - Türkçeleştirme işlemi (tarih) yapıldı.
