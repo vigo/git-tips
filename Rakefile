@@ -1,3 +1,4 @@
+# encoding: utf-8
 require "rubygems"
 require "bundler/setup"
 require "stringex"
@@ -106,8 +107,13 @@ task :new_post, :title do |t, args|
     post.puts "title: \"#{title.gsub(/&/,'&amp;')}\""
     post.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
     post.puts "comments: true"
-    post.puts "categories: "
+    post.puts "categories: [ kategori1, kategori2 ]"
+    post.puts "tags: [ etiket1, etiket2]"
+    post.puts "description: \"Açıklama\""
+    post.puts "keywords: \"kelime1, kelime2\""
     post.puts "---"
+    post.puts "Kısa açıklama..."
+    post.puts "<!-- more -->"
   end
 end
 
@@ -143,6 +149,8 @@ task :new_page, :filename do |t, args|
       page.puts "comments: true"
       page.puts "sharing: true"
       page.puts "footer: true"
+      page.puts "description: \"Açıklama\""
+      page.puts "keywords: \"kelime1, kelime2\""
       page.puts "---"
     end
   else
