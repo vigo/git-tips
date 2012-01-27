@@ -108,7 +108,7 @@ task :new_post, :title do |t, args|
     post.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
     post.puts "comments: true"
     post.puts "categories: [ kategori1, kategori2 ]"
-    post.puts "tags: [ etiket1, etiket2]"
+    post.puts "tags: [ etiket1, etiket2 ]"
     post.puts "description: \"Açıklama\""
     post.puts "keywords: \"kelime1, kelime2\""
     post.puts "---"
