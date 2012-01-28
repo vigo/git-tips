@@ -1,5 +1,7 @@
 ## Octopress Türkçe
 
+Türkçe dökümantasyon, kurulum vs tüm bilgiler en kısa sürede eklenecektir.
+
 Octopress [Jekyll](https://github.com/mojombo/jekyll) tabanlı blog sistemidir.
 [Orijinal proje](https://github.com/imathis/octopress), Octopress sitesi
 [Octopress.org](http://octopress.org/docs)
