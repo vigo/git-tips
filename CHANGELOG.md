@@ -1,5 +1,9 @@
 # Octopress Türkçe
 
+## 1.0.4
+- Kategori ve etiket'lerdeki Türkçe sorunu çözüldü. Türkçe kategori ve etiket kullanabilirsiniz.
+- octopress_filters.rb dosyasına **urlify** filtresi eklendi.
+
 ## 1.0.3
 
 - Footer'da metin düzeltmesi

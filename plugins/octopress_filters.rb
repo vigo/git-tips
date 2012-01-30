@@ -126,6 +126,9 @@ module OctopressLiquidFilters
     input.titlecase
   end
 
+  def urlify(input)
+    input.to_url
+  end
 end
 Liquid::Template.register_filter OctopressLiquidFilters
 

@@ -69,7 +69,8 @@ module Jekyll
       if self.layouts.key? 'tag_index'
         dir = self.config['tag_dir'] || 'tags'
         self.tags.keys.each do |tag|
-          self.write_tag_index(File.join(dir, tag.gsub(/_|\W/, '-')), tag)
+          # self.write_tag_index(File.join(dir, tag.gsub(/_|\W/, '-')), tag)
+          self.write_tag_index(File.join(dir, tag.to_url), tag)
         end
 
       # Throw an exception if the layout couldn't be found.
@@ -106,7 +107,8 @@ module Jekyll
     def tag_links(tags)
       dir = @context.registers[:site].config['tag_dir']
       tags = tags.sort!.map do |item|
-        "<a class='tag' href='/#{dir}/#{item.gsub(/_|\W/, '-')}/'>#{item}</a>"
+        # "<a class='tag' href='/#{dir}/#{item.gsub(/_|\W/, '-')}/'>#{item}</a>"
+        "<a class='tag' href='/#{dir}/#{item.to_url}/'>#{item}</a>"
       end
 
       case tags.length
