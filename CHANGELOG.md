@@ -1,5 +1,11 @@
 # Octopress Türkçe
 
+## 1.0.5
+
+- Sayfa (page) ve Post için `asides` eklemesi.
+
+---
+
 ## 1.0.4
 
 - Kategori ve etiket'lerdeki Türkçe sorunu çözüldü. Türkçe kategori ve etiket kullanabilirsiniz.
