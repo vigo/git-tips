@@ -1,5 +1,11 @@
 # Octopress Türkçe
 
+## 1.0.6
+
+- "disqus_show_comment_count" yüzünden çıkan Comments => Yorumlar haline getirildi.
+
+---
+
 ## 1.0.5
 
 - Sayfa (page) ve Post için `asides` eklemesi.
