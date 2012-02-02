@@ -1,5 +1,13 @@
 # Octopress Türkçe
 
+## 1.0.7
+
+- Türkçeleştirme düzeltmeleri
+- RSS fonksiyonu düzeltildi, genel rss ve kategoriler için ayrı rss
+- Vimeo plugin'nie ekstra parametre geldi ve _config.yml'a eklendi
+
+---
+
 ## 1.0.6
 
 - "disqus_show_comment_count" yüzünden çıkan Comments => Yorumlar haline getirildi.
