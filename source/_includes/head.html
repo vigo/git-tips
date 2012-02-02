@@ -23,11 +23,32 @@
   <script src="{{ root_url }}/javascripts/modernizr-2.0.js"></script>
   <script src="{{ root_url }}/javascripts/ender.js"></script>
   <script src="{{ root_url }}/javascripts/octopress.js" type="text/javascript"></script>
+  
+  {% if site.instapaper %}
+  {% capture instapaper_button_title %}{% if site.instapaper_button_title.size %}{{ site.instapaper_button_title }}{% else %}Instapaper{% endif %}{% endcapture %}
+  {% capture instapaper_link_title %}{% if site.instapaper_link_title.size %}{{ site.instapaper_link_title }}{% else %}Instapaper'a günder|escape{% endif %}{% endcapture %}
+  <script type="text/javascript">
+    var instapaper_button_title = "{{ instapaper_button_title | escape }}";
+    var instapaper_link_title = "{{ instapaper_link_title | escape }}";
+  </script>
+  <script src="{{ root_url }}/javascripts/instapaper.js" type="text/javascript"></script>
+  {% endif %}
+  
   {% if page.subrss %}
     <link href="{{ site.subscribe_rss }}" rel="alternate" title="{{site.title}}" type="application/atom+xml">
   {% else %}
     <link href="/{{ site.subscribe_rss }}" rel="alternate" title="{{site.title}}" type="application/atom+xml">
   {% endif %}
+
+  {% if site.open_links_in_new_window %}
+  <script>
+    $.domReady(function(){
+        $(".entry-content a").attr('target', '_blank');
+    });
+  </script>
+  {% endif %}
+  
+  
   {% include custom/head.html %}
   {% include google_analytics.html %}
 </head>

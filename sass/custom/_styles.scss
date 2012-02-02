@@ -10,3 +10,16 @@
 article > header > p.meta {
     text-transform: none;
 }
+
+#send_to_instapaper {
+    background-color: #eee;
+    color: #444;
+    display: inline-block;
+    font: bold normal normal 11px/11px 'Lucida Grande',Helvetica,Arial,sans-serif;
+    border: 1px solid #aaa;
+    @include border-radius(8px);
+    padding: 2px 7px;
+    text-decoration: none;
+    vertical-align: 6px;
+    margin: 0 5px 0 0;
+}

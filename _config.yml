@@ -121,6 +121,15 @@ google_analytics_tracking_id:
 facebook_like: true
 facebook_locale: tr_TR # en_US
 
+# Attach Instapaper link for posts
+instapaper: true
+instapaper_button_title: "Instapaper"
+instapaper_link_title: "Instapaper'e gönder..."
+
+# Open links in New window or Tab
+open_links_in_new_window: true
+
+
 # Vimeo
 # Available variables are:
 #   %{id}
