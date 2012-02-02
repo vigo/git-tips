@@ -1,7 +1,8 @@
+# encoding: utf-8
 # A Liquid tag for Jekyll sites that allows embedding vimeo movies
-# by: Gosuke Miyashita
+# by: Gosuke Miyashita, modified by Uğur Özyılmazel @ugurozyilmazel
 #
-# Example usage: {% vimeo 28040685 800 600 %}
+# Example usage: {% vimeo 28040685 800 600 information %}
 
 require 'open-uri'
 require 'multi_json' 
@@ -16,14 +17,26 @@ module Jekyll
     end
 
     def render(context)
-      if parts = @text.match(/(\d+) (\d+) (\d+)/)
-        id, width, height = parts[1].strip, parts[2].strip, parts[3].strip
+      if parts = @text.match(/(\d+) (\d+) (\d+) ?(information)?/)
+        id, width, height, info_string = parts[1].strip, parts[2].strip, parts[3].strip, parts[4]
       end
-
+      
       vimeo = get_vimeo(id)
-      <<-HTML
-<iframe src="http://player.vimeo.com/video/#{id}?color=ffffff" width="#{width}" height="#{height}" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe><p><a href="http://vimeo.com/#{id}">#{vimeo["title"]}</a> from <a href="#{vimeo["author_url"]}">#{vimeo["author_name"]}</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
-      HTML
+      html = "<iframe src=\"http://player.vimeo.com/video/#{id}?color=ffffff&amp;title=0&amp;byline=0&amp;portrait=0\" width=\"#{width}\" height=\"#{height}\" frameborder=\"0\" webkitAllowFullScreen allowFullScreen mozallowfullscreen></iframe>"
+      unless info_string.nil?
+        if context.registers[:site].config.has_key?("vimeo_information_format")
+          html+= context.registers[:site].config['vimeo_information_format'] % {
+            :id => id,
+            :title => vimeo["title"],
+            :author_url => vimeo["author_url"],
+            :author_name => vimeo["author_name"],
+            :duration => vimeo["duration"],
+            :description => vimeo["description"],
+            :thumbnail_url => vimeo["thumbnail_url"],
+          }
+        end
+      end
+      return html
     end
 
     def get_vimeo(id)

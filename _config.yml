@@ -23,7 +23,7 @@ date_format: "ordinal"
 # date_format: "%d %B %A, %Y, %k:%M" # 25 Aralık Pazar, 2011, 11:53
 
 # RSS / Email (optional) subscription links (change if using something like Feedburner)
-subscribe_rss: /atom.xml
+subscribe_rss: atom.xml # do not put /
 subscribe_email:
 # RSS feeds can list your email address if you like
 email:
@@ -54,7 +54,7 @@ recent_posts: 5       # Posts in the sidebar Recent Posts section
 # excerpt_link: "Read on &rarr;"  # "Continue reading" link text at the bottom of excerpted articles
 excerpt_link: "Devamı &rarr;"  # "Continue reading" link text at the bottom of excerpted articles
 
-titlecase: true       # Converts page and post titles to tilecase
+titlecase: false       # Converts page and post titles to tilecase
 
 # list each of the sidebar modules you want to include, in the order you want them to appear.
 # To add custom asides, create files in /source/_includes/custom/asides/ and add them to the list like 'custom/asides/custom_aside_name.html'
@@ -119,3 +119,16 @@ google_analytics_tracking_id:
 
 # Facebook Like
 facebook_like: true
+
+# Vimeo
+# Available variables are:
+#   %{id}
+#   %{title}
+#   %{author_url}
+#   %{author_name}
+#   %{duration}
+#   %{description}
+#   %{thumbnail_url}
+# Example:
+# '<p><a href="http://vimeo.com/%{id}">%{title}</a> from <a href="%{author_url}">%{author_name}</a> on <a href="http://vimeo.com/">Vimeo</a>.</p>'
+vimeo_information_format: '<p><a href="http://vimeo.com/%{id}">%{title}</a> / <a href="%{author_url}">%{author_name}</a></p>'
