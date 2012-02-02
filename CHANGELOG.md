@@ -1,5 +1,11 @@
 # Octopress Türkçe
 
+## 1.0.8
+
+- Facebook "Like" için `facebook_locale` parametresi ve Türkçeleştirme
+
+---
+
 ## 1.0.7
 
 - Türkçeleştirme düzeltmeleri

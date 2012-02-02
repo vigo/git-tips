@@ -119,6 +119,7 @@ google_analytics_tracking_id:
 
 # Facebook Like
 facebook_like: true
+facebook_locale: tr_TR # en_US
 
 # Vimeo
 # Available variables are:
