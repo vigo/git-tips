@@ -3,6 +3,8 @@
 ## 1.0.8
 
 - Facebook "Like" için `facebook_locale` parametresi ve Türkçeleştirme
+- Blog postları altında (footer) Instapaper'a gönderme buttonu
+- Blog postlardaki dış linkleri yeni pencerede açma özelliği
 
 ---
 

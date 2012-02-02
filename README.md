@@ -1,10 +1,43 @@
-## Octopress Türkçe
+# Octopress Türkçe
 
 Türkçe dökümantasyon, kurulum vs tüm bilgiler en kısa sürede eklenecektir.
 
-Octopress [Jekyll](https://github.com/mojombo/jekyll) tabanlı blog sistemidir.
-[Orijinal proje](https://github.com/imathis/octopress), Octopress sitesi
-[Octopress.org](http://octopress.org/docs)
+## Açıklama
+Octopress [Jekyll][1] tabanlı blog sistemidir. [Projenin orijinali][2], [Projenin sitesi][3]
+adreslerindedir. Bu sistem yardımıyla kendi bilgisayarınızda `statik html` sayfalarından
+sanki veritabanı olan dinamik bir web sitesi sistemi oluşturabilirsiniz.
+
+Oluşturacağınız site, iPhone, iPad ve diğer mobil cihazlarla da uyumlu olacaktır.
+
+Kendi sitenizi yapabilmek için gerekenler:
+
+- Git
+- Ruby 1.9.2 (*RVM ya da rbenv ile kurulması tavsiye ediliyor.*)
+
+## Kurulum
+Pek yakında
+
+---
+
+## Ayarlar
+Pek yakında
+
+---
+
+## Web Sunucusuna Yükleme (Deployment)
+Pek yakında
+
+---
+
+## Blog ve Sayfa
+Pek yakında
+
+---
+
+## Eklentiler (Pluginler)
+Pek yakında
+
+---
 
 ## Lisans
 (The MIT License)
@@ -21,3 +54,8 @@ THE SOFTWARE IS PROVIDED ‘AS IS’, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 #### Desteklemek için.
 - Footer'daki Octopress linkini koruyun.
 - Sitenizi Octopress [Wiki sayfasına](https://github.com/imathis/octopress/wiki/Octopress-Sites) ekleyerek topluluğu genişletin.
+
+
+[1]: https://github.com/mojombo/jekyll
+[2]: https://github.com/imathis/octopress "Octopress Orijinal Proje"
+[3]: http://octopress.org/docs "Octopress İngilizce Dokümantasyon"
