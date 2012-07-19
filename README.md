@@ -15,7 +15,27 @@ Kendi sitenizi yapabilmek için gerekenler:
 - Ruby 1.9.2 (*RVM ya da rbenv ile kurulması tavsiye ediliyor.*)
 
 ### Mac OS X Lion Kullanıcıları Dikkat
-  
+OS X Lion (10.7) ile beraber değişen derleme ortamları yüzünden ilk önce eski
+`gcc` yi indirip kurmanız gerekmetedir.
+
+[https://github.com/kennethreitz/osx-gcc-installer][4]
+
+Derleme işlemine komut satırından başlamadan önce;
+
+    export CPPFLAGS=-I/usr/local/Cellar/readline/6.2.4/include
+    export LDFLAGS=-L/usr/local/Cellar/readline/6.2.4/lib
+
+ve;
+
+    rbenv install 1.9.2-p290
+    rbenv rehash
+
+ve daha sonra da;
+
+    sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/
+
+yapmanız gerekiyor...
+
 ## Kurulum
 Pek yakında
 
@@ -61,3 +81,4 @@ THE SOFTWARE IS PROVIDED ‘AS IS’, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 [1]: https://github.com/mojombo/jekyll
 [2]: https://github.com/imathis/octopress "Octopress Orijinal Proje"
 [3]: http://octopress.org/docs "Octopress İngilizce Dokümantasyon"
+[4]: https://github.com/kennethreitz/osx-gcc-installer "OS X gcc"
