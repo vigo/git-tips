@@ -37,7 +37,16 @@ ve daha sonra da;
 yapmanız gerekiyor...
 
 ## Kurulum
-Pek yakında
+
+    gem install bundler
+    bundle
+
+Test etmek için:
+
+    rake generate
+    rake preview
+
+sonra [http://localhost:4000][lcl]
 
 ---
 
@@ -82,3 +91,5 @@ THE SOFTWARE IS PROVIDED ‘AS IS’, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 [2]: https://github.com/imathis/octopress "Octopress Orijinal Proje"
 [3]: http://octopress.org/docs "Octopress İngilizce Dokümantasyon"
 [4]: https://github.com/kennethreitz/osx-gcc-installer "OS X gcc"
+
+[lcl]: http://localhost:4000 "Yerel Sunucu"
