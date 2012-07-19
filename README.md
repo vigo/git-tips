@@ -14,6 +14,8 @@ Kendi sitenizi yapabilmek için gerekenler:
 - Git
 - Ruby 1.9.2 (*RVM ya da rbenv ile kurulması tavsiye ediliyor.*)
 
+### Mac OS X Lion Kullanıcıları Dikkat
+  
 ## Kurulum
 Pek yakında
 
