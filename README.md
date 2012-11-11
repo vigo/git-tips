@@ -251,6 +251,12 @@ Blog post şablonu aşağıdaki gibidir:
 <meta name="keywords" content="kelime1, kelime2">
 ```
 
+![Octopress Türkçe - Blog Arşivi][scr-005]  
+![Octopress Türkçe - Etiket Arşivi][scr-003]  
+![Octopress Türkçe - Kategori Arşivi][scr-004]  
+
+
+
 ### Sayfa
 ![Octopress Türkçe - Sayfa][scr-006]  
 
@@ -262,16 +268,16 @@ Düz sayfalar oluşturmanızı sağlar.
 Kullandığı şablon:
 
 ```yaml
----
-layout: page
-title: "Hakkımda"
-comments: false
-sharing: false
-footer: false
-description: "Hakkımda sayfası"
-keywords: "kelime1, kelime2"
-# asides: []
----
+    ---
+    layout: page
+    title: "Hakkımda"
+    comments: false
+    sharing: false
+    footer: false
+    description: "Hakkımda sayfası"
+    keywords: "kelime1, kelime2"
+    # asides: []
+    ---
 ```
 
 yani, **footer**'ı, **sharing**'i ve **comment**'i olmayan bir blog post
