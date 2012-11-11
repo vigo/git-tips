@@ -354,6 +354,7 @@ Post içinde `<!--more-->` kullanabilirsiniz.
 
 ### HTML5 Video Tag
 Örnekler [orijinal](http://octopress.org/docs/plugins/video-tag/) sayfadan alınmıştır.
+[Ekran görüntüsü için tıklayın][scr-007].
 
     {% video url/to/video [width height] [url/to/poster] %}
     {% video http://www.site.com/video.mp4 [genişlik yükseklik] [http://www.site.com/poster-resmi.png] %}
@@ -687,6 +688,8 @@ THE SOFTWARE IS PROVIDED ‘AS IS’, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 [scr-004]: https://raw.github.com/vigo/octopress/master/source/screen_shots/octopress-tr-category-archive.png
 [scr-005]: https://raw.github.com/vigo/octopress/master/source/screen_shots/octopress-tr-blog-archive.png
 [scr-006]: https://raw.github.com/vigo/octopress/master/source/screen_shots/octopress-tr-about.png
+[scr-007]: https://raw.github.com/vigo/octopress/master/source/screen_shots/octopress-tr-plugin-video.png
+
 
 [liquid]: https://github.com/Shopify/liquid/wiki/Liquid-for-Designers
 [jekyll]: https://github.com/mojombo/jekyll/wiki/Template-Data
