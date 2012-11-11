@@ -169,6 +169,33 @@ tag_cloud_max_ranks: 15                                     # en büyük tag 15,
 
 ---
 
+## Rake Komutları
+İçinde gelen `rake` task'leri görmek için:
+
+    rake -T
+
+    rake clean                     # Cache'leri temizler: .pygments-cache, .gist-cache, .sass-cache
+    rake copydot[source,dest]      # Deployment için . ile başlayan dosyaları kopyalamanıza yarar
+    rake deploy                    # Default deploy işlemi
+    rake gen_deploy                # Website'sini üret ve deploy et
+    rake generate                  # Jekyll site'sini üret
+    rake install[theme]            # Octopress'in ilk kurulumu: Default temayı ilgili yere kopyalar.
+    rake integrate                 # isolate ile izole edilen post'u tekrar yerine alır
+    rake isolate[filename]         # Çok postunuz olduğunda işe yarar. O an için sadece tek bir post'la çalışıp geri kalanları saklar. sonra -isolate- ile geri döner.
+    rake list                      # Rake task'ları göster (rake -T data detaylı)
+    rake new_page[filename]        # Yeni sayfa üret: source/(filename)/index.markdown
+    rake new_post[title]           # Yeni post üret: source/_posts
+    rake preview                   # Web tarayıcısında siteyi önizleme
+    rake push                      # public/ folder'ı github pages'a yolla
+    rake rsync                     # Siteyi -rsync- ile deploy et / sunucuna yolla
+    rake set_root_dir[dir]         # Root dizini belirle
+    rake setup_github_pages[repo]  # Github Pages deployment için _deploy/ dizinini ve branch'ini ayarla
+    rake update_source[theme]      # source/'u ource.old/ yap, tema güncellemelerini kur, source/_includes/navigation.html'i source.old/ daki navigation'la değiştir
+    rake update_style[theme]       # sass/'ı sass.old/ yap, sass tema güncellemelerini kur, sass/custom/'ı sass.old/custom/ ile değiştir
+    rake watch                     # Dosyalardaki değişiklikleri dinler. Preview için kullanılır.
+
+---
+
 ## Web Sunucusuna Yükleme (Deployment)
 
 ### GitHub
@@ -183,7 +210,14 @@ Pek yakında
 ---
 
 ## Blog ve Sayfa
-Pek yakında
+
+### Blog Post
+
+    rake new_post["post başlığı"]
+    
+    rake new_post["Merhaba Dünya"]
+    # source/_posts/2012-11-11-merhaba-dunya.markdown
+
 
 ---
 
