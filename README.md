@@ -65,8 +65,7 @@ sonra [http://localhost:4000][lcl]
 ## Ayarlar
 ### _config.yml
 
-Sitenizle ilgili hemen hemen her ayar bu dosyadan yapılıyor. Aşağıdaki örnek
-kendi sitemden alınmıştır:
+Sitenizle ilgili hemen hemen her ayar bu dosyadan yapılıyor.
 
 ```yaml
 url: http://siteniz.com                                     # sitenizin adresi
@@ -74,14 +73,14 @@ title: "Adınız Soyadınız"                                   # sitenizin baş
 subtitle: "Alt başlık"                                      # sitenizin alt başlığı
 author: 'Adınız Soyadınız'                                  # Adınız soyadınız, aynen tek tırnak içinde
 simple_search: http://google.com/search                     # google arasın
-description:                                                # html için genel site description'ı
+description: "Sitenizin açıklaması"                         # html için genel site description'ı
 
 date_format: "ordinal"                                      # Türkçe'de ordinal olmadığı için default olarak
                                                             # Aralık 26 Pazartesi, 2011 gibi
                                                             # %B %e %A, %Y
 subscribe_rss: atom.xml
 
-root: / # sitenizin root'u
+root: /                                                     # sitenizin root'u
 permalink: /blog/:year/:month/:day/:title/                  # yani /blog/2012/11/15/blog-baslik/ gibi
 source: source                                              # tüm postlarınız / sayfalarınız burada duracak
 destination: public                                         # sunucuya gönderilecek folder
@@ -114,12 +113,12 @@ default_asides: [
 ]
 
 
-github_user:                                                # GitHub kullanıcı adınız, eğer varsa
+github_user: GITHUB_KULLANICI_ADI                           # GitHub kullanıcı adınız, eğer varsa
 github_repo_count: 0                                        # 0 demek tüm repolarınızı gösterir anlamında
 github_show_profile_link: true                              # profil linkiniz
 github_skip_forks: true                                     # fork ettiğiniz repo'ları gösterme
                                                             
-twitter_user:                                               # Twitter kullanıcı adınız
+twitter_user: TWITTER_KULANICI_ADI                          # Twitter kullanıcı adınız
 twitter_tweet_count: 5                                      # son kaç tweet?
 twitter_show_replies: false                                 # gelen reply'leri gösterme
 twitter_follow_button: true                                 # "follow" linkini göster
