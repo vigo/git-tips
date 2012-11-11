@@ -557,6 +557,8 @@ Post içinde `<!--more-->` kullanabilirsiniz.
 ### Code Blocks
 Örnekler [orijinal](http://octopress.org/docs/plugins/codeblock/) sayfadan alınmıştır.
 
+![Code Blocks][scr-012]
+
     {% codeblock [title] [lang:language] [url] [link text] %}
     code snippet
     {% endcodeblock %}
@@ -585,6 +587,8 @@ Post içinde `<!--more-->` kullanabilirsiniz.
 
 ### Gist Tag
 Herhangi bir `gist`i entegre edebilirsiniz.
+
+![Gist][scr-013]
 
     {% gist GIST_ID %}
     
@@ -843,6 +847,8 @@ THE SOFTWARE IS PROVIDED ‘AS IS’, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 [scr-009]: https://raw.github.com/vigo/octopress/master/source/screen_shots/octopress-tr-plugin-bquo.png
 [scr-010]: https://raw.github.com/vigo/octopress/master/source/screen_shots/octopress-tr-plugin-pullquo.png
 [scr-011]: https://raw.github.com/vigo/octopress/master/source/screen_shots/octopress-tr-plugin-backtick.png
+[scr-012]: https://raw.github.com/vigo/octopress/master/source/screen_shots/octopress-tr-plugin-codeblocks.png
+[scr-013]: https://raw.github.com/vigo/octopress/master/source/screen_shots/octopress-tr-plugin-gist.png
 
 [liquid]: https://github.com/Shopify/liquid/wiki/Liquid-for-Designers
 [jekyll]: https://github.com/mojombo/jekyll/wiki/Template-Data
