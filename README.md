@@ -251,6 +251,42 @@ Blog post şablonu aşağıdaki gibidir:
 <meta name="keywords" content="kelime1, kelime2">
 ```
 
+### Sayfa
+![Octopress Türkçe - Sayfa][scr-006]  
+
+Düz sayfalar oluşturmanızı sağlar.
+
+    rake new_page["sunumlar"]                   # /source/sunumlar/index.markdown şeklinde üretir.
+    rake new_page["sunumlar/sayfa.html"]        # /source/sunumlar/sayfa.html şeklinde üretir.
+
+Kullandığı şablon:
+
+```yaml
+---
+layout: page
+title: "Hakkımda"
+comments: false
+sharing: false
+footer: false
+description: "Hakkımda sayfası"
+keywords: "kelime1, kelime2"
+# asides: []
+---
+```
+
+yani, **footer**'ı, **sharing**'i ve **comment**'i olmayan bir blog post
+sayfası gibi... `description`, `keywords` opsiyonel. Eğer isterseniz sayfaya
+göre özel `asides` da ekleyebilirsiniz.
+
+Örneğin sadece bu sayfa için:
+```yaml
+asides: [
+    custom/asides/hakkimda.html,
+]
+```
+
+derseniz, sağ tarafta sadece belirttiğiniz `aside` render edilir.
+
 ---
 
 ## Eklentiler (Pluginler)

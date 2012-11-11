@@ -4,6 +4,9 @@ title: "Hakkımda"
 comments: false
 sharing: false
 footer: false
+description: "Hakkımda sayfası"
+keywords: "kelime1, kelime2"
+# asides: []
 ---
 {% img http://placekitten.com/800/300 "Kedi"  %}  
 
