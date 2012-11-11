@@ -218,6 +218,27 @@ Pek yakında
     rake new_post["Merhaba Dünya"]
     # source/_posts/2012-11-11-merhaba-dunya.markdown
 
+Blog post şablonu aşağıdaki gibidir:
+```yaml
+    ---
+    layout: post
+    title: "Merhaba Dünya"
+    date: 2012-11-11 15:53
+    comments: true
+    categories: [ kategori1, kategori2 ]
+    tags: [ etiket1, etiket2 ]
+    description: "Açıklama"
+    keywords: "kelime1, kelime2"
+    # asides: []
+    ---
+    Kısa açıklama...
+    <!-- more -->
+```
+`comments`: true / false, **disqus** ile gelen yorum olayını aç/kapa
+
+`categories`: [katergori1, katergori2, ...., n]
+
+`tags`: [etiket1, etiket2, ...., n]
 
 ---
 

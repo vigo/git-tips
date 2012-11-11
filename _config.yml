@@ -62,6 +62,7 @@ default_asides: [
     custom/asides/hakkimda.html,
     asides/recent_posts.html,
     asides/tag_cloud.html,
+    asides/categories.html,
     asides/github.html,
     asides/twitter.html,
     asides/delicious.html,
