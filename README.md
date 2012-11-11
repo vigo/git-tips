@@ -171,6 +171,14 @@ tag_cloud_max_ranks: 15                        # en büyük tag 15, en küçük 
 ---
 
 ## Web Sunucusuna Yükleme (Deployment)
+
+### GitHub
+Pek yakında
+
+### Heroku
+Pek yakında
+
+### Rsync ile kendi sunucunuza
 Pek yakında
 
 ---
