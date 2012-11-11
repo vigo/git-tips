@@ -201,14 +201,65 @@ tag_cloud_max_ranks: 15                                     # en büyük tag 15,
 
 ## Web Sunucusuna Yükleme (Deployment)
 
+### Projeyi Kendi Makinene `clone` Yapmak ve Çalışmak
+
+    git clone git://github.com/vigo/octopress.git benim-blogum
+    git remote rename origin octopress-tr
+    git remote add origin (kendi repo adresiniz)
+    git config branch.master.remote origin
+
+Böylece `clone` etmenize rağmen kendi `origin`inizi kullanabilirsiniz. Eğer
+kendi `git` sunucuz varsa;
+
+    ssh user@host.com
+    mkdir -p git/octopress-tr.git
+    cd git/octopress-tr.git
+    git init --bare
+    pwd                             # bu lazım olacak repo
+    logout
+
+    git remote add origin (bu lazım olacak repo)
+
 ### GitHub
 Pek yakında
+
 
 ### Heroku
 Pek yakında
 
+
 ### Rsync ile kendi sunucunuza
-Pek yakında
+Orijanal döküman [burada](http://octopress.org/docs/deploying/rsync/).
+
+`rsync` kullanabilmek için sunucu tarafında `ssh` yapabilme yetkiniz olması
+gerekir. `public/` altına render edilen dosyalar, `ssh` ve `rsync` yardımıyla
+uzaktaki sunucuya atılır. Bunun için `RakeFile` da ufak ayarlar yapmanız gerekir.
+
+Öncelikle, uzaktaki makineye erişmek için `public/private` key olayını yapmış
+olmanız gerekir ve `public` key'iniz karşıdaki makinede `~/.ssh/authorized_keys`
+de olması gerekir. Eğer konu hakkında bilginiz yoksa [bu][x01] ve [bu][x02] linklerden
+yardım alabilirsiniz.
+
+`RakeFile`ı açın ve şu satırları kendinize göre ayarlayın:
+
+```ruby
+ssh_user       = "user@domain.com"    # uzak makineye ssh yaparken kullandığınız yöntem
+document_root  = "~/website.com/"     # uzak makinedeki web lokasyonu. Eğer /srv/www/website.com/ ise buraya aynen yazın.
+rsync_delete   = true                 # esas kaynak hep source/ olacak ve bunu public/'e senkronize edecek.
+deploy_default = "rsync"              # `rake deploy` deyince bu default olarak çalışacak
+```
+
+Deploy işini şu sırada yapın:
+
+    rake generate && rake deploy
+
+Eğer bazı dosyaları senkron dışında tutmak isterseniz, `root`a `rsync-exclude` diye
+bir dosya oluşturun ve içine dosyaları yazın:
+
+    some-file.txt
+    some-directory/
+    *.mp4
+
 
 ---
 
@@ -679,6 +730,9 @@ THE SOFTWARE IS PROVIDED ‘AS IS’, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 [2]: https://github.com/imathis/octopress "Octopress Orijinal Proje"
 [3]: http://octopress.org/docs "Octopress İngilizce Dokümantasyon"
 [4]: https://github.com/kennethreitz/osx-gcc-installer "OS X gcc"
+
+[x01]: http://ugur.ozyilmazel.com/blog/2009/08/27/macports-ssh-otomatik-tamamlama-ve-genel-bilgiler/
+[x02]: https://help.github.com/articles/generating-ssh-keys
 
 [lcl]: http://localhost:4000 "Yerel Sunucu"
 
