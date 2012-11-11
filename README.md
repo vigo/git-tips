@@ -795,6 +795,8 @@ bakabilirsiniz.
 ### jsFiddle
 Aynı **Gist** gibi, [jsFiddle](http://jsfiddle.net/) kaynağı da ekleyebilirsiniz.
 
+![jsfiddle][scr-014]
+
     {% jsfiddle shorttag [tabs] [skin] [height] [width] %}
     {% jsfiddle ccWP7 %}
     
@@ -803,9 +805,15 @@ Aynı **Gist** gibi, [jsFiddle](http://jsfiddle.net/) kaynağı da ekleyebilirsi
 
 ### Vimeo
 Sitenize [Vimeo](http://vimeo.com) videoları eklemenize yarar.
-    
+
+![vimeo][scr-015]
+
     # http://vimeo.com/52177751
     {% vimeo 52177751 800 600 information %}
+    {% vimeo 52177751 800 600 %}
+
+`information` video ile ilgili bilgileri getirir.
+
 
 ---
 
@@ -849,6 +857,8 @@ THE SOFTWARE IS PROVIDED ‘AS IS’, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 [scr-011]: https://raw.github.com/vigo/octopress/master/source/screen_shots/octopress-tr-plugin-backtick.png
 [scr-012]: https://raw.github.com/vigo/octopress/master/source/screen_shots/octopress-tr-plugin-codeblocks.png
 [scr-013]: https://raw.github.com/vigo/octopress/master/source/screen_shots/octopress-tr-plugin-gist.png
+[scr-014]: https://raw.github.com/vigo/octopress/master/source/screen_shots/octopress-tr-plugin-jsfiddle.png
+[scr-015]: https://raw.github.com/vigo/octopress/master/source/screen_shots/octopress-tr-plugin-vimeo.png
 
 [liquid]: https://github.com/Shopify/liquid/wiki/Liquid-for-Designers
 [jekyll]: https://github.com/mojombo/jekyll/wiki/Template-Data
