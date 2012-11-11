@@ -20,12 +20,24 @@ OS X Lion (10.7) ile beraber değişen derleme ortamları yüzünden ilk önce e
 
 [https://github.com/kennethreitz/osx-gcc-installer][4]
 
-Derleme işlemine komut satırından başlamadan önce;
+Derleme işlemine komut satırından başlamadan önce sisteminizde `readline`
+kütüphanesinin de kurulu olması gerekiyor. Eğer kurulu değilse;
+
+    brew install readline
+
+kullanarak kurabilirsiniz. Kurulum bittikten sonra lütfen `CPPFLAGS` ve
+`LDFLAGS` değişkenlerini kontrol edin. Aşağıdaki `PATH` bilgisi doğru olmalı.
+`readline`ı kontrol etmel için:
+
+    brew ls readline
+
+diyebilir ve `include` `lib` folder'larına bakabilirsiniz. Sizdeki sürüm ne
+ise aşağıdaki değerleri ona göre ayarlayın:
 
     export CPPFLAGS=-I/usr/local/Cellar/readline/6.2.4/include
     export LDFLAGS=-L/usr/local/Cellar/readline/6.2.4/lib
 
-ve;
+ve daha sonra `rbenv` ile gereken ruby'i kurun;
 
     rbenv install 1.9.2-p290
     rbenv rehash
@@ -34,7 +46,7 @@ ve daha sonra da;
 
     sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/
 
-yapmanız gerekiyor...
+yapın...
 
 ## Kurulum
 
