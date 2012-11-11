@@ -69,39 +69,39 @@ Sitenizle ilgili hemen hemen her ayar bu dosyadan yapılıyor. Aşağıdaki örn
 kendi sitemden alınmıştır:
 
 ```yaml
-url: http://ugur.ozyilmazel.com
-title: "Uğur Özyılmazel"
-subtitle: "Kişisel Web Blogum"
-author: 'Uğur Özyılmazel'
-simple_search: http://google.com/search
-description: "Uğur Özyılmazel'in kişisel web sitesi..."
+url: http://siteniz.com                                     # sitenizin adresi
+title: "Adınız Soyadınız"                                   # sitenizin başlığı
+subtitle: "Alt başlık"                                      # sitenizin alt başlığı
+author: 'Adınız Soyadınız'                                  # Adınız soyadınız, aynen tek tırnak içinde
+simple_search: http://google.com/search                     # google arasın
+description:                                                # html için genel site description'ı
 
-date_format: "ordinal"                         # Türkçe'de ordinal olmadığı için default olarak
-                                               # Aralık 26 Pazartesi, 2011 gibi
-                                               # %B %e %A, %Y
+date_format: "ordinal"                                      # Türkçe'de ordinal olmadığı için default olarak
+                                                            # Aralık 26 Pazartesi, 2011 gibi
+                                                            # %B %e %A, %Y
 subscribe_rss: atom.xml
 
 root: / # sitenizin root'u
-permalink: /blog/:year/:month/:day/:title/     # yani /blog/2012/11/15/blog-baslik/ gibi
-source: source                                 # tüm postlarınız / sayfalarınız burada duracak
-destination: public                            # sunucuya gönderilecek folder
-plugins: plugins                               # pluginlerin yeri
-code_dir: downloads/code                       # eğer code dosyaları dağıtacaksanız buradan...
-category_dir: blog/kategoriler                 # /blog/kategoriler/anket/ gibi...
-category_title_prefix: 'Kategori: '            # Kategori: Anket
-                                               
-tag_dir: blog/etiketler                        # /blog/etiketler/python/
-tag_title_prefix: 'Etiket: '                   # 'Etiket: Python'
-                                               
-markdown: rdiscount                            # ruby markdown engine
-pygments: false                                # syntax coloring için pygments.rb kullan
-paginate: 10                                   # Sayfa başı 10 post
-pagination_dir: blog                           # /blog/page/2/ gibi
-recent_posts: 5                                # Son 5 post
-excerpt_link: "Devamı &rarr;"                  # Excerpt kullanılınca, "Devamı >" linki
-titlecase: false                               # Kontrol edilmesi açısında off
+permalink: /blog/:year/:month/:day/:title/                  # yani /blog/2012/11/15/blog-baslik/ gibi
+source: source                                              # tüm postlarınız / sayfalarınız burada duracak
+destination: public                                         # sunucuya gönderilecek folder
+plugins: plugins                                            # pluginlerin yeri
+code_dir: downloads/code                                    # eğer code dosyaları dağıtacaksanız buradan...
+category_dir: blog/kategoriler                              # /blog/kategoriler/anket/ gibi...
+category_title_prefix: 'Kategori: '                         # Kategori: Anket
+                                                            
+tag_dir: blog/etiketler                                     # /blog/etiketler/python/
+tag_title_prefix: 'Etiket: '                                # 'Etiket: Python'
+                                                            
+markdown: rdiscount                                         # ruby markdown engine
+pygments: false                                             # syntax coloring için pygments.rb kullan
+paginate: 10                                                # Sayfa başı 10 post
+pagination_dir: blog                                        # /blog/page/2/ gibi
+recent_posts: 5                                             # Son 5 post
+excerpt_link: "Devamı &rarr;"                               # Excerpt kullanılınca, "Devamı >" linki
+titlecase: false                                            # Kontrol edilmesi açısında off
 default_asides: [
-    custom/asides/freesoftwarefoundation.html, # sağ kolonda çıkacaklar
+    custom/asides/freesoftwarefoundation.html,              # sağ kolonda çıkacaklar
     custom/asides/hakkimda.html,
     asides/recent_posts.html,
     asides/tag_cloud.html,
@@ -114,58 +114,58 @@ default_asides: [
 ]
 
 
-github_user:                                   # GitHub kullanıcı adınız, eğer varsa
-github_repo_count: 0                           # 0 demek tüm repolarınızı gösterir anlamında
-github_show_profile_link: true                 # profil linkiniz
-github_skip_forks: true                        # fork ettiğiniz repo'ları gösterme
+github_user:                                                # GitHub kullanıcı adınız, eğer varsa
+github_repo_count: 0                                        # 0 demek tüm repolarınızı gösterir anlamında
+github_show_profile_link: true                              # profil linkiniz
+github_skip_forks: true                                     # fork ettiğiniz repo'ları gösterme
+                                                            
+twitter_user:                                               # Twitter kullanıcı adınız
+twitter_tweet_count: 5                                      # son kaç tweet?
+twitter_show_replies: false                                 # gelen reply'leri gösterme
+twitter_follow_button: true                                 # "follow" linkini göster
+twitter_show_follower_count: true                           # takipçi sayısını göster
+twitter_tweet_button: true                                  # "tweetle" linkini göster
+                                                            
+google_plus_one: false                                      # google plus'ın + linki
+google_plus_one_size: medium                                #
+                                                            
+googleplus_user:                                            # google plus kullanıcı adı
+googleplus_hidden: false                                    #
+                                                            
+pinboard_user:                                              # pinboard servisi kullanıcı adı
+pinboard_count: 3                                           # kaç tane gösterilsin
+                                                            
+delicious_user:                                             # delicious servisi kullanıcı adı
+delicious_count: 3                                          # kaç tane gösterilsin
+                                                            
+disqus_short_name:                                          # disqus servisi için kullancı adı
+disqus_show_comment_count: false                            # yorum sayısını gösterme
+                                                            
+google_analytics_tracking_id:                               # google analytics içi tracking_id örnek: UA-XXXX
+                                                            
+facebook_like: true                                         # facebook like buttonu
+facebook_locale: tr_TR                                      # lisanı Türkçe, eğer en_US dersenin İngilizce olur
 
-twitter_user:                                  # Twitter kullanıcı adınız
-twitter_tweet_count: 5                         # son kaç tweet?
-twitter_show_replies: false                    # gelen reply'leri gösterme
-twitter_follow_button: true                    # "follow" linkini göster
-twitter_show_follower_count: true              # takipçi sayısını göster
-twitter_tweet_button: true                     # "tweetle" linkini göster
 
-google_plus_one: false                         # google plus'ın + linki
-google_plus_one_size: medium                   #
-
-googleplus_user:                               # google plus kullanıcı adı
-googleplus_hidden: false                       #
-
-pinboard_user:                                 # pinboard servisi kullanıcı adı
-pinboard_count: 3                              # kaç tane gösterilsin
-
-delicious_user:                                # delicious servisi kullanıcı adı
-delicious_count: 3                             # kaç tane gösterilsin
-
-disqus_short_name:                             # disqus servisi için kullancı adı
-disqus_show_comment_count: false               # yorum sayısını gösterme
-
-google_analytics_tracking_id:                  # google analytics içi tracking_id örnek: UA-XXXX
-
-facebook_like: true                            # facebook like buttonu
-facebook_locale: tr_TR                         # lisanı Türkçe, eğer en_US dersenin İngilizce olur
-
-
-instapaper: true                               # instapaper servisini kullan
-instapaper_button_title: "Instapaper"          # 
+instapaper: true                                            # instapaper servisini kullan
+instapaper_button_title: "Instapaper"                       # 
 instapaper_link_title: "Instapaper'e gönder..."
 
-open_links_in_new_window: true                 # linkleri yeni sayfada aç
+open_links_in_new_window: true                              # linkleri yeni sayfada aç
 
-vimeo_information_format:                      # vimeo plugini için varsayılan
-                                               # '<p><a href="http://vimeo.com/%{id}">%{title}</a> / <a href="%{author_url}">%{author_name}</a></p>'
-                                               # parametreler
-                                               # %{id}
-                                               # %{title}
-                                               # %{author_url}
-                                               # %{author_name}
-                                               # %{duration}
-                                               # %{description}
-                                               # %{thumbnail_url}
-
-tag_cloud_size: 30                             # en popüler 30 etiketi göster
-tag_cloud_max_ranks: 15                        # en büyük tag 15, en küçük 1 olsun
+vimeo_information_format:                                   # vimeo plugini için varsayılan
+                                                            # '<p><a href="http://vimeo.com/%{id}">%{title}</a> / <a href="%{author_url}">%{author_name}</a></p>'
+                                                            # parametreler
+                                                            # %{id}
+                                                            # %{title}
+                                                            # %{author_url}
+                                                            # %{author_name}
+                                                            # %{duration}
+                                                            # %{description}
+                                                            # %{thumbnail_url}
+                                                            
+tag_cloud_size: 30                                          # en popüler 30 etiketi göster
+tag_cloud_max_ranks: 15                                     # en büyük tag 15, en küçük 1 olsun
 ```
 
 ---
