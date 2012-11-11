@@ -289,8 +289,365 @@ derseniz, sağ tarafta sadece belirttiğiniz `aside` render edilir.
 
 ---
 
+## Ön İzleme, Üretme
+
+    rake generate   # postları ve sayfaları public/ altına üretir
+    rake watch      # source/ ve sass/ folder'larını dinler ve duruma göre yeniden üretir
+    rake preview    # dinler ve kendi içinde gelen web sunucusunu çalıştırır
+
+Ne yaptığımıza bakmak için:
+
+    rake generate && rake preview
+
+ve browser açıp: [http://localhost:4000](http://localhost:4000)
+
+Eğer [Pow][pow] kullanıyorsanız:
+
+    cd ~/.pow
+    ln -s /path/to/octopress octopress
+    cd /path/to/octopress
+    rake watch
+
+diyip, [http://octopress.dev](http://octopress.dev) yapabilirsiniz.
+
+---
+
+## Kullanılan Şablon (Templating) Dili, İçerik
+
+[Liquid][liquid] kullanılıyor. Ayrıca [Jekyll][jekyll]'a da bakmanızı öneririm.
+
+
+## Backtick Code Block: Kaynak Kodu Paylaşımı
+Örnekler [orijinal](http://octopress.org/docs/blogging/code/) sayfadan alınmıştır.
+
+    ``` [language] [title] [url] [link text]
+    code snippet
+    ```
+
+    # ruby kodu
+    # başlık: Discover if a number is prime
+    # ilgili web adresi: http://www.noulakaz.net/weblog/2007/03/18/a-regular-expression-to-check-for-prime-numbers/
+    # ilgili web adresi linkinin teksti: Source Article
+    
+    ``` ruby Discover if a number is prime http://www.noulakaz.net/weblog/2007/03/18/a-regular-expression-to-check-for-prime-numbers/ Source Article
+    class Fixnum
+      def prime?
+        ('1' * self) !~ /^1?$|^(11+?)\1+$/
+      end
+    end
+    ```
+
+
+---
+
 ## Eklentiler (Pluginler)
-Pek yakında
+
+### Excerpts
+Post içinde `<!--more-->` kullanabilirsiniz.
+
+
+### HTML5 Video Tag
+Örnekler [orijinal](http://octopress.org/docs/plugins/video-tag/) sayfadan alınmıştır.
+
+    {% video url/to/video [width height] [url/to/poster] %}
+    {% video http://www.site.com/video.mp4 [genişlik yükseklik] [http://www.site.com/poster-resmi.png] %}
+    
+    {% video http://s3.imathis.com/video/zero-to-fancy-buttons.mp4 640 320 http://s3.imathis.com/video/zero-to-fancy-buttons.png %}
+
+
+### Image Tag
+Örnekler [orijinal](http://octopress.org/docs/plugins/image-tag/) sayfadan alınmıştır.
+
+    {% img [class names] /path/to/image [width] [height] [title text [alt text]] %}
+    {% img [css classlar] http://www.site.com/resim.jpg [genişlik] [yükseklik] [başlık [alt]] %}
+
+    {% img http://placekitten.com/890/280 %}
+    {% img left http://placekitten.com/320/250 Place Kitten #2 %}
+    {% img right http://placekitten.com/300/500 150 250 Place Kitten #3 %}
+    {% img right http://placekitten.com/300/500 150 250 'Place Kitten #4' 'An image of a very cute kitten' %}
+
+
+### Block quote
+Örnekler [orijinal](http://octopress.org/docs/plugins/blockquote/) sayfadan alınmıştır.
+
+    {% blockquote [author[, source]] [link] [source_link_title] %}
+    Quote string
+    {% endblockquote %}
+
+    {% blockquote %}
+    Last night I lay in bed looking up at the stars in the sky and I thought to myself, where the heck is the ceiling.
+    {% endblockquote %}
+
+    {% blockquote Douglas Adams, The Hichhikers Guide to the Galaxy %}
+    Flying is learning how to throw yourself at the ground and miss.
+    {% endblockquote %}
+
+    {% blockquote @allanbranch https://twitter.com/allanbranch/status/90766146063712256 %}
+    Over the past 24 hours I've been reflecting on my life & I've realized only one thing. I need a medieval battle axe.
+    {% endblockquote %}
+
+    {% blockquote Seth Godin http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html Welcome to Island Marketing %}
+    Every interaction is both precious and an opportunity to delight.
+    {% endblockquote %}
+
+
+### Pull quote
+Örnekler [orijinal](http://octopress.org/docs/plugins/pullquote/) sayfadan alınmıştır.
+
+    {% pullquote %}
+    Surround your paragraph with the pull quote tags. Then when you come to
+    the text you want to pull, {" surround it like this "} and that's all there is to it.
+    {% endpullquote %}
+
+
+### Code Blocks
+Örnekler [orijinal](http://octopress.org/docs/plugins/codeblock/) sayfadan alınmıştır.
+
+    {% codeblock [title] [lang:language] [url] [link text] %}
+    code snippet
+    {% endcodeblock %}
+
+    {% codeblock %}
+    Awesome code snippet
+    {% endcodeblock %}
+
+    {% codeblock lang:objc %}
+    [rectangle setX: 10 y: 10 width: 20 height: 20];
+    {% endcodeblock %}
+
+    {% codeblock Time to be Awesome - awesome.rb %}
+    puts "Awesome!" unless lame
+    {% endcodeblock %}
+
+    {% codeblock Here's an example .rvmrc file. lang:ruby %}
+    rvm ruby-1.8.6 # ZOMG, seriously? We still use this version?
+    {% endcodeblock %}
+
+    {% codeblock Javascript Array Syntax lang:js http://j.mp/pPUUmW MDN Documentation %}
+    var arr1 = new Array(arrayLength);
+    var arr2 = new Array(element0, element1, ..., elementN);
+    {% endcodeblock %}
+
+
+### Gist Tag
+Herhangi bir `gist`i entegre edebilirsiniz.
+
+    {% gist GIST_ID %}
+    
+    # https://gist.github.com/4014521
+    {% gist 4014521 %}
+
+
+### Include Code
+Örnekler [orijinal](http://octopress.org/docs/plugins/include-code/) sayfadan alınmıştır.
+
+    {% include_code [title] [lang:language] path/to/file %}
+    {% include_code [başlık] [lang:dil] dizin/dosya %}
+
+Örnek dosyanız: `source/downloads/code/test.js` da duruyorsa;
+
+    {% include_code test.js %}
+
+şeklinde kullanabilirsiniz. Ya da, `source/downloads/code/ruby/test.rb` şeklindeyse:
+
+    {% include_code Add to_fraction for floats ruby/test.rb %}
+
+İstediğiniz dil türünü de `lang` ile verebilirsiniz.
+
+    {% include_code test.coffee lang:coffeescript %}
+
+Desteklenen diller:
+
+    abap
+    antlr
+    antlr-as
+    antlr-csharp
+    antlr-cpp
+    antlr-java
+    antlr-objc
+    antlr-perl
+    antlr-python
+    antlr-ruby
+    as
+    as3
+    apacheconf
+    applescript
+    asy
+    bbcode
+    bash
+    console
+    bat
+    befunge
+    boo
+    brainfuck
+    c
+    csharp
+    cpp
+    cmake
+    css
+    css+django
+    css+genshitext
+    css+mako
+    css+myghty
+    css+php
+    css+erb
+    css+smarty
+    cheetah
+    clojure
+    common-lisp
+    cython
+    d
+    dpatch
+    control
+    sourceslist
+    delphi
+    diff
+    django
+    dylan
+    erb
+    ragel-em
+    erlang
+    erl
+    evoque
+    fortran
+    gas
+    glsl
+    genshi
+    genshitext
+    pot
+    Cucumber
+    gnuplot
+    go
+    groff
+    html
+    html+cheetah
+    html+django
+    html+evoque
+    html+genshi
+    html+mako
+    html+myghty
+    html+php
+    html+smarty
+    haskell
+    ini
+    irc
+    io
+    java
+    jsp
+    js
+    js+cheetah
+    js+django
+    js+genshitext
+    js+mako
+    js+myghty
+    js+php
+    js+erb
+    js+smarty
+    llvm
+    lighty
+    lhs
+    logtalk
+    lua
+    moocode
+    mxml
+    basemake
+    make
+    mako
+    matlab
+    matlabsession
+    minid
+    modelica
+    trac-wiki
+    mupad
+    mysql
+    myghty
+    nasm
+    newspeak
+    nginx
+    numpy
+    ocaml
+    objective-c
+    ooc
+    php
+    pov
+    perl
+    prolog
+    python
+    python3
+    py3tb
+    pytb
+    pycon
+    rebol
+    rhtml
+    ragel
+    ragel-c
+    ragel-cpp
+    ragel-d
+    ragel-java
+    ragel-objc
+    ragel-ruby
+    raw
+    redcode
+    rb
+    rbcon
+    splus
+    sql
+    scala
+    scheme
+    smalltalk
+    smarty
+    squidconf
+    tcl
+    tcsh
+    tex
+    text
+    vb.net
+    vala
+    vim
+    xml
+    xml+cheetah
+    xml+django
+    xml+evoque
+    xml+mako
+    xml+myghty
+    xml+php
+    xml+erb
+    xml+smarty
+    xslt
+    yaml
+    aspx-cs
+    aspx-vb
+    c-objdump
+    cpp-objdump
+    d-objdump
+    objdump
+    rst
+    sqlite3
+
+
+### Render Partial
+Post ya da sayfa içine ayrıca birşeyler ekleyebilirsiniz. Daha detaylı
+örnekler için [orijinal](http://octopress.org/docs/plugins/render-partial/) sayfaya
+bakabilirsiniz.
+
+    {% render_partial path/to/file %}
+    {% render_partial docs/blogging/plugins/index.markdown %}
+
+
+### jsFiddle
+Aynı **Gist** gibi, [jsFiddle](http://jsfiddle.net/) kaynağı da ekleyebilirsiniz.
+
+    {% jsfiddle shorttag [tabs] [skin] [height] [width] %}
+    {% jsfiddle ccWP7 %}
+    
+    {% jsfiddle ccWP7 js,html,result %}
+
+
+### Vimeo
+Sitenize [Vimeo](http://vimeo.com) videoları eklemenize yarar.
+    
+    # http://vimeo.com/52177751
+    {% vimeo 52177751 800 600 information %}
 
 ---
 
@@ -324,3 +681,7 @@ THE SOFTWARE IS PROVIDED ‘AS IS’, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 [scr-004]: https://raw.github.com/vigo/octopress/master/source/screen_shots/octopress-tr-category-archive.png
 [scr-005]: https://raw.github.com/vigo/octopress/master/source/screen_shots/octopress-tr-blog-archive.png
 [scr-006]: https://raw.github.com/vigo/octopress/master/source/screen_shots/octopress-tr-about.png
+
+[liquid]: https://github.com/Shopify/liquid/wiki/Liquid-for-Designers
+[jekyll]: https://github.com/mojombo/jekyll/wiki/Template-Data
+[pow]: http://pow.cx/
