@@ -142,3 +142,6 @@ open_links_in_new_window: true
 # Example:
 # '<p><a href="http://vimeo.com/%{id}">%{title}</a> from <a href="%{author_url}">%{author_name}</a> on <a href="http://vimeo.com/">Vimeo</a>.</p>'
 vimeo_information_format: '<p><a href="http://vimeo.com/%{id}">%{title}</a> / <a href="%{author_url}">%{author_name}</a></p>'
+
+tag_cloud_size: 30
+tag_cloud_max_ranks: 15

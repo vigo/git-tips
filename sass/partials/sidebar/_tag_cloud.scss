@@ -1,7 +1,7 @@
 .tag-cloud {
-    @for $i from 1 through 5 {
+    @for $i from 1 through 15 {
         .rank-#{$i} {
-            font-size: 150% - ($i * 10);
+            font-size: 200% - ($i * 10);
         }
     }
 }
