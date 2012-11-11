@@ -504,6 +504,8 @@ Post içinde `<!--more-->` kullanabilirsiniz.
 ### Image Tag
 Örnekler [orijinal](http://octopress.org/docs/plugins/image-tag/) sayfadan alınmıştır.
 
+![Image Tag][scr-008]  
+
     {% img [class names] /path/to/image [width] [height] [title text [alt text]] %}
     {% img [css classlar] http://www.site.com/resim.jpg [genişlik] [yükseklik] [başlık [alt]] %}
 
@@ -513,8 +515,10 @@ Post içinde `<!--more-->` kullanabilirsiniz.
     {% img right http://placekitten.com/300/500 150 250 'Place Kitten #4' 'An image of a very cute kitten' %}
 
 
-### Block quote
+### Blockquote
 Örnekler [orijinal](http://octopress.org/docs/plugins/blockquote/) sayfadan alınmıştır.
+
+![Blockquote][scr-009]
 
     {% blockquote [author[, source]] [link] [source_link_title] %}
     Quote string
@@ -831,7 +835,8 @@ THE SOFTWARE IS PROVIDED ‘AS IS’, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 [scr-005]: https://raw.github.com/vigo/octopress/master/source/screen_shots/octopress-tr-blog-archive.png
 [scr-006]: https://raw.github.com/vigo/octopress/master/source/screen_shots/octopress-tr-about.png
 [scr-007]: https://raw.github.com/vigo/octopress/master/source/screen_shots/octopress-tr-plugin-video.png
-
+[scr-008]: https://raw.github.com/vigo/octopress/master/source/screen_shots/octopress-tr-plugin-img.png
+[scr-009]: https://raw.github.com/vigo/octopress/master/source/screen_shots/octopress-tr-plugin-bquo.png
 
 [liquid]: https://github.com/Shopify/liquid/wiki/Liquid-for-Designers
 [jekyll]: https://github.com/mojombo/jekyll/wiki/Template-Data
