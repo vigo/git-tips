@@ -842,7 +842,7 @@ THE SOFTWARE IS PROVIDED ‘AS IS’, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 [scr-008]: https://raw.github.com/vigo/octopress/master/source/screen_shots/octopress-tr-plugin-img.png
 [scr-009]: https://raw.github.com/vigo/octopress/master/source/screen_shots/octopress-tr-plugin-bquo.png
 [scr-010]: https://raw.github.com/vigo/octopress/master/source/screen_shots/octopress-tr-plugin-pullquo.png
-[scr-011]: https://raw.github.com/vigo/octopress/master/source/screen_shots/octopress-tr-plugin-backtick
+[scr-011]: https://raw.github.com/vigo/octopress/master/source/screen_shots/octopress-tr-plugin-backtick.png
 
 [liquid]: https://github.com/Shopify/liquid/wiki/Liquid-for-Designers
 [jekyll]: https://github.com/mojombo/jekyll/wiki/Template-Data
