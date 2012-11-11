@@ -463,6 +463,8 @@ diyip, [http://octopress.dev](http://octopress.dev) yapabilirsiniz.
 ## Backtick Code Block: Kaynak Kodu Paylaşımı
 Örnekler [orijinal](http://octopress.org/docs/blogging/code/) sayfadan alınmıştır.
 
+![Backtick Code Block][scr-011]
+
     ``` [language] [title] [url] [link text]
     code snippet
     ```
@@ -543,6 +545,8 @@ Post içinde `<!--more-->` kullanabilirsiniz.
 
 ### Pull quote
 Örnekler [orijinal](http://octopress.org/docs/plugins/pullquote/) sayfadan alınmıştır.
+
+![Pull quote][scr-010]  
 
     {% pullquote %}
     Surround your paragraph with the pull quote tags. Then when you come to
@@ -837,6 +841,8 @@ THE SOFTWARE IS PROVIDED ‘AS IS’, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 [scr-007]: https://raw.github.com/vigo/octopress/master/source/screen_shots/octopress-tr-plugin-video.png
 [scr-008]: https://raw.github.com/vigo/octopress/master/source/screen_shots/octopress-tr-plugin-img.png
 [scr-009]: https://raw.github.com/vigo/octopress/master/source/screen_shots/octopress-tr-plugin-bquo.png
+[scr-010]: https://raw.github.com/vigo/octopress/master/source/screen_shots/octopress-tr-plugin-pullquo.png
+[scr-011]: https://raw.github.com/vigo/octopress/master/source/screen_shots/octopress-tr-plugin-backtick
 
 [liquid]: https://github.com/Shopify/liquid/wiki/Liquid-for-Designers
 [jekyll]: https://github.com/mojombo/jekyll/wiki/Template-Data
