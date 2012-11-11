@@ -245,6 +245,12 @@ Blog post şablonu aşağıdaki gibidir:
 
 `tags`: [etiket1, etiket2, ...., n]
 
+`description` ve `keywords`: üretilen html için:
+```html
+<meta name="description" content="Açıklama">
+<meta name="keywords" content="kelime1, kelime2">
+```
+
 ---
 
 ## Eklentiler (Pluginler)
@@ -278,3 +284,7 @@ THE SOFTWARE IS PROVIDED ‘AS IS’, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 
 [scr-001]: https://raw.github.com/vigo/octopress/master/source/screen_shots/octopress-tr-home.png
 [scr-002]: https://raw.github.com/vigo/octopress/master/source/screen_shots/octopress-tr-post-detail.png
+[scr-003]: https://raw.github.com/vigo/octopress/master/source/screen_shots/octopress-tr-tag-archive.png
+[scr-004]: https://raw.github.com/vigo/octopress/master/source/screen_shots/octopress-tr-category-archive.png
+[scr-005]: https://raw.github.com/vigo/octopress/master/source/screen_shots/octopress-tr-blog-archive.png
+[scr-006]: https://raw.github.com/vigo/octopress/master/source/screen_shots/octopress-tr-about.png
