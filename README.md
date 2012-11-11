@@ -1,9 +1,5 @@
 # Octopress Türkçe
 
-Türkçe dökümantasyon, kurulum vs tüm bilgiler en kısa sürede eklenecektir.
-
-## Açıklama
-
 ![Octopress Türkçe - Anasayfa][scr-001]  
 
 Octopress [Jekyll][1] tabanlı blog sistemidir. [Projenin orijinali][2], [Projenin sitesi][3]
@@ -17,7 +13,7 @@ Kendi sitenizi yapabilmek için gerekenler:
 - Git
 - Ruby 1.9.2 (*RVM ya da rbenv ile kurulması tavsiye ediliyor.*)
 
-### Mac OS X Lion Kullanıcıları Dikkat
+### Mac OS X (Mountain) Lion Kullanıcıları Dikkat
 OS X Lion (10.7) ile beraber değişen derleme ortamları yüzünden ilk önce eski
 `gcc` yi indirip kurmanız gerekmetedir.
 
@@ -221,15 +217,90 @@ kendi `git` sunucuz varsa;
     git remote add origin (bu lazım olacak repo)
 
 ### GitHub
-Pek yakında
+Orijinal döküman [burada](http://octopress.org/docs/deploying/github/).
+
+#### http://KULLANICI-ADI.github.com
+Örneğin kullanıcı adınız `vigo` ise; [http://vigo.github.com](http://vigo.github.com) şeklinde
+bir sayfanız default olarak var. Eğer **organization**sanız da var; `http://organization.github.com`
+Yapmamız gereken `source` branch'i oluşturmak, üretilen sayfaları `master` brach'e taşımak.
+
+    rake setup_github_pages
+
+1. Size; Github Pages repository url'sini sorar,
+2. `origin` adını **octopress** yapar,
+3. Github Pages repository artık default origin remote olur.
+4. `source` branch'ine `checkout` eder,
+5. Blog'un adresini repository'e göre ayarlar,
+6. `_deploy` altında `master` brach açar.
+
+Bunların ardından;
+
+    rake generate && rake deploy
+
+blog, `_deploy/` altında oluşturulur, `git`e eklenir, `master` branch'e push edilir.
+Sakın `source`u **commit** etmeyi unutmayın!
+
+    git add .
+    git commit -m 'your message'
+    git push origin source
+
+
+#### (gh-pages) GitHub Proje Sayfaları
+GitHub, projeler için sayfa hizmeti veriyor. `xprojesi` adında bir projeniz olsa,
+`http://KULLANICI-ADI.github.com/xprojesi` şeklinde bir adres altından görebilirsiniz.
+Bunun için `gh-pages` adında bir branch olması gerekiyor.
+
+    rake setup_github_pages
+
+1. Size; Github Pages repository url'sini sorar,
+2. `origin` adını **octopress** yapar,
+3. Blog'u alt dizine deploy edecek şekilde ayarlar.
+4. `_deploy/` altında `gh-pages` branch'i açar.
+
+Bunların ardından;
+
+    rake generate && rake deploy
+
+`origin` `remote` unutmayın:
+
+    git remote add origin (your repo url)
+    
+    # set your new origin as the default branch
+    git config branch.master.remote origin
+
+
+#### Kendinize Ait Alan Adı Kullanmak
+`source/` altında `CNAME` dosyası oluşturup içine alan adınızı yazın.
+
+    echo 'websitniz.com' >> source/CNAME
 
 
 ### Heroku
-Pek yakında
+Orijinal döküman [burada](http://octopress.org/docs/deploying/heroku/).
+
+Önce [heroku](https://api.heroku.com/signup) hesabınız olmalı. Daha sonra
+eğer yoksa;
+
+    gem install heroku
+
+Eğer heroku'yla ilk kez tanışıyorsanız bir kısım işlemler gerekiyor. SSH key
+vs. detaylar için [buraya tıklayın](https://help.github.com/articles/set-up-git).
+
+    heroku create
+    # default remote'u heroku yapıyoruz; remote push/fetch için
+    git config branch.master.remote heroku
+
+var olan `.gitignore` dosyasını düzeltmek gerekiyor; `public` folder'ı oradan
+silelim, sonra;
+
+    rake generate
+    git add .
+    git commit -m 'site güncellendi'
+    git push heroku master
 
 
 ### Rsync ile kendi sunucunuza
-Orijanal döküman [burada](http://octopress.org/docs/deploying/rsync/).
+Orijinal döküman [burada](http://octopress.org/docs/deploying/rsync/).
 
 `rsync` kullanabilmek için sunucu tarafında `ssh` yapabilme yetkiniz olması
 gerekir. `public/` altına render edilen dosyalar, `ssh` ve `rsync` yardımıyla
