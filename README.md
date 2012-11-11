@@ -3,6 +3,9 @@
 Türkçe dökümantasyon, kurulum vs tüm bilgiler en kısa sürede eklenecektir.
 
 ## Açıklama
+
+![Octopress Türkçe - Anasayfa][scr-001]  
+
 Octopress [Jekyll][1] tabanlı blog sistemidir. [Projenin orijinali][2], [Projenin sitesi][3]
 adreslerindedir. Bu sistem yardımıyla kendi bilgisayarınızda `statik html` sayfalarından
 sanki veritabanı olan dinamik bir web sitesi sistemi oluşturabilirsiniz.
@@ -213,6 +216,8 @@ Pek yakında
 
 ### Blog Post
 
+![Octopress Türkçe - Post Detay][scr-002]  
+
     rake new_post["post başlığı"]
     
     rake new_post["Merhaba Dünya"]
@@ -270,3 +275,6 @@ THE SOFTWARE IS PROVIDED ‘AS IS’, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 [4]: https://github.com/kennethreitz/osx-gcc-installer "OS X gcc"
 
 [lcl]: http://localhost:4000 "Yerel Sunucu"
+
+[scr-001]: https://raw.github.com/vigo/octopress/master/source/screen_shots/octopress-tr-home.png
+[scr-002]: https://raw.github.com/vigo/octopress/master/source/screen_shots/octopress-tr-post-detail.png
