@@ -314,9 +314,9 @@ yardım alabilirsiniz.
 `RakeFile`ı açın ve şu satırları kendinize göre ayarlayın:
 
 ```ruby
-ssh_user       = "user@domain.com"    # uzak makineye ssh yaparken kullandığınız yöntem
-document_root  = "~/website.com/"     # uzak makinedeki web lokasyonu. Eğer /srv/www/website.com/ ise buraya aynen yazın.
-rsync_delete   = true                 # esas kaynak hep source/ olacak ve bunu public/'e senkronize edecek.
+ssh_user = "user@domain.com"          # uzak makineye ssh yaparken kullandığınız yöntem
+document_root = "~/website.com/"      # uzak makinedeki web lokasyonu. Eğer /srv/www/website.com/ ise buraya aynen yazın.
+rsync_delete = true                   # esas kaynak hep source/ olacak ve bunu public/'e senkronize edecek.
 deploy_default = "rsync"              # `rake deploy` deyince bu default olarak çalışacak
 ```
 
@@ -330,6 +330,21 @@ bir dosya oluşturun ve içine dosyaları yazın:
     some-file.txt
     some-directory/
     *.mp4
+
+
+### Alt Folder / Dizin'e Yükleme
+Orijinal [döküman burada](http://octopress.org/docs/deploying/subdir/).
+
+    rake set_root_dir[proje/kök/dizin]
+    
+    # geri almak için
+    rake set_root_dir[/]
+    
+    # _config.yml
+    url: http://siteniz.com/alt/dizin
+    
+    # Rakefile (rsync ile kullanıyorsanız)
+    document_root = "~/yoursite.com/your/path"
 
 
 ---
@@ -476,7 +491,9 @@ Post içinde `<!--more-->` kullanabilirsiniz.
 
 ### HTML5 Video Tag
 Örnekler [orijinal](http://octopress.org/docs/plugins/video-tag/) sayfadan alınmıştır.
-[Ekran görüntüsü için tıklayın][scr-007].
+
+![HTML5 Video Tag][scr-007]  
+
 
     {% video url/to/video [width height] [url/to/poster] %}
     {% video http://www.site.com/video.mp4 [genişlik yükseklik] [http://www.site.com/poster-resmi.png] %}
