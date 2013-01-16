@@ -33,23 +33,23 @@ email:
 # ----------------------- #
 
 # If publishing to a subdirectory as in http://site.com/project set 'root: /project'
-root: /
-permalink: /blog/:year/:month/:day/:title/
+root: /git-tips
+permalink: /ipucu/:year/:month/:day/:title/
 source: source
-destination: public
+destination: public/git-tips
 plugins: plugins
-code_dir: downloads/code
-category_dir: blog/kategoriler
+code_dir: indir/kod
+category_dir: ipucu/kategoriler
 category_title_prefix: 'Kategori: '
 
-tag_dir: blog/etiket
+tag_dir: ipucu/etiket
 tag_title_prefix: 'Etiket: '
 
 markdown: rdiscount
 pygments: false # default python pygments have been replaced by pygments.rb
 
 paginate: 10          # Posts per page on the blog index
-pagination_dir: blog  # Directory base for pagination URLs eg. /blog/page/2/
+pagination_dir: ipucu  # Directory base for pagination URLs eg. /blog/page/2/
 recent_posts: 5       # Posts in the sidebar Recent Posts section
 # excerpt_link: "Read on &rarr;"  # "Continue reading" link text at the bottom of excerpted articles
 excerpt_link: "Devamı &rarr;"  # "Continue reading" link text at the bottom of excerpted articles
