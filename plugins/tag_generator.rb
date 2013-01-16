@@ -47,6 +47,23 @@ module Jekyll
 
   end
 
+  class TagFeed < Page
+    def initialize(site, base, tag_dir, tag)
+      @site = site
+      @base = base
+      @dir  = tag_dir
+      @name = 'rss.xml'
+      self.process(@name)
+      self.read_yaml(File.join(base, '_includes/custom'), 'tag_feed_rss.xml')
+      self.data['tag']         = tag
+      title_prefix             = site.config['tag_title_prefix'] || 'Etiket: '
+      self.data['title']       = "#{title_prefix}#{tag}"
+      meta_description_prefix  = site.config['tag_meta_description_prefix'] || 'Etiket: '
+      self.data['description'] = "#{meta_description_prefix}#{tag}"
+      self.data['feed_url'] = "#{tag_dir}/#{name}"
+    end
+  end
+
 
   # The Site class is a built-in Jekyll class with access to global site config information.
   class Site
@@ -62,6 +79,12 @@ module Jekyll
       index.write(self.dest)
       # Record the fact that this page has been added, otherwise Site::cleanup will remove it.
       self.pages << index
+      
+      feed = TagFeed.new(self, self.source, tag_dir, tag)
+      feed.render(self.layouts, site_payload)
+      feed.write(self.dest)
+      self.pages << feed
+      
     end
 
     # Loops through the list of tag pages and processes each one.
