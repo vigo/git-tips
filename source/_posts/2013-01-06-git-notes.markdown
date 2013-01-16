@@ -1,0 +1,17 @@
+---
+layout: post
+title: "git notes"
+date: 2013-01-06 00:00
+comments: true
+categories: [ Log ]
+tags: [ git-notes ]
+description: "SHA‘yı değiştirmeden commit’e comment (yorum) eklemek mümkün."
+keywords: "git, git-notes, note, not"
+# asides: []
+---
+**SHA**‘yı değiştirmeden commit’e comment (*yorum*) eklemek mümkün.
+Bunun için önce notu eklemek istediğimiz commit’i seçmemiz gerekiyor.
+Hemen `git log` yapıyoruz. İster uzun ister kısa SHA1 kullanarak not düzenleme
+moduna geçiyoruz.
+<!-- more -->
+{% render_partial _includes/global_links.markdown %}

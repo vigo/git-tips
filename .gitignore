@@ -8,7 +8,7 @@ public
 sass.old
 source.old
 source/_stash
-source/_posts
+# source/_posts
 source/stylesheets/screen.css
 vendor
 node_modules
