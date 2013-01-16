@@ -4,11 +4,11 @@
 # ----------------------- #
 
 url: http://vigo.github.com/git-tips
-title: Git için Türkçe ipuçları
-subtitle: "Türkçe dökümantasyon"
+title: Git Püf Noktaları
+subtitle: "Git versiyon kontrol programı / sistemi ile ilgili Türkçe ipuçları"
 author: 'Uğur Özyılmazel'
 simple_search: http://google.com/search
-description:
+description: "Git versiyon kontrol programı / sistemi ile ilgili Türkçe ipuçları"
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
