@@ -7,3 +7,5 @@
 
 [site-git-tips]: http://git-tips.heroku.com/ "Git Tips"
 [site-vigo]: http://ugur.ozyilmazel.com "Uğur Özyılmazel"
+
+[app-tig]: http://jonas.nitro.dk/tig/ "tig"
