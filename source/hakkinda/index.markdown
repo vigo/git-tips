@@ -20,4 +20,13 @@ Uğur “vigo” Özyılmazel
 [http://ugur.ozyilmazel.com][site-vigo]  
 [@vigobronx][@vigobronx] | [@ugurozyilmazel][@ugurozyilmazel]
 
+
+## Lisans
+
+- Bu sitedeki yazıları gönül rahatlığıyla kullanabilirsiniz.
+- Bu sitedeki bilgiler, kendi araştırmalarım, başka internet siteleri ve
+ilgili kitaplardan derlenmiştir.
+- Sitedeki **git** logosu, [http://git-scm.com/](http://git-scm.com/downloads/logos)
+sitesinden alınıp kullanılmıştır.
+
 {% render_partial _includes/global_links.markdown %}
