@@ -9,3 +9,5 @@
 [site-vigo]: http://ugur.ozyilmazel.com "Uğur Özyılmazel"
 
 [app-tig]: http://jonas.nitro.dk/tig/ "tig"
+
+[sample]: https://github.com/vigo/dotfiles-bash "Dotfiles"
