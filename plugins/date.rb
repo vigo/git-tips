@@ -62,26 +62,6 @@ module Octopress
         my_format = my_format.gsub(/%b/, ABBR_MONTHNAMES_TR[date.mon])
         my_format = my_format.gsub(/%B/, MONTHNAMES_TR[date.mon])
         date_formatted = date.strftime(my_format)
-        
-        # date_formatted = "%s" % my_format
-        
-        # date_formatted = "%s, %s, %s, %s, (%s)" % [
-        #   format, date, date.wday, DAYNAMES_TR[date.wday],
-        #   format.gsub(/%A/, DAYNAMES_TR[date.wday])
-        # ]
-        # my_format = format
-        # my_format.gsub!(/%B/, MONTHNAMES_TR[date.mon])
-        # my_format.gsub!(/%A/, DAYNAMES_TR[date.wday])
-        # 
-        # # date_formatted = "bu: %s | %s | %s" % [date.wday.class, DAYNAMES_TR, format]
-        # # format.gsub!(/%a/, ABBR_DAYNAMES_TR[date.wday])
-        # # format.gsub!(/%A/, DAYNAMES_TR[date.wday])
-        # # format.gsub!(/%b/, ABBR_MONTHNAMES_TR[date.mon])
-        # # format.gsub!(/%B/, MONTHNAMES_TR[date.mon])
-        # date_formatted = date.strftime(my_format)
-        # my_format = format
-        # # date_formatted = date.strftime(format)
-        # # date_formatted.gsub!(/%o/, ordinal(date.strftime('%e').to_i))
       end
       date_formatted
     end
