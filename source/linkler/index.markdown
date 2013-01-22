@@ -13,6 +13,10 @@ asides: [
 ]
 ---
 
+## Türkçe Kaynaklar
+
+- [Git Tips’in Örnek Videoları](http://www.screenr.com/user/git_tips)
+
 ## İngilizce Kaynaklar
 
 - [http://git-scm.com/doc](http://git-scm.com/doc)
