@@ -6,6 +6,10 @@ $root = ::File.dirname(__FILE__)
 
 class SinatraStaticServer < Sinatra::Base  
 
+  get '/' do
+    redirect "/git-tips/"
+  end
+
   get(/.+/) do
     send_sinatra_file(request.path) {404}
   end
