@@ -12,3 +12,4 @@
 [app-homebrew]:    http://mxcl.github.com/homebrew/ "Homebrew"
 
 [sample]:          https://github.com/vigo/dotfiles-bash "Dotfiles"
+[github]:          http://github.com "Github"
