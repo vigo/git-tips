@@ -76,3 +76,20 @@ function getTwitterFeed(user, count, replies) {
     , success: function(data) { showTwitterFeed(data.slice(0, count), user); }
   })
 }
+
+function recent_tweets(data){
+  var timeline = document.getElementById('tweets'),
+      content = '',
+      tweets = data.slice(0, 5),
+      user = 'ugurozyilmazel';
+
+  for (var t in tweets) {
+    content += '<li>'
+      +'<p>'
+        +'<a href="http://twitter.com/' + user + '/status/'+tweets[t].id_str+'">'
+          + prettyDate(tweets[t].created_at)
+        +'</a>'
+        +linkifyTweet(tweets[t].text.replace(/\n/g, '<br>'), tweets[t].entities.urls)+'</p>'+'</li>';
+  }
+  timeline.innerHTML = content;
+}
