@@ -9,7 +9,7 @@ keywords: "git, püf noktası, tips tricks, github"
 asides: [
     asides/recent_posts.html,
     asides/categories.html,
-    asides/twitter.html,
+    asides/twitter.html
 ]
 ---
 

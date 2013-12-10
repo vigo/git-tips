@@ -6,8 +6,7 @@ sharing: false
 footer: false
 description: "Git versiyon kontrol sistemi ile ilgili Türkçe kaynak."
 # keywords: "kelime1, kelime2"
-asides: [
-]
+# asides: []
 ---
 Bu site, versiyon kontrol sistemi git ile ilgili Türkçe kaynak sağlamak
 amacıyla, [Pro Git][book-progit] kitabı’nın yazarı [Scott “Draper” Chacon][@chacon]‘un
