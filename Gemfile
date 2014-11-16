@@ -7,13 +7,14 @@ group :development do
   gem 'rdiscount'
   gem 'pygments.rb'
   gem 'RedCloth'
-  gem 'haml', '>= 3.1'
-  gem 'compass', '>= 0.11'
+  gem 'haml'
+  gem 'compass'
   gem 'rubypants'
-  gem 'rb-fsevent', "~> 0.9.1"
+  gem 'rb-fsevent'
   gem 'stringex'
-  gem 'liquid', '2.2.2'
+  gem 'liquid'
   gem 'multi_json'
+  gem 'iconv'
 end
 
-gem 'sinatra', '1.2.6'
+gem 'sinatra'

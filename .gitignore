@@ -8,10 +8,8 @@ public
 sass.old
 source.old
 source/_stash
-source/_posts
 source/stylesheets/screen.css
-vendor
+vendor/bundle
 node_modules
 .vimeo-cache
 .preview-mode
-_config.yml
