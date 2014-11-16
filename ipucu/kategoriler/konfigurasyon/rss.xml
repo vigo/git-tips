@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git Püf Noktaları</title>
+    <link>http://vigo.github.com/git-tips</link>
+    <description>Git versiyon kontrol programı / sistemi ile ilgili Türkçe ipuçları</description>
+    <language>tr-tr</language>
+    <pubDate>Sun, 16 Nov 2014 13:06:04 +0200</pubDate>
+    <lastBuildDate>Sun, 16 Nov 2014 13:06:04 +0200</lastBuildDate>
+
+    
+    <item>
+      <title>Modifiye Edilmiş Tüm Dosyaları Eklemek</title>
+      <link>http://vigo.github.com/git-tips/ipucu/2013/02/03/modifiye-edilmis-tum-dosyalari-eklemek/</link>
+      <pubDate>Sun, 03 Feb 2013 19:10:00 +0200</pubDate>
+      <author>Uğur Özyılmazel</author>
+      <guid>http://vigo.github.com/git-tips/ipucu/2013/02/03/modifiye-edilmis-tum-dosyalari-eklemek</guid>
+      <description>Tek hareketle modifiye edilen dosyaları eklemek</description>
+    </item>
+    
+    <item>
+      <title>Kontrol Dışındaki Tüm Dosyaları Eklemek</title>
+      <link>http://vigo.github.com/git-tips/ipucu/2013/02/03/kontrol-disindaki-tum-dosyalari-eklemek/</link>
+      <pubDate>Sun, 03 Feb 2013 18:58:00 +0200</pubDate>
+      <author>Uğur Özyılmazel</author>
+      <guid>http://vigo.github.com/git-tips/ipucu/2013/02/03/kontrol-disindaki-tum-dosyalari-eklemek</guid>
+      <description>Track edilmeyen dosyaları tek hareketle eklemek</description>
+    </item>
+    
+    <item>
+      <title>`push.default` ve Ayarı</title>
+      <link>http://vigo.github.com/git-tips/ipucu/2013/02/03/push-default-ve-ayari/</link>
+      <pubDate>Sun, 03 Feb 2013 17:30:00 +0200</pubDate>
+      <author>Uğur Özyılmazel</author>
+      <guid>http://vigo.github.com/git-tips/ipucu/2013/02/03/push-default-ve-ayari</guid>
+      <description>Yeni push özellikleri ve ayarlanması</description>
+    </item>
+    
+    <item>
+      <title>`git-log` ve `less` ile İlgili Sorun</title>
+      <link>http://vigo.github.com/git-tips/ipucu/2013/01/14/git-log-ve-less-ile-ilgili-sorun/</link>
+      <pubDate>Mon, 14 Jan 2013 01:08:00 +0200</pubDate>
+      <author>Uğur Özyılmazel</author>
+      <guid>http://vigo.github.com/git-tips/ipucu/2013/01/14/git-log-ve-less-ile-ilgili-sorun</guid>
+      <description>Git ve Unix komutu less arasında bazen sorun olabiliyor!</description>
+    </item>
+    
+    <item>
+      <title>“Author” ile “Committer” arasındaki fark?</title>
+      <link>http://vigo.github.com/git-tips/ipucu/2013/01/14/author-ile-committer-arasindaki-fark/</link>
+      <pubDate>Mon, 14 Jan 2013 00:31:00 +0200</pubDate>
+      <author>Uğur Özyılmazel</author>
+      <guid>http://vigo.github.com/git-tips/ipucu/2013/01/14/author-ile-committer-arasindaki-fark</guid>
+      <description>“Author” ile “Committer” arasındaki fark?</description>
+    </item>
+    
+    <item>
+      <title>`git-config` ve Renklendirme</title>
+      <link>http://vigo.github.com/git-tips/ipucu/2013/01/13/git-config-ve-renklendirme/</link>
+      <pubDate>Sun, 13 Jan 2013 16:23:00 +0200</pubDate>
+      <author>Uğur Özyılmazel</author>
+      <guid>http://vigo.github.com/git-tips/ipucu/2013/01/13/git-config-ve-renklendirme</guid>
+      <description>Git ve renk ayarları</description>
+    </item>
+    
+    <item>
+      <title>`git-config` İçinden Bilgileri Okumak</title>
+      <link>http://vigo.github.com/git-tips/ipucu/2013/01/13/git-config-icinden-bilgileri-okumak/</link>
+      <pubDate>Sun, 13 Jan 2013 01:04:00 +0200</pubDate>
+      <author>Uğur Özyılmazel</author>
+      <guid>http://vigo.github.com/git-tips/ipucu/2013/01/13/git-config-icinden-bilgileri-okumak</guid>
+      <description>Git konfigürasyon dosyasından bilgi okumak</description>
+    </item>
+    
+    <item>
+      <title>`gitconfig` - Konfigürasyon Dosyası</title>
+      <link>http://vigo.github.com/git-tips/ipucu/2013/01/10/gitconfig-konfigurasyon-dosyasi/</link>
+      <pubDate>Thu, 10 Jan 2013 23:31:00 +0200</pubDate>
+      <author>Uğur Özyılmazel</author>
+      <guid>http://vigo.github.com/git-tips/ipucu/2013/01/10/gitconfig-konfigurasyon-dosyasi</guid>
+      <description>Git’in ayar dosyası: gitconfig</description>
+    </item>
+    
+
+  </channel> 
+</rss>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git Püf Noktaları</title>
+    <link>http://vigo.github.com/git-tips</link>
+    <description>Git versiyon kontrol programı / sistemi ile ilgili Türkçe ipuçları</description>
+    <language>tr-tr</language>
+    <pubDate>Sun, 16 Nov 2014 13:06:04 +0200</pubDate>
+    <lastBuildDate>Sun, 16 Nov 2014 13:06:04 +0200</lastBuildDate>
+
+    
+    <item>
+      <title>`git-clone` Kullanarak Reponuzu Yedekleyin</title>
+      <link>http://vigo.github.com/git-tips/ipucu/2013/02/20/git-clone-kullanarak-reponuzu-yedekleyin/</link>
+      <pubDate>Wed, 20 Feb 2013 21:59:00 +0200</pubDate>
+      <author>Uğur Özyılmazel</author>
+      <guid>http://vigo.github.com/git-tips/ipucu/2013/02/20/git-clone-kullanarak-reponuzu-yedekleyin</guid>
+      <description>Repository’inizi `git-clone` kullanarak yedekleyebilirsiniz.</description>
+    </item>
+    
+
+  </channel> 
+</rss>

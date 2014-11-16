@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git Püf Noktaları</title>
+    <link>http://vigo.github.com/git-tips</link>
+    <description>Git versiyon kontrol programı / sistemi ile ilgili Türkçe ipuçları</description>
+    <language>tr-tr</language>
+    <pubDate>Sun, 16 Nov 2014 13:06:04 +0200</pubDate>
+    <lastBuildDate>Sun, 16 Nov 2014 13:06:04 +0200</lastBuildDate>
+
+    
+    <item>
+      <title>Kısa ve Öz `git-log`</title>
+      <link>http://vigo.github.com/git-tips/ipucu/2013/01/13/kisa-ve-oz-git-log/</link>
+      <pubDate>Sun, 13 Jan 2013 01:41:00 +0200</pubDate>
+      <author>Uğur Özyılmazel</author>
+      <guid>http://vigo.github.com/git-tips/ipucu/2013/01/13/kisa-ve-oz-git-log</guid>
+      <description>Git’de en kısa şekilde log’a bakmak</description>
+    </item>
+    
+    <item>
+      <title>`git-status` Kısa ve Öz</title>
+      <link>http://vigo.github.com/git-tips/ipucu/2013/01/06/git-status-kisa/</link>
+      <pubDate>Sun, 06 Jan 2013 18:06:00 +0200</pubDate>
+      <author>Uğur Özyılmazel</author>
+      <guid>http://vigo.github.com/git-tips/ipucu/2013/01/06/git-status-kisa</guid>
+      <description>Kısa ve öz git-status</description>
+    </item>
+    
+
+  </channel> 
+</rss>

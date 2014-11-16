@@ -9,7 +9,8 @@
   <meta name="author" content="Uğur Özyılmazel">
 
   
-  <meta name="description" content="git branch -vv ">
+  <meta name="description" content="Revizyonu etiketlemek çok işe yarıyabilir. Belirleyeceğiniz etikete ya da
+versiyona kolay geri dönebilirsiniz. ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://vigo.github.com/git-tips">
+  <link rel="canonical" href="http://vigo.github.com/git-tips/ipucu/page/2">
   <link href="/git-tips/favicon.png" rel="icon">
   <link href="/git-tips/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/git-tips/javascripts/modernizr-2.0.js"></script>
@@ -103,7 +104,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/git-tips/ipucu/2014/11/16/track-edilen-branch/">Track edilen branch</a></h1>
+      <h1 class="entry-title"><a href="/git-tips/ipucu/2013/01/22/git-tag-ile-versiyon-belirlemek-ya-da-taglemek/">`git-tag` İle Versiyon Belirlemek ya da Tag’lemek</a></h1>
     
     
       <p class="meta">
@@ -117,21 +118,103 @@
 
 
 
-<time datetime="2014-11-16T12:55:00+02:00" pubdate data-updated="true">16 Kasım Pazar, 2014, 12:55</time>
+<time datetime="2013-01-22T22:50:00+02:00" pubdate data-updated="true">22 Ocak Salı, 2013, 22:50</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><pre><code>git branch -vv
+  <div class="entry-content"><p>Revizyonu etiketlemek çok işe yarıyabilir. Belirleyeceğiniz etikete ya da
+versiyona kolay geri dönebilirsiniz.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/git-tips/ipucu/2013/01/22/git-tag-ile-versiyon-belirlemek-ya-da-taglemek/">Devamı &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/git-tips/ipucu/2013/01/22/git-rm-dosyayi-versiyon-kontrol-altindan-cikarmak/">`git-rm` Dosyayı versiyon kontrol altından çıkarmak</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2013-01-22T17:30:00+02:00" pubdate data-updated="true">22 Ocak Salı, 2013, 17:30</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Versiyon kontrol altındaki bir dosyayı daha sonradan <code>.gitignore</code>a eklediniz.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/git-tips/ipucu/2013/01/22/git-rm-dosyayi-versiyon-kontrol-altindan-cikarmak/">Devamı &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/git-tips/ipucu/2013/01/20/ilgili-revizyonda-hangi-dosyalar-degisti/">İlgili Revizyonda Hangi Dosyalar Değişti?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2013-01-20T18:12:00+02:00" pubdate data-updated="true">20 Ocak Pazar, 2013, 18:12</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="https://github.com/vigo/dotfiles-bash" title="Dotfiles">Örnek projede</a>; önce <code>git log --oneline</code> yapalım; <code>d9808b6</code>
+revizyonunda değişen dosyları görmek için;</p>
+
+<pre><code>git show d9808b6 --name-status
 </code></pre>
 
 </div>
   
   
     <footer>
-      <a rel="full-article" href="/git-tips/ipucu/2014/11/16/track-edilen-branch/">Devamı &rarr;</a>
+      <a rel="full-article" href="/git-tips/ipucu/2013/01/20/ilgili-revizyonda-hangi-dosyalar-degisti/">Devamı &rarr;</a>
     </footer>
   
 
@@ -143,7 +226,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/git-tips/ipucu/2013/02/28/git-whatchanged-ile-nelerin-degistigini-bulmak/">`git-whatchanged` İle Nelerin Değiştiğini Bulmak</a></h1>
+      <h1 class="entry-title"><a href="/git-tips/ipucu/2013/01/16/commitleri-sayalim/">Commit&#8217;leri Sayalım</a></h1>
     
     
       <p class="meta">
@@ -157,21 +240,23 @@
 
 
 
-<time datetime="2013-02-28T22:41:00+02:00" pubdate data-updated="true">28 Şubat Perşembe, 2013, 22:41</time>
+<time datetime="2013-01-16T11:31:00+02:00" pubdate data-updated="true">16 Ocak Çarşamba, 2013, 11:31</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><pre><code>git whatchanged --oneline
+  <div class="entry-content"><p>Acaba projenizde <strong>kim</strong> kaç <strong>commit</strong> yaptı?</p>
+
+<pre><code>git shortlog -s -n
 </code></pre>
 
 </div>
   
   
     <footer>
-      <a rel="full-article" href="/git-tips/ipucu/2013/02/28/git-whatchanged-ile-nelerin-degistigini-bulmak/">Devamı &rarr;</a>
+      <a rel="full-article" href="/git-tips/ipucu/2013/01/16/commitleri-sayalim/">Devamı &rarr;</a>
     </footer>
   
 
@@ -183,7 +268,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/git-tips/ipucu/2013/02/28/git-ls-remote-ile-uzaktaki-tagleri-listelemek/">`git-ls-remote` İle Uzaktaki TAG’leri listelemek</a></h1>
+      <h1 class="entry-title"><a href="/git-tips/ipucu/2013/01/16/sayfalama-yapmadan-tum-logu-almak/">Sayfalama (Paging) Yapmadan Tüm Log&#8217;u Almak</a></h1>
     
     
       <p class="meta">
@@ -197,21 +282,21 @@
 
 
 
-<time datetime="2013-02-28T00:25:00+02:00" pubdate data-updated="true">28 Şubat Perşembe, 2013, 00:25</time>
+<time datetime="2013-01-16T11:25:00+02:00" pubdate data-updated="true">16 Ocak Çarşamba, 2013, 11:25</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><pre><code>git ls-remote --tags
+  <div class="entry-content"><pre><code>git --no-pager log --oneline
 </code></pre>
 
 </div>
   
   
     <footer>
-      <a rel="full-article" href="/git-tips/ipucu/2013/02/28/git-ls-remote-ile-uzaktaki-tagleri-listelemek/">Devamı &rarr;</a>
+      <a rel="full-article" href="/git-tips/ipucu/2013/01/16/sayfalama-yapmadan-tum-logu-almak/">Devamı &rarr;</a>
     </footer>
   
 
@@ -223,7 +308,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/git-tips/ipucu/2013/02/20/git-clone-kullanarak-reponuzu-yedekleyin/">`git-clone` Kullanarak Reponuzu Yedekleyin</a></h1>
+      <h1 class="entry-title"><a href="/git-tips/ipucu/2013/01/16/belli-tarihler-arasindaki-loga-bakmak-slash-filtrelemek/">Belli Tarihler Arasındaki Log&#8217;a Bakmak / Filtrelemek</a></h1>
     
     
       <p class="meta">
@@ -237,21 +322,23 @@
 
 
 
-<time datetime="2013-02-20T21:59:00+02:00" pubdate data-updated="true">20 Şubat Çarşamba, 2013, 21:59</time>
+<time datetime="2013-01-16T11:18:00+02:00" pubdate data-updated="true">16 Ocak Çarşamba, 2013, 11:18</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><pre><code>git clone /yedeklemek/istediğiniz/repo /yedekleyeceğiniz/dizin
+  <div class="entry-content"><p><strong>Eylül 2012</strong> ile <strong>Ekim 2012</strong> arasındaki commit log’u görmek için:</p>
+
+<pre><code>git log --since="2012-09-01" --until="2012-10-01" --reverse --format="%ad | %h : %s" --date=short
 </code></pre>
 
 </div>
   
   
     <footer>
-      <a rel="full-article" href="/git-tips/ipucu/2013/02/20/git-clone-kullanarak-reponuzu-yedekleyin/">Devamı &rarr;</a>
+      <a rel="full-article" href="/git-tips/ipucu/2013/01/16/belli-tarihler-arasindaki-loga-bakmak-slash-filtrelemek/">Devamı &rarr;</a>
     </footer>
   
 
@@ -263,7 +350,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/git-tips/ipucu/2013/02/18/istediginiz-revizyondan-branch-olusturmak/">İstediğiniz Revizyondan `branch` Oluşturmak</a></h1>
+      <h1 class="entry-title"><a href="/git-tips/ipucu/2013/01/14/branch-merge-agac-yapisini-git-log-da-gormek/">Branch / Merge ağaç yapısını `git-log` da görmek</a></h1>
     
     
       <p class="meta">
@@ -277,22 +364,103 @@
 
 
 
-<time datetime="2013-02-18T23:11:00+02:00" pubdate data-updated="true">18 Şubat Pazartesi, 2013, 23:11</time>
+<time datetime="2013-01-14T01:17:00+02:00" pubdate data-updated="true">14 Ocak Pazartesi, 2013, 01:17</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><pre><code>git branch BRANCH_ADI REVIZYON
-git checkout -b BRANCH_ADI REVIZYON
+  <div class="entry-content"><p>Yapmanız gereken sadece komut içinde <code>--graph</code> kelimesi kullanmak. Son
+<strong>10 commit</strong>’i belirlediğim formatta <code>--graph</code> ile göster
+(<em>önceki örneklerden</em>):</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/git-tips/ipucu/2013/01/14/branch-merge-agac-yapisini-git-log-da-gormek/">Devamı &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/git-tips/ipucu/2013/01/14/git-log-ve-less-ile-ilgili-sorun/">`git-log` ve `less` ile İlgili Sorun</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2013-01-14T01:08:00+02:00" pubdate data-updated="true">14 Ocak Pazartesi, 2013, 01:08</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Renkli log çıktılarında ilk satırı görmüyor ya da kaybediyorsanız bu
+sistemdeki <code>less</code> komutunun konfigürasyonu ile ilgilidir. Bunu düzeltmek için
+<code>~/.gitconfig</code> dosyasında <code>core.pager</code> bölümüne müdahale etmek gerekir:</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/git-tips/ipucu/2013/01/14/git-log-ve-less-ile-ilgili-sorun/">Devamı &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/git-tips/ipucu/2013/01/14/git-log-ciktisini-formatlamak/">`git-log` Çıktısını Formatlamak</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2013-01-14T00:51:00+02:00" pubdate data-updated="true">14 Ocak Pazartesi, 2013, 00:51</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><pre><code>git log --pretty=format:'%Cblue%h%Creset %Cgreen%an%Creset %s (%Cred%ar%Creset)'
 </code></pre>
 
 </div>
   
   
     <footer>
-      <a rel="full-article" href="/git-tips/ipucu/2013/02/18/istediginiz-revizyondan-branch-olusturmak/">Devamı &rarr;</a>
+      <a rel="full-article" href="/git-tips/ipucu/2013/01/14/git-log-ciktisini-formatlamak/">Devamı &rarr;</a>
     </footer>
   
 
@@ -304,7 +472,7 @@ git checkout -b BRANCH_ADI REVIZYON
       
   <header>
     
-      <h1 class="entry-title"><a href="/git-tips/ipucu/2013/02/18/git-stash-anlik-mudahale-ya-da-zulalama/">`git stash` Anlık Müdahale ya da Zulalama</a></h1>
+      <h1 class="entry-title"><a href="/git-tips/ipucu/2013/01/14/author-ile-committer-arasindaki-fark/">“Author” ile “Committer” arasındaki fark?</a></h1>
     
     
       <p class="meta">
@@ -318,183 +486,21 @@ git checkout -b BRANCH_ADI REVIZYON
 
 
 
-<time datetime="2013-02-18T22:30:00+02:00" pubdate data-updated="true">18 Şubat Pazartesi, 2013, 22:30</time>
+<time datetime="2013-01-14T00:31:00+02:00" pubdate data-updated="true">14 Ocak Pazartesi, 2013, 00:31</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Tam işin ortasındasınız ve aniden acil bir durumla karşılaştınız. Bir çok
-dosyayı da değiştirdiniz ama <code>commit</code> etmek istemiyorsunuz. Ne yapacaksınız?</p>
+  <div class="entry-content"><p>Git’in yazılma amaçlarından biri de <strong>e-posta</strong> ile gelen <strong>patch</strong>‘lerin
+kolayca sisteme entegre edilmesiydi.</p>
 
 </div>
   
   
     <footer>
-      <a rel="full-article" href="/git-tips/ipucu/2013/02/18/git-stash-anlik-mudahale-ya-da-zulalama/">Devamı &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/git-tips/ipucu/2013/02/03/modifiye-edilmis-tum-dosyalari-eklemek/">Modifiye Edilmiş Tüm Dosyaları Eklemek</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-
-<time datetime="2013-02-03T19:10:00+02:00" pubdate data-updated="true">03 Şubat Pazar, 2013, 19:10</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><pre><code>git status -sb | grep -e "^ M " | awk "{ print $2 }" | xargs git add
-</code></pre>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/git-tips/ipucu/2013/02/03/modifiye-edilmis-tum-dosyalari-eklemek/">Devamı &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/git-tips/ipucu/2013/02/03/kontrol-disindaki-tum-dosyalari-eklemek/">Kontrol Dışındaki Tüm Dosyaları Eklemek</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-
-<time datetime="2013-02-03T18:58:00+02:00" pubdate data-updated="true">03 Şubat Pazar, 2013, 18:58</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><pre><code>git status -sb | grep -e '^??' | awk '{ print $2 }' | xargs git add
-</code></pre>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/git-tips/ipucu/2013/02/03/kontrol-disindaki-tum-dosyalari-eklemek/">Devamı &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/git-tips/ipucu/2013/02/03/push-default-ve-ayari/">`push.default` ve Ayarı</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-
-<time datetime="2013-02-03T17:30:00+02:00" pubdate data-updated="true">03 Şubat Pazar, 2013, 17:30</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Git versiyon <a href="https://github.com/git/git/blob/master/Documentation/RelNotes/1.8.0.txt">1.8.0</a>’la hayatımıza giren ve ilk anda kafamızı karıştıran
-<code>git push</code> özelliği aslında çok basit ve kullanışlı.</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/git-tips/ipucu/2013/02/03/push-default-ve-ayari/">Devamı &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/git-tips/ipucu/2013/01/25/diff-filter-ile-silinmis-tum-dosyalari-bulmak/">`&#8211;diff-filter` ile Silinmiş Tüm Dosyaları Bulmak</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-
-<time datetime="2013-01-25T11:33:00+02:00" pubdate data-updated="true">25 Ocak Cuma, 2013, 11:33</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Sildiğiniz tüm dosyaları listelemek ister misiniz?</p>
-
-<pre><code>git log --diff-filter=D --summary
-</code></pre>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/git-tips/ipucu/2013/01/25/diff-filter-ile-silinmis-tum-dosyalari-bulmak/">Devamı &rarr;</a>
+      <a rel="full-article" href="/git-tips/ipucu/2013/01/14/author-ile-committer-arasindaki-fark/">Devamı &rarr;</a>
     </footer>
   
 
@@ -503,9 +509,11 @@ dosyayı da değiştirdiniz ama <code>commit</code> etmek istemiyorsunuz. Ne yap
   
   <div class="pagination">
     
-      <a class="prev" href="/git-tips/ipucu/page/2/">&larr; Eskiler</a>
+      <a class="prev" href="/git-tips/ipucu/page/3/">&larr; Eskiler</a>
     
     <a href="/git-tips/ipucu/arsiv">Arşiv</a>
+    
+    <a class="next" href="/git-tips/">Yeniler &rarr;</a>
     
   </div>
 </div>
@@ -552,7 +560,7 @@ dosyayı da değiştirdiniz ama <code>commit</code> etmek istemiyorsunuz. Ne yap
 
 <section class="tag-cloud">
   <h1>En Popüler 30 Etiket</h1>
-  <span class='rank-15'><a href='/git-tips/ipucu/etiket/git-stash/'>git-stash</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/git-ls-remote/'>git-ls-remote</a></span> <span class='rank-9'><a href='/git-tips/ipucu/etiket/format/'>format</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/git-add/'>git-add</a></span> <span class='rank-12'><a href='/git-tips/ipucu/etiket/git-tag/'>git-tag</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/short-status/'>short-status</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/git-rm/'>git-rm</a></span> <span class='rank-12'><a href='/git-tips/ipucu/etiket/color/'>color</a></span> <span class='rank-9'><a href='/git-tips/ipucu/etiket/rev-parse/'>rev-parse</a></span> <span class='rank-5'><a href='/git-tips/ipucu/etiket/git-config/'>git-config</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/cat-file/'>cat-file</a></span> <span class='rank-12'><a href='/git-tips/ipucu/etiket/git-status/'>git-status</a></span> <span class='rank-12'><a href='/git-tips/ipucu/etiket/git-show/'>git-show</a></span> <span class='rank-12'><a href='/git-tips/ipucu/etiket/git-alias/'>git-alias</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/branch/'>branch</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/gitignore/'>gitignore</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/browse/'>browse</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/git-help/'>git-help</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/count/'>count</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/git-clone/'>git-clone</a></span> <span class='rank-9'><a href='/git-tips/ipucu/etiket/git-branch/'>git-branch</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/git-notes/'>git-notes</a></span> <span class='rank-1'><a href='/git-tips/ipucu/etiket/git-log/'>git-log</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/git-bundle/'>git-bundle</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/deleted-files/'>deleted files</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/filtre/'>filtre</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/tig/'>tig</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/utility/'>utility</a></span> 
+  <span class='rank-15'><a href='/git-tips/ipucu/etiket/deleted-files/'>deleted files</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/gitignore/'>gitignore</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/git-add/'>git-add</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/git-bundle/'>git-bundle</a></span> <span class='rank-1'><a href='/git-tips/ipucu/etiket/git-log/'>git-log</a></span> <span class='rank-12'><a href='/git-tips/ipucu/etiket/git-show/'>git-show</a></span> <span class='rank-12'><a href='/git-tips/ipucu/etiket/git-status/'>git-status</a></span> <span class='rank-5'><a href='/git-tips/ipucu/etiket/git-config/'>git-config</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/filtre/'>filtre</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/cat-file/'>cat-file</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/git-clone/'>git-clone</a></span> <span class='rank-9'><a href='/git-tips/ipucu/etiket/git-branch/'>git-branch</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/git-rm/'>git-rm</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/browse/'>browse</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/utility/'>utility</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/branch/'>branch</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/count/'>count</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/short-status/'>short-status</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/git-stash/'>git-stash</a></span> <span class='rank-12'><a href='/git-tips/ipucu/etiket/git-tag/'>git-tag</a></span> <span class='rank-9'><a href='/git-tips/ipucu/etiket/format/'>format</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/git-help/'>git-help</a></span> <span class='rank-12'><a href='/git-tips/ipucu/etiket/color/'>color</a></span> <span class='rank-12'><a href='/git-tips/ipucu/etiket/git-alias/'>git-alias</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/git-notes/'>git-notes</a></span> <span class='rank-9'><a href='/git-tips/ipucu/etiket/rev-parse/'>rev-parse</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/git-ls-remote/'>git-ls-remote</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/tig/'>tig</a></span> 
 </section>
 
 

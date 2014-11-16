@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git Püf Noktaları</title>
+    <link>http://vigo.github.com/git-tips</link>
+    <description>Git versiyon kontrol programı / sistemi ile ilgili Türkçe ipuçları</description>
+    <language>tr-tr</language>
+    <pubDate>Sun, 16 Nov 2014 13:06:04 +0200</pubDate>
+    <lastBuildDate>Sun, 16 Nov 2014 13:06:04 +0200</lastBuildDate>
+
+    
+    <item>
+      <title>`--diff-filter` ile Silinmiş Tüm Dosyaları Bulmak</title>
+      <link>http://vigo.github.com/git-tips/ipucu/2013/01/25/diff-filter-ile-silinmis-tum-dosyalari-bulmak/</link>
+      <pubDate>Fri, 25 Jan 2013 11:33:00 +0200</pubDate>
+      <author>Uğur Özyılmazel</author>
+      <guid>http://vigo.github.com/git-tips/ipucu/2013/01/25/diff-filter-ile-silinmis-tum-dosyalari-bulmak</guid>
+      <description>İlgili repositorydeki sildiğiniz tüm dosyaları listemek.</description>
+    </item>
+    
+
+  </channel> 
+</rss>

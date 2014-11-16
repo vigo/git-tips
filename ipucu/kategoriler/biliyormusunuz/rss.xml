@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git Püf Noktaları</title>
+    <link>http://vigo.github.com/git-tips</link>
+    <description>Git versiyon kontrol programı / sistemi ile ilgili Türkçe ipuçları</description>
+    <language>tr-tr</language>
+    <pubDate>Sun, 16 Nov 2014 13:06:04 +0200</pubDate>
+    <lastBuildDate>Sun, 16 Nov 2014 13:06:04 +0200</lastBuildDate>
+
+    
+    <item>
+      <title>“Author” ile “Committer” arasındaki fark?</title>
+      <link>http://vigo.github.com/git-tips/ipucu/2013/01/14/author-ile-committer-arasindaki-fark/</link>
+      <pubDate>Mon, 14 Jan 2013 00:31:00 +0200</pubDate>
+      <author>Uğur Özyılmazel</author>
+      <guid>http://vigo.github.com/git-tips/ipucu/2013/01/14/author-ile-committer-arasindaki-fark</guid>
+      <description>“Author” ile “Committer” arasındaki fark?</description>
+    </item>
+    
+
+  </channel> 
+</rss>

@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git Püf Noktaları</title>
+    <link>http://vigo.github.com/git-tips</link>
+    <description>Git versiyon kontrol programı / sistemi ile ilgili Türkçe ipuçları</description>
+    <language>tr-tr</language>
+    <pubDate>Sun, 16 Nov 2014 13:06:04 +0200</pubDate>
+    <lastBuildDate>Sun, 16 Nov 2014 13:06:04 +0200</lastBuildDate>
+
+    
+    <item>
+      <title>`git-tag` İle Versiyon Belirlemek ya da Tag’lemek</title>
+      <link>http://vigo.github.com/git-tips/ipucu/2013/01/22/git-tag-ile-versiyon-belirlemek-ya-da-taglemek/</link>
+      <pubDate>Tue, 22 Jan 2013 22:50:00 +0200</pubDate>
+      <author>Uğur Özyılmazel</author>
+      <guid>http://vigo.github.com/git-tips/ipucu/2013/01/22/git-tag-ile-versiyon-belirlemek-ya-da-taglemek</guid>
+      <description>Revizyonu etiketlemek ya da TAG’lemek</description>
+    </item>
+    
+    <item>
+      <title>SHA1 Görüntülemek (uzun)</title>
+      <link>http://vigo.github.com/git-tips/ipucu/2013/01/12/sha1-goruntulemek-uzun/</link>
+      <pubDate>Sat, 12 Jan 2013 23:24:00 +0200</pubDate>
+      <author>Uğur Özyılmazel</author>
+      <guid>http://vigo.github.com/git-tips/ipucu/2013/01/12/sha1-goruntulemek-uzun</guid>
+      <description>SHA1 Görüntülemek (uzun)</description>
+    </item>
+    
+    <item>
+      <title>SHA1 Görüntülemek (kısa)</title>
+      <link>http://vigo.github.com/git-tips/ipucu/2013/01/12/sha1-goruntulemek-kisa/</link>
+      <pubDate>Sat, 12 Jan 2013 23:12:00 +0200</pubDate>
+      <author>Uğur Özyılmazel</author>
+      <guid>http://vigo.github.com/git-tips/ipucu/2013/01/12/sha1-goruntulemek-kisa</guid>
+      <description>SHA1 Görüntülemek (kısa)</description>
+    </item>
+    
+
+  </channel> 
+</rss>

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git Püf Noktaları</title>
+    <link>http://vigo.github.com/git-tips</link>
+    <description>Git versiyon kontrol programı / sistemi ile ilgili Türkçe ipuçları</description>
+    <language>tr-tr</language>
+    <pubDate>Sun, 16 Nov 2014 13:06:04 +0200</pubDate>
+    <lastBuildDate>Sun, 16 Nov 2014 13:06:04 +0200</lastBuildDate>
+
+    
+    <item>
+      <title>Modifiye Edilmiş Tüm Dosyaları Eklemek</title>
+      <link>http://vigo.github.com/git-tips/ipucu/2013/02/03/modifiye-edilmis-tum-dosyalari-eklemek/</link>
+      <pubDate>Sun, 03 Feb 2013 19:10:00 +0200</pubDate>
+      <author>Uğur Özyılmazel</author>
+      <guid>http://vigo.github.com/git-tips/ipucu/2013/02/03/modifiye-edilmis-tum-dosyalari-eklemek</guid>
+      <description>Tek hareketle modifiye edilen dosyaları eklemek</description>
+    </item>
+    
+    <item>
+      <title>Kontrol Dışındaki Tüm Dosyaları Eklemek</title>
+      <link>http://vigo.github.com/git-tips/ipucu/2013/02/03/kontrol-disindaki-tum-dosyalari-eklemek/</link>
+      <pubDate>Sun, 03 Feb 2013 18:58:00 +0200</pubDate>
+      <author>Uğur Özyılmazel</author>
+      <guid>http://vigo.github.com/git-tips/ipucu/2013/02/03/kontrol-disindaki-tum-dosyalari-eklemek</guid>
+      <description>Track edilmeyen dosyaları tek hareketle eklemek</description>
+    </item>
+    
+
+  </channel> 
+</rss>

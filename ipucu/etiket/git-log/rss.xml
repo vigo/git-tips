@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git Püf Noktaları</title>
+    <link>http://vigo.github.com/git-tips</link>
+    <description>Git versiyon kontrol programı / sistemi ile ilgili Türkçe ipuçları</description>
+    <language>tr-tr</language>
+    <pubDate>Sun, 16 Nov 2014 13:06:04 +0200</pubDate>
+    <lastBuildDate>Sun, 16 Nov 2014 13:06:04 +0200</lastBuildDate>
+
+    
+    <item>
+      <title>`git-whatchanged` İle Nelerin Değiştiğini Bulmak</title>
+      <link>http://vigo.github.com/git-tips/ipucu/2013/02/28/git-whatchanged-ile-nelerin-degistigini-bulmak/</link>
+      <pubDate>Thu, 28 Feb 2013 22:41:00 +0200</pubDate>
+      <author>Uğur Özyılmazel</author>
+      <guid>http://vigo.github.com/git-tips/ipucu/2013/02/28/git-whatchanged-ile-nelerin-degistigini-bulmak</guid>
+      <description>Commit’ler arasında kaybolduğunuzda bir çırpıda nelerin değiştini görmek istemez misiniz?</description>
+    </item>
+    
+    <item>
+      <title>`--diff-filter` ile Silinmiş Tüm Dosyaları Bulmak</title>
+      <link>http://vigo.github.com/git-tips/ipucu/2013/01/25/diff-filter-ile-silinmis-tum-dosyalari-bulmak/</link>
+      <pubDate>Fri, 25 Jan 2013 11:33:00 +0200</pubDate>
+      <author>Uğur Özyılmazel</author>
+      <guid>http://vigo.github.com/git-tips/ipucu/2013/01/25/diff-filter-ile-silinmis-tum-dosyalari-bulmak</guid>
+      <description>İlgili repositorydeki sildiğiniz tüm dosyaları listemek.</description>
+    </item>
+    
+    <item>
+      <title>İlgili Revizyonda Hangi Dosyalar Değişti?</title>
+      <link>http://vigo.github.com/git-tips/ipucu/2013/01/20/ilgili-revizyonda-hangi-dosyalar-degisti/</link>
+      <pubDate>Sun, 20 Jan 2013 18:12:00 +0200</pubDate>
+      <author>Uğur Özyılmazel</author>
+      <guid>http://vigo.github.com/git-tips/ipucu/2013/01/20/ilgili-revizyonda-hangi-dosyalar-degisti</guid>
+      <description>Belirttiğiniz revizyona göre değişen dosyaların adlarını görmek</description>
+    </item>
+    
+    <item>
+      <title>Commit'leri Sayalım</title>
+      <link>http://vigo.github.com/git-tips/ipucu/2013/01/16/commitleri-sayalim/</link>
+      <pubDate>Wed, 16 Jan 2013 11:31:00 +0200</pubDate>
+      <author>Uğur Özyılmazel</author>
+      <guid>http://vigo.github.com/git-tips/ipucu/2013/01/16/commitleri-sayalim</guid>
+      <description>Kim? kaç tane commit yaptı?</description>
+    </item>
+    
+    <item>
+      <title>Sayfalama (Paging) Yapmadan Tüm Log'u Almak</title>
+      <link>http://vigo.github.com/git-tips/ipucu/2013/01/16/sayfalama-yapmadan-tum-logu-almak/</link>
+      <pubDate>Wed, 16 Jan 2013 11:25:00 +0200</pubDate>
+      <author>Uğur Özyılmazel</author>
+      <guid>http://vigo.github.com/git-tips/ipucu/2013/01/16/sayfalama-yapmadan-tum-logu-almak</guid>
+      <description>Sayfalama ya da paging yapmadan tüm log’u görüntülemek</description>
+    </item>
+    
+    <item>
+      <title>Belli Tarihler Arasındaki Log'a Bakmak / Filtrelemek</title>
+      <link>http://vigo.github.com/git-tips/ipucu/2013/01/16/belli-tarihler-arasindaki-loga-bakmak-slash-filtrelemek/</link>
+      <pubDate>Wed, 16 Jan 2013 11:18:00 +0200</pubDate>
+      <author>Uğur Özyılmazel</author>
+      <guid>http://vigo.github.com/git-tips/ipucu/2013/01/16/belli-tarihler-arasindaki-loga-bakmak-slash-filtrelemek</guid>
+      <description>Git’de belli tarih aralığındaki log’a bakmak</description>
+    </item>
+    
+    <item>
+      <title>Branch / Merge ağaç yapısını `git-log` da görmek</title>
+      <link>http://vigo.github.com/git-tips/ipucu/2013/01/14/branch-merge-agac-yapisini-git-log-da-gormek/</link>
+      <pubDate>Mon, 14 Jan 2013 01:17:00 +0200</pubDate>
+      <author>Uğur Özyılmazel</author>
+      <guid>http://vigo.github.com/git-tips/ipucu/2013/01/14/branch-merge-agac-yapisini-git-log-da-gormek</guid>
+      <description>Git’de branch-merge ağaç yapısını görmek</description>
+    </item>
+    
+    <item>
+      <title>`git-log` ve `less` ile İlgili Sorun</title>
+      <link>http://vigo.github.com/git-tips/ipucu/2013/01/14/git-log-ve-less-ile-ilgili-sorun/</link>
+      <pubDate>Mon, 14 Jan 2013 01:08:00 +0200</pubDate>
+      <author>Uğur Özyılmazel</author>
+      <guid>http://vigo.github.com/git-tips/ipucu/2013/01/14/git-log-ve-less-ile-ilgili-sorun</guid>
+      <description>Git ve Unix komutu less arasında bazen sorun olabiliyor!</description>
+    </item>
+    
+    <item>
+      <title>`git-log` Çıktısını Formatlamak</title>
+      <link>http://vigo.github.com/git-tips/ipucu/2013/01/14/git-log-ciktisini-formatlamak/</link>
+      <pubDate>Mon, 14 Jan 2013 00:51:00 +0200</pubDate>
+      <author>Uğur Özyılmazel</author>
+      <guid>http://vigo.github.com/git-tips/ipucu/2013/01/14/git-log-ciktisini-formatlamak</guid>
+      <description>Git’de renkli log almak</description>
+    </item>
+    
+    <item>
+      <title>“Author” ile “Committer” arasındaki fark?</title>
+      <link>http://vigo.github.com/git-tips/ipucu/2013/01/14/author-ile-committer-arasindaki-fark/</link>
+      <pubDate>Mon, 14 Jan 2013 00:31:00 +0200</pubDate>
+      <author>Uğur Özyılmazel</author>
+      <guid>http://vigo.github.com/git-tips/ipucu/2013/01/14/author-ile-committer-arasindaki-fark</guid>
+      <description>“Author” ile “Committer” arasındaki fark?</description>
+    </item>
+    
+    <item>
+      <title>`git-config` ve Renklendirme</title>
+      <link>http://vigo.github.com/git-tips/ipucu/2013/01/13/git-config-ve-renklendirme/</link>
+      <pubDate>Sun, 13 Jan 2013 16:23:00 +0200</pubDate>
+      <author>Uğur Özyılmazel</author>
+      <guid>http://vigo.github.com/git-tips/ipucu/2013/01/13/git-config-ve-renklendirme</guid>
+      <description>Git ve renk ayarları</description>
+    </item>
+    
+    <item>
+      <title>Kısa ve Öz `git-log`</title>
+      <link>http://vigo.github.com/git-tips/ipucu/2013/01/13/kisa-ve-oz-git-log/</link>
+      <pubDate>Sun, 13 Jan 2013 01:41:00 +0200</pubDate>
+      <author>Uğur Özyılmazel</author>
+      <guid>http://vigo.github.com/git-tips/ipucu/2013/01/13/kisa-ve-oz-git-log</guid>
+      <description>Git’de en kısa şekilde log’a bakmak</description>
+    </item>
+    
+
+  </channel> 
+</rss>

@@ -1,0 +1,885 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Git Püf Noktaları]]></title>
+  <link href="http://vigo.github.com/git-tips/atom.xml" rel="self"/>
+  <link href="http://vigo.github.com/git-tips/"/>
+  <updated>2014-11-16T13:06:04+02:00</updated>
+  <id>http://vigo.github.com/git-tips/</id>
+  <author>
+    <name><![CDATA[Uğur Özyılmazel]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Track edilen branch]]></title>
+    <link href="http://vigo.github.com/git-tips/ipucu/2014/11/16/track-edilen-branch/"/>
+    <updated>2014-11-16T12:55:00+02:00</updated>
+    <id>http://vigo.github.com/git-tips/ipucu/2014/11/16/track-edilen-branch</id>
+    <content type="html"><![CDATA[<pre><code>git branch -vv
+</code></pre>
+
+<!-- more -->
+
+
+<p><code>push</code> ettiğiniz yeri <code>--set-upstream-to=</code> ile takip edersiniz, ya da ilk
+push’u yaparken <code>git push -u origin master</code> gibi <code>-u</code> kullanarak track edilecek
+branch’i belirlersiniz.</p>
+
+<p>Takip ettiğiniz branch’i unuttuğunuzda yardıma <code>-vv</code> koşar :) <code>git branch -vv</code>
+size nereyi takip ettiğiniz söyler!</p>
+
+<pre><code>* master b85437d [origin/master] README.md
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[`git-whatchanged` İle Nelerin Değiştiğini Bulmak]]></title>
+    <link href="http://vigo.github.com/git-tips/ipucu/2013/02/28/git-whatchanged-ile-nelerin-degistigini-bulmak/"/>
+    <updated>2013-02-28T22:41:00+02:00</updated>
+    <id>http://vigo.github.com/git-tips/ipucu/2013/02/28/git-whatchanged-ile-nelerin-degistigini-bulmak</id>
+    <content type="html"><![CDATA[<pre><code>git whatchanged --oneline
+</code></pre>
+
+<!-- more -->
+
+
+<p><a href="https://github.com/vigo/dotfiles-bash" title="Dotfiles">Örnek</a> projede bu komutu çalıştırdığınızda;</p>
+
+<pre><code>4fae319 Due to nano config issues, i uninstalled nano from brew:
+:100644 100644 9e98075... d293000... M  rc/nanorc
+:100644 100644 119a5a3... aca0127... M  shell/alias
+8c9e2ba nanorc fix
+:100644 100644 0119faf... 9e98075... M  rc/nanorc
+</code></pre>
+
+<p>çıktısı alırsınız.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git whatchanged --oneline -n 5  <span class="c"># son 5 commit</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[`git-ls-remote` İle Uzaktaki TAG’leri listelemek]]></title>
+    <link href="http://vigo.github.com/git-tips/ipucu/2013/02/28/git-ls-remote-ile-uzaktaki-tagleri-listelemek/"/>
+    <updated>2013-02-28T00:25:00+02:00</updated>
+    <id>http://vigo.github.com/git-tips/ipucu/2013/02/28/git-ls-remote-ile-uzaktaki-tagleri-listelemek</id>
+    <content type="html"><![CDATA[<pre><code>git ls-remote --tags
+</code></pre>
+
+<!-- more -->
+
+
+<p>Özellikle <a href="http://github.com" title="Github">Github</a> kullananlar için çok kullanışlı bir komut. <a href="https://github.com/vigo/dotfiles-bash" title="Dotfiles">Örnek</a>
+projede;</p>
+
+<pre><code>git list-remote-tags
+
+From git@github.com:vigo/dotfiles-bash.git
+8a63ef3dde0ad0571220be83c5c13e2e032127ae    refs/tags/v0.6.5
+6b83f7c853efe88a5067a8848c1cabab1496ecd3    refs/tags/v0.6.5^{}
+223690e53d0c241c0123829470cb5ae216d33c5e    refs/tags/v0.6.6
+df345467e96452e0f28dc16c21ecea9c376017bf    refs/tags/v0.6.6^{}
+4fae319de58d09923dbbfdce5bffff6941831ea1    refs/tags/v0.6.7
+</code></pre>
+
+<p>şeklinde bir çıktı görüntülenir. <code>alias</code> yapabilirsiniz:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git config --global alias.list-remote-tags <span class="s2">&quot;ls-remote --tags&quot;</span>
+</span><span class='line'>git list-remote-tags <span class="c"># şeklinde kullanım</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[`git-clone` Kullanarak Reponuzu Yedekleyin]]></title>
+    <link href="http://vigo.github.com/git-tips/ipucu/2013/02/20/git-clone-kullanarak-reponuzu-yedekleyin/"/>
+    <updated>2013-02-20T21:59:00+02:00</updated>
+    <id>http://vigo.github.com/git-tips/ipucu/2013/02/20/git-clone-kullanarak-reponuzu-yedekleyin</id>
+    <content type="html"><![CDATA[<pre><code>git clone /yedeklemek/istediğiniz/repo /yedekleyeceğiniz/dizin
+</code></pre>
+
+<!-- more -->
+
+
+<p><code>git clone</code> sadece uzaktaki repo’dan transfer için kullanılan bir komut değil.
+Aynı zamanda yerel (<em>local</em>) işlemlerde de kullanılıyor. Örneğin uzaktaki
+repo’dan yerele <code>clone</code> yaptınız:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">cd</span> <span class="nv">$HOME</span>
+</span><span class='line'>git clone git://github.com/vigo/git-tips.git <span class="nb">test</span>-repo
+</span><span class='line'>ls -al      <span class="c"># test-repo dizinini görmeniz gerekiyor... şimdi yedekliyelim...</span>
+</span><span class='line'>git clone <span class="nv">$HOME</span>/test-repo /tmp/yedek-test-repo
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a href="http://github.com" title="Github">Github</a>’dan repo’yu <code>clone</code> yaptık yerelimize. Sonra yerelimizdeki
+repo dizininden başka bir yere kopya çıkarttık.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[İstediğiniz Revizyondan `branch` Oluşturmak]]></title>
+    <link href="http://vigo.github.com/git-tips/ipucu/2013/02/18/istediginiz-revizyondan-branch-olusturmak/"/>
+    <updated>2013-02-18T23:11:00+02:00</updated>
+    <id>http://vigo.github.com/git-tips/ipucu/2013/02/18/istediginiz-revizyondan-branch-olusturmak</id>
+    <content type="html"><![CDATA[<pre><code>git branch BRANCH_ADI REVIZYON
+git checkout -b BRANCH_ADI REVIZYON
+</code></pre>
+
+<!-- more -->
+
+
+<p>İlk örnekte, açtığınız <code>branch</code>e <code>git checkout BRANCH_ADI</code> ile geçiş
+yapabilirsiniz. İkinci örnek; <code>branch</code>i oluşturur ve hemen oluşan yeni
+branch’e <code>checkout</code> yapar.</p>
+
+<p><a href="https://github.com/vigo/dotfiles-bash" title="Dotfiles">Örnek</a> projede şu şekilde yapabilirdik;</p>
+
+<pre><code>git checkout -b testing_branch 8bab7c4
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[`git stash` Anlık Müdahale ya da Zulalama]]></title>
+    <link href="http://vigo.github.com/git-tips/ipucu/2013/02/18/git-stash-anlik-mudahale-ya-da-zulalama/"/>
+    <updated>2013-02-18T22:30:00+02:00</updated>
+    <id>http://vigo.github.com/git-tips/ipucu/2013/02/18/git-stash-anlik-mudahale-ya-da-zulalama</id>
+    <content type="html"><![CDATA[<p>Tam işin ortasındasınız ve aniden acil bir durumla karşılaştınız. Bir çok
+dosyayı da değiştirdiniz ama <code>commit</code> etmek istemiyorsunuz. Ne yapacaksınız?</p>
+
+<!-- more -->
+
+
+<p>İşte <code>git stash</code> burada devreye giriyor. Yapmanız gereken:</p>
+
+<pre><code>git stash save
+</code></pre>
+
+<p>ve</p>
+
+<pre><code>Saved working directory and index state WIP on master: 423eaf4 init
+HEAD is now at 423eaf4 init
+</code></pre>
+
+<p>gibi bir mesaj göreceksiniz. <code>ls -al</code> ile directory’e baktığınızda, eklediğiniz
+ama <code>commit</code> etmediğiniz dosyaları göremeyeceksiniz. Sakın paniklemeyin.
+Bu dosyalar artık <strong>ZULA</strong>’da yani <code>stash</code>de&#8230;</p>
+
+<p>Çalışmaya devam edin, işlerinizi tamamlayın ve kaldığınız yere gere dönmek
+için:</p>
+
+<pre><code>git stash pop
+</code></pre>
+
+<p>yapmanız yeterli.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Modifiye Edilmiş Tüm Dosyaları Eklemek]]></title>
+    <link href="http://vigo.github.com/git-tips/ipucu/2013/02/03/modifiye-edilmis-tum-dosyalari-eklemek/"/>
+    <updated>2013-02-03T19:10:00+02:00</updated>
+    <id>http://vigo.github.com/git-tips/ipucu/2013/02/03/modifiye-edilmis-tum-dosyalari-eklemek</id>
+    <content type="html"><![CDATA[<pre><code>git status -sb | grep -e "^ M " | awk "{ print $2 }" | xargs git add
+</code></pre>
+
+<!-- more -->
+
+
+<p>Hemen <code>alias</code> oluşturalım:</p>
+
+<pre><code>git config --global alias.add-modified '!git status -sb | grep -e "^ M " | awk "{ print $2 }" | xargs git add'
+</code></pre>
+
+<p>Bu işlemin ardından;</p>
+
+<pre><code>git add-modified
+</code></pre>
+
+<p>yapabiliriz.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Kontrol Dışındaki Tüm Dosyaları Eklemek]]></title>
+    <link href="http://vigo.github.com/git-tips/ipucu/2013/02/03/kontrol-disindaki-tum-dosyalari-eklemek/"/>
+    <updated>2013-02-03T18:58:00+02:00</updated>
+    <id>http://vigo.github.com/git-tips/ipucu/2013/02/03/kontrol-disindaki-tum-dosyalari-eklemek</id>
+    <content type="html"><![CDATA[<pre><code>git status -sb | grep -e '^??' | awk '{ print $2 }' | xargs git add
+</code></pre>
+
+<!-- more -->
+
+
+<p>Her seferinde bu uzun komutu yazmak yerine, hemen bir <code>alias</code> oluşturuyoruz.
+<code>~/.gitconfig</code> dosyasını açarak ya da direk komut satırından;</p>
+
+<pre><code>git config --global alias.add-untracked '!git status -sb | grep -e "^??" | awk "{ print $2 }" | xargs git add'
+</code></pre>
+
+<p>yapabilirsiniz. Bu işlemin ardından;</p>
+
+<pre><code>git add-untracked
+</code></pre>
+
+<p>yapmanız mümkün!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[`push.default` ve Ayarı]]></title>
+    <link href="http://vigo.github.com/git-tips/ipucu/2013/02/03/push-default-ve-ayari/"/>
+    <updated>2013-02-03T17:30:00+02:00</updated>
+    <id>http://vigo.github.com/git-tips/ipucu/2013/02/03/push-default-ve-ayari</id>
+    <content type="html"><![CDATA[<p>Git versiyon <a href="https://github.com/git/git/blob/master/Documentation/RelNotes/1.8.0.txt">1.8.0</a>’la hayatımıza giren ve ilk anda kafamızı karıştıran
+<code>git push</code> özelliği aslında çok basit ve kullanışlı.</p>
+
+<!-- more -->
+
+
+<p>Önceki versiyonlarda, bulunduğunuz <strong>branch</strong> neresi ise uzak repo’daki aynı
+yere <strong>push</strong> yapılırdı. Yani siz o an için <code>test</code> branch’deyseniz ve <code>test</code>i
+uzaktaki repo’ya göndermek (<em>push</em>) için;</p>
+
+<pre><code>git push origin master # ya da
+git push
+</code></pre>
+
+<p>demeniz yeterli oluyordu. Yeni versiyonla birlikte aynı şekilde <code>git push</code>
+dediğiniz anda, karşımıza uyarı mesajı gelir. Bizden <code>push.default</code>
+ayarımızı yapmanızı ister. İster proje bazlı ister genel olarak bu ayarı
+yapabiliriz. (<em>&#8211;global</em>)</p>
+
+<h2>current</h2>
+
+<pre><code>git config --global push.default current
+</code></pre>
+
+<p>Aynı eski sistem gibi çalışır. Bulunduğunuz branch adı neyse uzağa aynı
+adla push eder.</p>
+
+<h2>matching</h2>
+
+<pre><code>git config --global push.default matching
+</code></pre>
+
+<p>Tüm lokal branch’lerinizi aynen uzağa push eder. Bu biraz <strong>tehlikeli</strong> bir
+kullanım şeklidir. İstemeden diğer branch’leri de push etmiş olursunuz.</p>
+
+<h2>upstream (tracking)</h2>
+
+<pre><code>git config --global push.default upstream
+</code></pre>
+
+<p>Eski adı <strong>tracking</strong> yeni adı <strong>upstream</strong>. Lokal branch’i uzaktaki
+bağlı olduğu tracking branch’e push etmemizi sağlar. Projeyi <code>clone</code> ettiniz
+ve <code>git branch -a</code> dediğinizde pek çok <strong>branch adı</strong> gördünüz.</p>
+
+<p>O branch’lerden birine <code>checkout</code> ettiğiniz anda lokal ile uzak arasında
+<strong>Tracking</strong> bağı kuruluyor. <code>upstream</code> bu şekilde track ettiğiniz branch’e
+push etmenizi sağlar.</p>
+
+<p>Keza, ilk kez push ederken <code>git push -u origin master</code> dediğinizde de
+adı <strong>origin</strong> olak remote’daki <code>master</code> branch’ine <code>upstream</code> eklemiş
+olursunuz.</p>
+
+<h2>simple</h2>
+
+<pre><code>git config --global push.default simple
+</code></pre>
+
+<p>Aynı <code>upstream</code> gibidir. Tek farkı eğer uzaktaki ile lokal&#8217;deki branch
+adlarında farklılık olursa push etmeye izin vermez. Git <a href="http://git-scm.com/docs/git-config">dökümantasyonunda</a>
+bu özellik için;</p>
+
+<p>Liquid error: undefined method `map&#8217; for &#8220;\nYeni git kullananlar için en güvenli yöntemdir.\n&#8221;:String</p>
+
+<p>Git versiyon 2.0’da default olarak bu <strong>simple</strong> gelecekmiş.</p>
+
+<h2>nothing</h2>
+
+<pre><code>git config --global push.default nothing
+</code></pre>
+
+<p>Hiçbir şey olmaz!</p>
+
+<p>Önerim <code>git config --global push.default upstream</code> kullanmanızdır. Zaten
+uzaktaki branch’leri mutlaka track ediyor olmanız gerektiğini düşünüyorum.
+Bu sayede; örneğin <code>develop</code> branch’indeyken <code>git push origin develop</code> yerine
+<code>git push</code> yazmanız yeterli olacaktır.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[`--diff-filter` ile Silinmiş Tüm Dosyaları Bulmak]]></title>
+    <link href="http://vigo.github.com/git-tips/ipucu/2013/01/25/diff-filter-ile-silinmis-tum-dosyalari-bulmak/"/>
+    <updated>2013-01-25T11:33:00+02:00</updated>
+    <id>http://vigo.github.com/git-tips/ipucu/2013/01/25/diff-filter-ile-silinmis-tum-dosyalari-bulmak</id>
+    <content type="html"><![CDATA[<p>Sildiğiniz tüm dosyaları listelemek ister misiniz?</p>
+
+<pre><code>git log --diff-filter=D --summary
+</code></pre>
+
+<!-- more -->
+
+
+<pre><code>commit 28b7e216114a6749917842bf832a629575ee5209
+Author: Uğur Özyılmazel &lt;ugur@XXXXXXX.com&gt;
+Date:   Fri Jan 25 11:42:10 2013 +0200
+
+    deleted
+
+ delete mode 100644 file1.txt
+ delete mode 100644 file2.txt
+ delete mode 100644 file3.txt
+
+commit 3dcd237bcfa862d6850ee095737f9316e74f9c18
+Author: Uğur Özyılmazel &lt;ugur@XXXXXXX.com&gt;
+Date:   Tue Jan 22 17:20:23 2013 +0200
+
+    file ok
+
+ delete mode 100644 file.txt
+</code></pre>
+
+<p>Karşınıza sildiğiniz dosyların listesi / path’i ve ilgili revizyon bilgisi
+gelir.</p>
+
+<pre><code>git log --diff-filter=D --oneline
+
+28b7e21 deleted
+3dcd237 file ok
+</code></pre>
+
+<p>Sadece kısa SHA ve commit mesajını gösterir.</p>
+
+<pre><code>git log --diff-filter=D --oneline --summary
+
+28b7e21 deleted
+ delete mode 100644 file1.txt
+ delete mode 100644 file2.txt
+ delete mode 100644 file3.txt
+3dcd237 file ok
+ delete mode 100644 file.txt
+</code></pre>
+
+<p>Hem kısa SHA ile commit mesajını, hemde silinen dosyaları gösterir.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[`git-tag` İle Versiyon Belirlemek ya da Tag’lemek]]></title>
+    <link href="http://vigo.github.com/git-tips/ipucu/2013/01/22/git-tag-ile-versiyon-belirlemek-ya-da-taglemek/"/>
+    <updated>2013-01-22T22:50:00+02:00</updated>
+    <id>http://vigo.github.com/git-tips/ipucu/2013/01/22/git-tag-ile-versiyon-belirlemek-ya-da-taglemek</id>
+    <content type="html"><![CDATA[<p>Revizyonu etiketlemek çok işe yarıyabilir. Belirleyeceğiniz etikete ya da
+versiyona kolay geri dönebilirsiniz.</p>
+
+<!-- more -->
+
+
+<p>Etiketlemek ya da <strong>tag</strong>’lemek değişik yollarla mümkün.</p>
+
+<pre><code>git tag ETİKET                # o anki revizyona etiketi’i oluştur
+
+# ya da
+git tag -a ETİKET -m "Mesaj"
+</code></pre>
+
+<p>ya da</p>
+
+<pre><code>git tag -m "Mesaj" ETİKET SHA1
+</code></pre>
+
+<p>İkinci örnek bence daha pratik. İstediğiniz bir revizyona etiket
+atayabilirsiniz. Repodaki etiketleri;</p>
+
+<pre><code>git tag
+</code></pre>
+
+<p>listeleyebilirsiniz. Her zaman olduğu gibi örnek <a href="https://github.com/vigo/dotfiles-bash" title="Dotfiles">projeye</a> bakalım:</p>
+
+<pre><code>git tag
+
+v0.5.1
+v0.6
+v0.6.1
+v0.6.2
+
+git rev-parse v0.6.2
+# 9030576ac90eb8c1a9ba77432792deafb2272852
+
+git cat-file -p 903057 # SHA1’in ilk 6 harfi de kullanılabilir
+
+object 4fceaf40f4452cb0168f7af37ef14de657cdb994
+type commit
+tag v6.0.2
+tagger Uğur Özyılmazel &lt;ugur@-----.com&gt; Tue Jan 22 11:33:23 2013 +0200
+
+battery_prompt.rb now suppors osx internal notification. requires "terminal-notifier" gem
+</code></pre>
+
+<p><code>tag</code> ile ilgili pek çok şeyi görebiliyoruz.</p>
+
+<p>Aynı <strong>branch</strong> gibi çalışan tag’lere de <code>checkout</code> etmek mümkün. Zaten bu
+versiyonlama durumu da burada işe yarıyor. Örnek projede istediğimiz bir
+tag’a geçiş yapalım:</p>
+
+<pre><code>git checkout v0.6.2
+</code></pre>
+
+<p>karşımıza şu mesaj çıkar:</p>
+
+<pre><code>Note: checking out 'v0.6.2'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b new_branch_name
+
+HEAD is now at 4fceaf4... Merge branch 'release/v6.0.2'
+</code></pre>
+
+<p>Bu durumda eğer <code>.git/HEAD</code> dosyasına bakarsanız, <strong>ref</strong> bilgisi yerine
+revizyon bilgisini görürsünüz yani <code>4fceaf40f4452cb0168f7af37ef14de657cdb994</code></p>
+
+<p>Eğer isterseniz, bulunduğunuz noktadan başka bir <strong>branch</strong>
+oluşturabilirsiniz:</p>
+
+<pre><code>git checkout -b BRANCH_İSMİ
+# BRANCH_İSMİ adında branch oluştur ve bu branch’e geç
+</code></pre>
+
+<p><code>tag</code> içindeyken aynı <strong>branch</strong>’deymiş gibi değişiklik yapıp <code>commit</code>
+edebilirsiniz. İşiniz bitince <code>master</code> branch’e ya da başka bir branch’e
+geçiş yaptığınızda karşınıza uyarı mesajı çıkar.</p>
+
+<pre><code>Warning: you are leaving 1 commit behind, not connected to
+any of your branches:
+
+  ff77580 file-v1.txt eklendi
+
+If you want to keep them by creating a new branch, this may be a good time
+to do so with:
+
+ git branch new_branch_name ff77580d9aa76d24aefe0ec6fc887df4cfd23064
+
+Switched to branch 'master'
+</code></pre>
+
+<p><strong>1 commit</strong> geride kaldın! <code>ff77580</code> numaralı revizyondaki değişiklikleri
+almak istiyorsan o revizyondan bir branch üretmen gerek! Bunun için gerekli
+komutu da bize sağlıyor <code>git</code>:</p>
+
+<pre><code>git branch new_branch_name ff77580d9aa76d24aefe0ec6fc887df4cfd23064
+</code></pre>
+
+<p><code>new_branch_name</code> kısmına oluşturacağınız yeni <strong>branch</strong>’in adını
+yazıyorsunuz. <code>tag</code> içindeki değişikleri ancak bu tag’dan oluşturacağınız
+farklı bir branch’le alabiliyorsunuz. İsterseniz bu oluşan yeni branch’i
+ilgili diğer branch’lere <code>merge</code> edebilir, o değişiklikleri gerekiyorsa
+tüm branch’lerinize aktara bilirsiniz.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[`git-rm` Dosyayı versiyon kontrol altından çıkarmak]]></title>
+    <link href="http://vigo.github.com/git-tips/ipucu/2013/01/22/git-rm-dosyayi-versiyon-kontrol-altindan-cikarmak/"/>
+    <updated>2013-01-22T17:30:00+02:00</updated>
+    <id>http://vigo.github.com/git-tips/ipucu/2013/01/22/git-rm-dosyayi-versiyon-kontrol-altindan-cikarmak</id>
+    <content type="html"><![CDATA[<p>Versiyon kontrol altındaki bir dosyayı daha sonradan <code>.gitignore</code>a eklediniz.</p>
+
+<!-- more -->
+
+
+<p><code>.gitignore</code>’un değiştiğini gördünüz ve <code>git add</code> ile eklediniz. Daha sonra
+<strong>ignore</strong> ettiğiniz dosyada değişiklik yaptınız ve halen kontrol altında
+olduğunu gördünüz.</p>
+
+<pre><code>echo "file.txt" &gt; .gitignore # file.txt’yi ignore ettiniz.
+
+# On branch master
+# Untracked files:
+#   (use "git add &lt;file&gt;..." to include in what will be committed)
+#
+#   .gitignore
+nothing added to commit but untracked files present (use "git add" to track)
+
+git add .gitignore
+git commit -m "file.txt ignore'a alındı"
+git status
+
+# On branch master
+nothing to commit, working directory clean
+
+echo "file" &gt;&gt; file.txt
+# file.txt’ye yeni bir satır ekledik. ignore edildiğine göre bir sorun
+# olmamalı... kontrol edelim
+
+git status
+
+# On branch master
+# Changes not staged for commit:
+#   (use "git add &lt;file&gt;..." to update what will be committed)
+#   (use "git checkout -- &lt;file&gt;..." to discard changes in working directory)
+#
+#   modified:   file.txt
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+</code></pre>
+
+<p><code>file.txt</code> <strong>modified</strong> görünüyor??? Halbuki biz bu dosyayı <code>.gitignore</code>’a
+eklemiştik???</p>
+
+<p>Bu durumu düzeltmek için;</p>
+
+<pre><code>git rm --cached file.txt
+</code></pre>
+
+<p>yapmamız gerekiyor. Kormayın dosya silinmedi (8</p>
+
+<div class="flash-video">
+    <div><iframe src="http://www.screenr.com/embed/qMO7" width="650" height="396" frameborder="0"></iframe></div>
+</div>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[İlgili Revizyonda Hangi Dosyalar Değişti?]]></title>
+    <link href="http://vigo.github.com/git-tips/ipucu/2013/01/20/ilgili-revizyonda-hangi-dosyalar-degisti/"/>
+    <updated>2013-01-20T18:12:00+02:00</updated>
+    <id>http://vigo.github.com/git-tips/ipucu/2013/01/20/ilgili-revizyonda-hangi-dosyalar-degisti</id>
+    <content type="html"><![CDATA[<p><a href="https://github.com/vigo/dotfiles-bash" title="Dotfiles">Örnek projede</a>; önce <code>git log --oneline</code> yapalım; <code>d9808b6</code>
+revizyonunda değişen dosyları görmek için;</p>
+
+<pre><code>git show d9808b6 --name-status
+</code></pre>
+
+<!-- more -->
+
+
+<pre><code>commit d9808b6bbcd54e2631072fc6a0a53d0cc11f4329
+Author: Uğur Özyılmazel &lt;ugurXXXXXXXXXcom&gt;
+Date:   Mon Jan 14 19:27:55 2013 +0200
+
+    NODE_PATH removed from env file
+
+M       shell/env
+</code></pre>
+
+<p>Değişen dosya; <strong>M</strong>odified işareti olan <code>shell/env</code>. Eğer <code>--name-only</code>
+dersek bize dosyanın status’u gelmez. Yani <strong>M</strong> görünmez.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Commit'leri Sayalım]]></title>
+    <link href="http://vigo.github.com/git-tips/ipucu/2013/01/16/commitleri-sayalim/"/>
+    <updated>2013-01-16T11:31:00+02:00</updated>
+    <id>http://vigo.github.com/git-tips/ipucu/2013/01/16/commitleri-sayalim</id>
+    <content type="html"><![CDATA[<p>Acaba projenizde <strong>kim</strong> kaç <strong>commit</strong> yaptı?</p>
+
+<pre><code>git shortlog -s -n
+</code></pre>
+
+<!-- more -->
+
+
+<p>Gelen sayfada commit adedi ve kimin yaptığını görebilirsiniz.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>75  Uğur Özyılmazel
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Eğer bu işi, kişi ayırmadan yapmak istiyorsak:</p>
+
+<pre><code>git --no-pager log --oneline | wc -l
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Sayfalama (Paging) Yapmadan Tüm Log'u Almak]]></title>
+    <link href="http://vigo.github.com/git-tips/ipucu/2013/01/16/sayfalama-yapmadan-tum-logu-almak/"/>
+    <updated>2013-01-16T11:25:00+02:00</updated>
+    <id>http://vigo.github.com/git-tips/ipucu/2013/01/16/sayfalama-yapmadan-tum-logu-almak</id>
+    <content type="html"><![CDATA[<pre><code>git --no-pager log --oneline
+</code></pre>
+
+<!-- more -->
+
+
+<p>Eğer log alırken <code>--no-pager</code> kullanırsanız tüm log’u biranda almış
+olursunuz.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Belli Tarihler Arasındaki Log'a Bakmak / Filtrelemek]]></title>
+    <link href="http://vigo.github.com/git-tips/ipucu/2013/01/16/belli-tarihler-arasindaki-loga-bakmak-slash-filtrelemek/"/>
+    <updated>2013-01-16T11:18:00+02:00</updated>
+    <id>http://vigo.github.com/git-tips/ipucu/2013/01/16/belli-tarihler-arasindaki-loga-bakmak-slash-filtrelemek</id>
+    <content type="html"><![CDATA[<p><strong>Eylül 2012</strong> ile <strong>Ekim 2012</strong> arasındaki commit log’u görmek için:</p>
+
+<pre><code>git log --since="2012-09-01" --until="2012-10-01" --reverse --format="%ad | %h : %s" --date=short
+</code></pre>
+
+<!-- more -->
+
+
+<p><code>-—since</code><br/>
+Tarihinden itibaren anlamında. Tarih format <strong>YIL-AY-GÜN</strong> şeklinde. Yani
+<strong>1 Eylül 2012</strong> tarihinden itibaren&#8230;</p>
+
+<p><code>--until</code><br/>
+Tarihine kadar. Yani <strong>1 Ekim 2012</strong> tarihine kadar.</p>
+
+<p><code>--reverse</code><br/>
+Git, logu gösterirken sondan başa yani en son commit’den başa doğru gösterir.
+<code>--reverse</code> ile bunu terse çeviriyoruz yani ilkten sona doğru.</p>
+
+<p><code>--format</code><br/>
+Çıktının formatını belirliyoruz. <a href="http://vigo.github.com/git-tips/ipucu/2013/01/14/git-log-ciktisini-formatlamak/">Daha önceki</a> yazıda format ile
+ilgili detaylı bilgiler bulunuyor.</p>
+
+<pre><code>%ad : --date'de verilen formata uygun olarak "Author Date"
+%h  : Kısa SHA1
+%s  : Commit mesajı
+</code></pre>
+
+<p><code>--date</code><br/>
+Tarihin nasıl görüneceğini buradan ayarlıyoruz. Seçeneklerimiz:</p>
+
+<pre><code>relative : "2 hours ago"
+local    : "Tue Sep 4 23:57:50 2012" (Tarih ayarınıza göre)
+default  : "Tue Sep 4 23:57:50 2012 +0300"
+iso      : "2012-09-04 23:57:50 +0300"
+rfc      : "Tue, 4 Sep 2012 23:57:50 +0300"
+short    : "2012-09-04"
+raw      : "1346792270 +0300"
+</code></pre>
+
+<p><a href="https://github.com/vigo/dotfiles-bash" title="Dotfiles">Örnek Proje</a> çıktısı:</p>
+
+<pre><code>2012-09-04 | 495740f : screen status display for prompt shell
+2012-09-05 | 205e566 : screen_status script small fix
+2012-09-05 | ab5a9cb : color removed from screen status
+2012-09-07 | 25e69c4 : git_add_untracked alias for adding untracked files -git-
+2012-09-12 | 5bb659f : screen_status.rb fix
+2012-09-12 | 09870a6 : screen_status.rb fix for private screen tab completion
+2012-09-12 | f30410b : when screen is active, promps sty name
+2012-09-28 | 39010e3 : up
+2012-09-29 | 2ae0924 : screenrc config
+2012-09-30 | 9b4ba71 : git_add_modified_only alias fix
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Branch / Merge ağaç yapısını `git-log` da görmek]]></title>
+    <link href="http://vigo.github.com/git-tips/ipucu/2013/01/14/branch-merge-agac-yapisini-git-log-da-gormek/"/>
+    <updated>2013-01-14T01:17:00+02:00</updated>
+    <id>http://vigo.github.com/git-tips/ipucu/2013/01/14/branch-merge-agac-yapisini-git-log-da-gormek</id>
+    <content type="html"><![CDATA[<p>Yapmanız gereken sadece komut içinde <code>--graph</code> kelimesi kullanmak. Son
+<strong>10 commit</strong>’i belirlediğim formatta <code>--graph</code> ile göster
+(<em>önceki örneklerden</em>):</p>
+
+<!-- more -->
+
+
+<pre><code>git log -10 --pretty=format:'%Cblue%h%Creset %Cgreen%an%Creset %s (%Cred%ar%Creset)' --graph
+</code></pre>
+
+<p><a href="http://25.media.tumblr.com/2d220499f7a1bef11a84b461c4bb610e/tumblr_mgl7ukFYIJ1s3r5wmo1_1280.png"><img class="center" src="http://25.media.tumblr.com/2d220499f7a1bef11a84b461c4bb610e/tumblr_mgl7ukFYIJ1s3r5wmo1_1280.png"></a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[`git-log` ve `less` ile İlgili Sorun]]></title>
+    <link href="http://vigo.github.com/git-tips/ipucu/2013/01/14/git-log-ve-less-ile-ilgili-sorun/"/>
+    <updated>2013-01-14T01:08:00+02:00</updated>
+    <id>http://vigo.github.com/git-tips/ipucu/2013/01/14/git-log-ve-less-ile-ilgili-sorun</id>
+    <content type="html"><![CDATA[<p>Renkli log çıktılarında ilk satırı görmüyor ya da kaybediyorsanız bu
+sistemdeki <code>less</code> komutunun konfigürasyonu ile ilgilidir. Bunu düzeltmek için
+<code>~/.gitconfig</code> dosyasında <code>core.pager</code> bölümüne müdahale etmek gerekir:</p>
+
+<!-- more -->
+
+
+<pre><code>[core]
+    pager = less -FRX
+</code></pre>
+
+<p>ya da direk komut satırından da yapabilirsiniz:</p>
+
+<pre><code>git config --global core.pager "less -FRX"
+</code></pre>
+
+<p>hatta <code>less</code> yerine <code>cat</code> kullanabilirsiniz. Aslında istediğiniz herhangi
+bir <strong>unix</strong> komutunu kullanabilirsiniz.</p>
+
+<pre><code>git config --global core.pager cat
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[`git-log` Çıktısını Formatlamak]]></title>
+    <link href="http://vigo.github.com/git-tips/ipucu/2013/01/14/git-log-ciktisini-formatlamak/"/>
+    <updated>2013-01-14T00:51:00+02:00</updated>
+    <id>http://vigo.github.com/git-tips/ipucu/2013/01/14/git-log-ciktisini-formatlamak</id>
+    <content type="html"><![CDATA[<pre><code>git log --pretty=format:'%Cblue%h%Creset %Cgreen%an%Creset %s (%Cred%ar%Creset)'
+</code></pre>
+
+<!-- more -->
+
+
+<p><a href="http://24.media.tumblr.com/bb0b4749953d850e6b768bad2d840251/tumblr_mgl80whokP1s3r5wmo1_1280.png"><img class="center" src="http://24.media.tumblr.com/bb0b4749953d850e6b768bad2d840251/tumblr_mgl80whokP1s3r5wmo1_1280.png"></a></p>
+
+<p>İlk örnek;</p>
+
+<pre><code>SHA1                     : Kısa versiyon                          [mavi]
+Author Name              : Commit sahibinin Adı, Soyadı           [yeşil]
+Commit Message           : Commit mesajı
+Author Date: Relative    : Commit tarihi, XX gün/ay/yıl önce gibi [kırmızı]
+</code></pre>
+
+<p>şeklinde verir. Yani;</p>
+
+<pre><code>14d0c4a Uğur Özyılmazel fabric / fab autocompletion fix (4 weeks ago)
+9819725 Uğur Özyılmazel Merge branch 'release/ackrc' (4 weeks ago)
+403a16a Uğur Özyılmazel less support for ack (4 weeks ago)
+ad971c1 Uğur Özyılmazel Merge branch 'develop' (8 weeks ago)
+173ddab Uğur Özyılmazel fab fix (8 weeks ago)
+</code></pre>
+
+<p>görürüz.</p>
+
+<pre><code>git log --pretty=format:'%Cblue%h%Creset %Cgreen%an%Creset %s (%Cred%ar | %ad%Creset)'
+</code></pre>
+
+<p>İkinci örnek aynı ilki gibi çıktı verir sadece fazladan <strong>Author Date</strong>‘in
+açık halini de verir. <strong>Author</strong> ile <strong>Committer</strong> arasındaki farkı merak
+ediyorsanız önceki <a href="http://vigo.github.com/git-tips/ipucu/2013/01/14/author-ile-committer-arasindaki-fark/">post</a>‘a bakabilirsiniz.</p>
+
+<pre><code>14d0c4a Uğur Özyılmazel fabric / fab autocompletion fix (4 weeks ago | Tue Dec 18 14:05:50 2012 +0200)
+9819725 Uğur Özyılmazel Merge branch 'release/ackrc' (4 weeks ago | Mon Dec 17 18:25:55 2012 +0200)
+403a16a Uğur Özyılmazel less support for ack (4 weeks ago | Mon Dec 17 18:25:16 2012 +0200)
+ad971c1 Uğur Özyılmazel Merge branch 'develop' (8 weeks ago | Thu Nov 15 14:07:04 2012 +0200)
+173ddab Uğur Özyılmazel fab fix (8 weeks ago | Thu Nov 15 14:06:45 2012 +0200)
+</code></pre>
+
+<h2>Format değişkenleri (Placeholders)</h2>
+
+<pre><code>%H       : 45ec63deba36cee1b7fd3913790293901785a259 | SHA1
+%h       : 45ec63d | SHA1 Kısa
+%T       : 4564afd25a3522dbbc594652ff1977b17d90e221 | (tree hash)
+%t       : 4564afd | (tree hash Kısa)
+%P       : 535bcf41885555a7923965b7c4c92214349f8743 1a14ea28e82924c3e6991337119af5b9c37111e4
+         : Bağlı olduğu hash'ler (parent)
+%p       : 535bcf4 1a14ea2 Bağlı olduğu hash'ler Kısa (parent)
+%an      : Uğur Özyılmazel | Author Adı
+%aN      : Uğur Özyılmazel | Author Adı (.mailmap ayarlarını koruyarak)
+%ae      : ugur@example.com | Author E-Posta adresi
+%aE      : ugur@example.com | Author E-Posta adresi (.mailmap ayarlarını koruyarak)
+%ad      : Fri Jan 11 23:20:03 2013 +0200 | Author'un tarihi, (--date= opsiyonuna sadık kalarak)
+%aD      : Fri, 11 Jan 2013 23:20:03 +0200 | Author'un tarihi, RFC2822 stilinde
+%ar      : 2 days ago | Author'un tarihi, bağlantılı (Relative)
+%at      : 1357939203 | Author'un tarihi, UNIX timestamp
+%ai      : 2013-01-11 23:20:03 +0200 | Author'un tarihi, ISO 8601 formatı
+%cn      : Uğur Özyılmazel | Commit'i yapanın Adı
+%cN      : Uğur Özyılmazel | Commit'i yapanın (.mailmap ayarlarını koruyarak)
+%ce      : ugur@example.com | Commit'i yapanın E-Posta adresi
+%cE      : ugur@example.com | Commit'i yapanın E-Posta adresi (.mailmap ayarlarını koruyarak)
+%cd      : Fri Jan 11 23:20:03 2013 +0200 | Commit'i yapanın Tarihi
+%cD      : Fri, 11 Jan 2013 23:20:03 +0200 | Commit'i yapanın Tarihi, RFC2822 stilinde
+%cr      : 2 days ago | Commit'i yapanın Tarihi, bağlantılı (Relative)
+%ct      : 1357939203 | Commit'i yapanın Tarihi, UNIX timestamp
+%ci      : 2013-01-11 23:20:03 +0200 | Commit'i yapanın Tarihi, ISO 8601 formatı
+%d       : (HEAD, origin/develop, develop) | ref names, like the --decorate option of git-log(1)
+%e       : encoding
+%s       : Merge branch 'hotfix/non-applied' into develop | Commit mesajı'nın ilk satırı yani "subject"
+%f       : Merge-branch-hotfix-non-applied-into-develop | Arındırılmış "subject" mesajı, dosya adı için uygun!
+%b       : Commit mesajının "subject" den sonrası
+%B       : Subject ve Body birlikte
+%N       : Notlar (git notes edit SHA1 ile eklenen)
+
+%Cred    : Kırmızı renk
+%Cgreen  : Yeşil renk
+%Cblue   : Mavi renk
+%Creset  : Rengi sıfırlar
+%C(...)  : color.branch.* dosyasında tanımlanmış renk bilgisi
+
+%m       : Sol, sağ ya da sınır çizgisi işareti
+%n       : Yeni satır (new line)
+%%       : Mesaj içinde % işareti kullanmak için
+%x00     : Byte olarak HEX-CODE yazmak
+
+# Eğer GPG Signing varsa;
+%GG      : işlenmemiş doğrulama mesajı
+%G?      : "G" ya da "B" gelir, G=Good B=Bad yani İyi/Kötü anlamında
+%GS      : Sign edeni gösterir
+
+# git reflog ile kullanılır.
+%gD      : reflog selector, e.g., refs/stash@{1}
+%gd      : shortened reflog selector, e.g., stash@{1}
+%gn      : reflog identity name
+%gN      : reflog identity name (respecting .mailmap, see git-shortlog(1) or git-blame(1))
+%ge      : reflog identity email
+%gE      : reflog identity email (respecting .mailmap, see git-shortlog(1) or git-blame(1))
+%gs      : reflog subject
+
+%w([&lt;w&gt;[,&lt;i1&gt;[,&lt;i2&gt;]]])
+         : Default: İlk satır 76 karakter, 2. ve 3.satırlar 6 karakter girintilidir
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[“Author” ile “Committer” arasındaki fark?]]></title>
+    <link href="http://vigo.github.com/git-tips/ipucu/2013/01/14/author-ile-committer-arasindaki-fark/"/>
+    <updated>2013-01-14T00:31:00+02:00</updated>
+    <id>http://vigo.github.com/git-tips/ipucu/2013/01/14/author-ile-committer-arasindaki-fark</id>
+    <content type="html"><![CDATA[<p>Git’in yazılma amaçlarından biri de <strong>e-posta</strong> ile gelen <strong>patch</strong>‘lerin
+kolayca sisteme entegre edilmesiydi.</p>
+
+<!-- more -->
+
+
+<p>Bu bakımdan patch’i yazıp yollayan kişi <strong>Author</strong>, patch’i monte eden yani
+“patchleyen” kişi de <strong>Committer</strong> oluyor. Log işlemleri ve log çıktısını
+format ederken karşımıza çıkacak bir durum bu.</p>
+
+<p>Author Name, Author Email ve Committer Name, Committer Email.</p>
+
+<p>Genelde web projelerinde pek bu tür patch işleri olmaz. Bu bakımdan da <strong>author</strong>
+ile <strong>committer</strong> aynı kişi gibi olur.</p>
+]]></content>
+  </entry>
+  
+</feed>

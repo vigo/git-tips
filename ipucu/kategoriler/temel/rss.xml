@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git Püf Noktaları</title>
+    <link>http://vigo.github.com/git-tips</link>
+    <description>Git versiyon kontrol programı / sistemi ile ilgili Türkçe ipuçları</description>
+    <language>tr-tr</language>
+    <pubDate>Sun, 16 Nov 2014 13:06:04 +0200</pubDate>
+    <lastBuildDate>Sun, 16 Nov 2014 13:06:04 +0200</lastBuildDate>
+
+    
+    <item>
+      <title>`git-clone` Kullanarak Reponuzu Yedekleyin</title>
+      <link>http://vigo.github.com/git-tips/ipucu/2013/02/20/git-clone-kullanarak-reponuzu-yedekleyin/</link>
+      <pubDate>Wed, 20 Feb 2013 21:59:00 +0200</pubDate>
+      <author>Uğur Özyılmazel</author>
+      <guid>http://vigo.github.com/git-tips/ipucu/2013/02/20/git-clone-kullanarak-reponuzu-yedekleyin</guid>
+      <description>Repository’inizi `git-clone` kullanarak yedekleyebilirsiniz.</description>
+    </item>
+    
+    <item>
+      <title>`git stash` Anlık Müdahale ya da Zulalama</title>
+      <link>http://vigo.github.com/git-tips/ipucu/2013/02/18/git-stash-anlik-mudahale-ya-da-zulalama/</link>
+      <pubDate>Mon, 18 Feb 2013 22:30:00 +0200</pubDate>
+      <author>Uğur Özyılmazel</author>
+      <guid>http://vigo.github.com/git-tips/ipucu/2013/02/18/git-stash-anlik-mudahale-ya-da-zulalama</guid>
+      <description>Tam işin ortasındasınız ve commit yapmak istemiyorsunuz. Değişikleri de kaybetmek istemiyorsunuz. Peki ne yapmak lazım?</description>
+    </item>
+    
+    <item>
+      <title>`git-rm` Dosyayı versiyon kontrol altından çıkarmak</title>
+      <link>http://vigo.github.com/git-tips/ipucu/2013/01/22/git-rm-dosyayi-versiyon-kontrol-altindan-cikarmak/</link>
+      <pubDate>Tue, 22 Jan 2013 17:30:00 +0200</pubDate>
+      <author>Uğur Özyılmazel</author>
+      <guid>http://vigo.github.com/git-tips/ipucu/2013/01/22/git-rm-dosyayi-versiyon-kontrol-altindan-cikarmak</guid>
+      <description>Versiyon kontrol altındaki dosyayı .gitignore aldığınızda halen -modified- görünebilir.</description>
+    </item>
+    
+    <item>
+      <title>Alt `git` Komutları İçin Yardım Almak (Subcommands)</title>
+      <link>http://vigo.github.com/git-tips/ipucu/2013/01/10/alt-git-komutlari-icin-yardim-almak-subcommands/</link>
+      <pubDate>Thu, 10 Jan 2013 22:26:00 +0200</pubDate>
+      <author>Uğur Özyılmazel</author>
+      <guid>http://vigo.github.com/git-tips/ipucu/2013/01/10/alt-git-komutlari-icin-yardim-almak-subcommands</guid>
+      <description>Alt komutlar için yardım almak (subcommands)</description>
+    </item>
+    
+    <item>
+      <title>`rm` ile Silinen Dosyaların Tümünü `git`'e Eklemek</title>
+      <link>http://vigo.github.com/git-tips/ipucu/2013/01/09/rm-ile-silinen-dosyalarin-tumunu-gite-eklemek/</link>
+      <pubDate>Wed, 09 Jan 2013 01:57:00 +0200</pubDate>
+      <author>Uğur Özyılmazel</author>
+      <guid>http://vigo.github.com/git-tips/ipucu/2013/01/09/rm-ile-silinen-dosyalarin-tumunu-gite-eklemek</guid>
+      <description>rm ile Silinen Dosyaların Tümünü git&#39;e Eklemek</description>
+    </item>
+    
+    <item>
+      <title>`git-status` Kısa ve Öz</title>
+      <link>http://vigo.github.com/git-tips/ipucu/2013/01/06/git-status-kisa/</link>
+      <pubDate>Sun, 06 Jan 2013 18:06:00 +0200</pubDate>
+      <author>Uğur Özyılmazel</author>
+      <guid>http://vigo.github.com/git-tips/ipucu/2013/01/06/git-status-kisa</guid>
+      <description>Kısa ve öz git-status</description>
+    </item>
+    
+
+  </channel> 
+</rss>

@@ -1,0 +1,375 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Obje ile İlgili Detaylı Bilgi Almak - Git Püf Noktaları</title>
+  <meta name="author" content="Uğur Özyılmazel">
+
+  
+  <meta name="description" content="git objesi ile ilgili detaylı bilgi almak">
+  <meta name="keywords" content="git, git cat-file">
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://vigo.github.com/git-tips/ipucu/2013/01/12/obje-ile-ilgili-detayli-bilgi-almak">
+  <link href="/git-tips/favicon.png" rel="icon">
+  <link href="/git-tips/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/git-tips/javascripts/modernizr-2.0.js"></script>
+  <script src="/git-tips/javascripts/ender.js"></script>
+  <script src="/git-tips/javascripts/octopress.js" type="text/javascript"></script>
+  
+  
+  
+  
+    <link href="/git-tips/atom.xml" rel="alternate" title="Git Püf Noktaları" type="application/atom+xml">
+  
+
+  
+  <script>
+    $.domReady(function(){
+        $(".entry-content a").attr('target', '_blank');
+    });
+  </script>
+  
+  
+  
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-6463685-25']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/git-tips/">Git Püf Noktaları</a></h1>
+  
+    <h2>Git ile ilgili Türkçe ipuçları</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  
+    <li><a href="/git-tips/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+  
+  
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:vigo.github.com/git-tips" />
+    <input class="search" type="text" name="q" results="0" placeholder="Arama"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/git-tips/">Ana Sayfa</a></li>
+  <li><a href="/git-tips/ipucu/arsiv/">Arşiv</a></li>
+  <li><a href="/git-tips/hakkinda/">Hakkında</a></li>
+  <li><a href="/git-tips/linkler/">Linkler</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Obje ile İlgili Detaylı Bilgi Almak</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2013-01-12T23:47:00+02:00" pubdate data-updated="true">12 Ocak Cumartesi, 2013, 23:47</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p><a href="https://github.com/vigo/dotfiles-bash" title="Dotfiles">An itibariyle</a>, <code>master</code> branch’in <code>HEAD</code> yani son haline
+bakarsak <code>7e4ad38</code> ya da <code>7e4ad38078b32dbe5335745fcda19bf120fb5812</code>
+<strong>SHA1</strong> görürüz.</p>
+
+<p>Git; <strong>Object</strong>, <strong>Hash</strong> ve <strong>Blob</strong>’lardan oluşur. İlgili obje’nin
+detaylarına bakmak için;</p>
+
+<!-- more -->
+
+
+<pre><code>git cat-file -p 7e4ad38
+</code></pre>
+
+<p>dediğimizde;</p>
+
+<pre><code>tree b2b9af79c350340bee27584a775911e1e52af7e5
+parent 252c2ad95c67d3b6249137e62548d0a7755edca2
+parent 7a9cccf97cd7808ce3999dc857550e739cbdb050
+author Uğur Özyılmazel &lt;email&gt; 1355832983 +0200
+committer Uğur Özyılmazel &lt;email&gt; 1355832983 +0200
+
+Merge branch 'hotfix/fab-complete'
+</code></pre>
+
+<p>görürüz.</p>
+
+<pre><code>git cat-file -t 7e4ad38 # obje tipini verir
+git cat-file -s 7e4ad38 # obje büyüklüğünü verir (size)
+</code></pre>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">Gönderen <span class="fn">Uğur Özyılmazel</span></span>
+
+      
+
+
+
+
+
+
+
+
+
+<time datetime="2013-01-12T23:47:00+02:00" pubdate data-updated="true">12 Ocak Cumartesi, 2013, 23:47</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/git-tips/ipucu/kategoriler/detay/'>Detay</a>
+  
+</span>
+
+
+      
+
+<span class="tags">
+  
+    etiketler:
+  
+  
+    <a class='tag' href='/git-tips/ipucu/etiket/cat-file/'>cat-file</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://vigo.github.com/git-tips/ipucu/2013/01/12/obje-ile-ilgili-detayli-bilgi-almak/" data-via="GiT_Tips_TR" data-counturl="http://vigo.github.com/git-tips/ipucu/2013/01/12/obje-ile-ilgili-detayli-bilgi-almak/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/git-tips/ipucu/2013/01/12/sha1-goruntulemek-uzun/" title="Previous Post: SHA1 Görüntülemek (uzun)">&laquo; SHA1 Görüntülemek (uzun)</a>
+      
+      
+        <a class="basic-alignment right" href="/git-tips/ipucu/2013/01/13/tig-git-icin-text-mode-arayuz/" title="next Post: tig : Git için Text-Mode Arayüz">tig : Git için Text-Mode Arayüz &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Yorumlar</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+      
+        <section>
+  <h1>Hakkında</h1>
+  <p>
+      Bu site, versiyon kontrol sistemi <strong>git</strong> ile ilgili 
+      Türkçe kaynak sağlamak amacıyla, <a href="http://git-scm.com/book" title="ProGit" target="_blank">Pro Git</a> 
+      kitabı’nın yazarı <a href="http://twitter.com/chacon" title="Scott Chacon" target="_blank">Scott “Draper” Chacon</a>‘un 
+      <a href="http://git-tips.heroku.com" title="Git Tips" target="_blank">Git Tips</a> 
+      adlı sitesinden esinlenerek hazırlanmıştır. <a href="/git-tips/hakkinda/">Detaylar</a>
+  </p>
+</section>
+
+<section>
+  <h1>Son Gönderilenler</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/git-tips/ipucu/2014/11/16/track-edilen-branch/">Track edilen branch</a>
+      </li>
+    
+      <li class="post">
+        <a href="/git-tips/ipucu/2013/02/28/git-whatchanged-ile-nelerin-degistigini-bulmak/">`git-whatchanged` İle Nelerin Değiştiğini Bulmak</a>
+      </li>
+    
+      <li class="post">
+        <a href="/git-tips/ipucu/2013/02/28/git-ls-remote-ile-uzaktaki-tagleri-listelemek/">`git-ls-remote` İle Uzaktaki TAG’leri listelemek</a>
+      </li>
+    
+      <li class="post">
+        <a href="/git-tips/ipucu/2013/02/20/git-clone-kullanarak-reponuzu-yedekleyin/">`git-clone` Kullanarak Reponuzu Yedekleyin</a>
+      </li>
+    
+      <li class="post">
+        <a href="/git-tips/ipucu/2013/02/18/istediginiz-revizyondan-branch-olusturmak/">İstediğiniz Revizyondan `branch` Oluşturmak</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section class="tag-cloud">
+  <h1>En Popüler 30 Etiket</h1>
+  <span class='rank-5'><a href='/git-tips/ipucu/etiket/git-config/'>git-config</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/git-stash/'>git-stash</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/git-add/'>git-add</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/browse/'>browse</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/count/'>count</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/tig/'>tig</a></span> <span class='rank-12'><a href='/git-tips/ipucu/etiket/git-tag/'>git-tag</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/git-ls-remote/'>git-ls-remote</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/git-notes/'>git-notes</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/branch/'>branch</a></span> <span class='rank-9'><a href='/git-tips/ipucu/etiket/rev-parse/'>rev-parse</a></span> <span class='rank-12'><a href='/git-tips/ipucu/etiket/git-show/'>git-show</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/git-bundle/'>git-bundle</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/git-rm/'>git-rm</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/short-status/'>short-status</a></span> <span class='rank-12'><a href='/git-tips/ipucu/etiket/color/'>color</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/cat-file/'>cat-file</a></span> <span class='rank-1'><a href='/git-tips/ipucu/etiket/git-log/'>git-log</a></span> <span class='rank-12'><a href='/git-tips/ipucu/etiket/git-status/'>git-status</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/utility/'>utility</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/filtre/'>filtre</a></span> <span class='rank-9'><a href='/git-tips/ipucu/etiket/format/'>format</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/deleted-files/'>deleted files</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/git-help/'>git-help</a></span> <span class='rank-12'><a href='/git-tips/ipucu/etiket/git-alias/'>git-alias</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/git-clone/'>git-clone</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/gitignore/'>gitignore</a></span> <span class='rank-9'><a href='/git-tips/ipucu/etiket/git-branch/'>git-branch</a></span> 
+</section>
+
+
+<section id="blog-categories">
+    <h1>Kategoriler</h1>
+    <ul>
+        <li><a class="category" href="/git-tips/ipucu/kategoriler/biliyormusunuz/">Biliyormusunuz</a> [ 1 ]</li>
+<li><a class="category" href="/git-tips/ipucu/kategoriler/branch/">Branch</a> [ 3 ]</li>
+<li><a class="category" href="/git-tips/ipucu/kategoriler/detay/">Detay</a> [ 1 ]</li>
+<li><a class="category" href="/git-tips/ipucu/kategoriler/konfigurasyon/">Konfigürasyon</a> [ 8 ]</li>
+<li><a class="category" href="/git-tips/ipucu/kategoriler/log/">Log</a> [ 16 ]</li>
+<li><a class="category" href="/git-tips/ipucu/kategoriler/paket/">Paket</a> [ 1 ]</li>
+<li><a class="category" href="/git-tips/ipucu/kategoriler/tag/">Tag</a> [ 2 ]</li>
+<li><a class="category" href="/git-tips/ipucu/kategoriler/temel/">Temel</a> [ 6 ]</li>
+<li><a class="category" href="/git-tips/ipucu/kategoriler/tool/">Tool</a> [ 1 ]</li>
+<li><a class="category" href="/git-tips/ipucu/kategoriler/branch/">branch</a> [ 1 ]</li>
+    </ul>
+</section>
+
+
+
+<section>
+  <h1>Twitter</h1>
+  <ul id="tweets">
+    <li class="loading">Yükleniyor...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("GiT_Tips_TR", 4, false);
+    });
+  </script>
+  <script src="/git-tips/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/GiT_Tips_TR" class="twitter-follow-button" data-show-count="true" data-lang="tr">Takip et @GiT_Tips_TR</a>
+  
+</section>
+<script type="text/javascript" src="http://git-tips.tumblr.com/tweets.js"></script>
+
+
+
+
+
+      
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  &copy; 2014 - Uğur Özyılmazel -
+  <span class="credit"><a href="https://github.com/vigo/octopress">Türkçe Octopress</a></span> -
+  <span class="credit">Orijinal versiyon <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'git-tips';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://vigo.github.com/git-tips/ipucu/2013/01/12/obje-ile-ilgili-detayli-bilgi-almak/';
+        var disqus_url = 'http://vigo.github.com/git-tips/ipucu/2013/01/12/obje-ile-ilgili-detayli-bilgi-almak/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/tr_TR/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
