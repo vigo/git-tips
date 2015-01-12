@@ -5,9 +5,18 @@
     <link>http://vigo.github.com/git-tips</link>
     <description>Git versiyon kontrol programı / sistemi ile ilgili Türkçe ipuçları</description>
     <language>tr-tr</language>
-    <pubDate>Sun, 16 Nov 2014 13:06:04 +0200</pubDate>
-    <lastBuildDate>Sun, 16 Nov 2014 13:06:04 +0200</lastBuildDate>
+    <pubDate>Mon, 12 Jan 2015 14:36:55 +0200</pubDate>
+    <lastBuildDate>Mon, 12 Jan 2015 14:36:55 +0200</lastBuildDate>
 
+    
+    <item>
+      <title>Hash ID olmadan checkout yapmak</title>
+      <link>http://vigo.github.com/git-tips/ipucu/2015/01/12/hash-id-olmadan-checkout-yapmak/</link>
+      <pubDate>Mon, 12 Jan 2015 14:15:00 +0200</pubDate>
+      <author>Uğur Özyılmazel</author>
+      <guid>http://vigo.github.com/git-tips/ipucu/2015/01/12/hash-id-olmadan-checkout-yapmak</guid>
+      <description>Hash ID olmadan checkout yapmak...</description>
+    </item>
     
     <item>
       <title>Track edilen branch</title>

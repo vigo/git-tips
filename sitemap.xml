@@ -2,208 +2,214 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://vigo.github.com/git-tips/ipucu/2013/01/06/git-notes/</loc>
-        <lastmod>2014-11-16T13:04:32+02:00</lastmod>
+        <lastmod>2015-01-12T14:18:38+02:00</lastmod>
     </url>
     <url>
         <loc>http://vigo.github.com/git-tips/ipucu/2013/01/06/git-status-kisa/</loc>
-        <lastmod>2014-11-16T13:04:32+02:00</lastmod>
+        <lastmod>2015-01-12T14:18:38+02:00</lastmod>
     </url>
     <url>
         <loc>http://vigo.github.com/git-tips/ipucu/2013/01/06/daha-detayli-git-branch/</loc>
-        <lastmod>2014-11-16T13:04:32+02:00</lastmod>
+        <lastmod>2015-01-12T14:18:38+02:00</lastmod>
     </url>
     <url>
         <loc>
             http://vigo.github.com/git-tips/ipucu/2013/01/06/git-bundle-repoyu-tek-dosya-haline-getirmek/
         </loc>
-        <lastmod>2014-11-16T13:04:32+02:00</lastmod>
+        <lastmod>2015-01-12T14:18:38+02:00</lastmod>
     </url>
     <url>
         <loc>
             http://vigo.github.com/git-tips/ipucu/2013/01/09/git-show-ile-revizyon-goruntulemek/
         </loc>
-        <lastmod>2014-11-16T13:04:32+02:00</lastmod>
+        <lastmod>2015-01-12T14:18:38+02:00</lastmod>
     </url>
     <url>
         <loc>
             http://vigo.github.com/git-tips/ipucu/2013/01/09/rm-ile-silinen-dosyalarin-tumunu-gite-eklemek/
         </loc>
-        <lastmod>2014-11-16T13:04:32+02:00</lastmod>
+        <lastmod>2015-01-12T14:18:38+02:00</lastmod>
     </url>
     <url>
         <loc>
             http://vigo.github.com/git-tips/ipucu/2013/01/10/alt-git-komutlari-icin-yardim-almak-subcommands/
         </loc>
-        <lastmod>2014-11-16T13:04:32+02:00</lastmod>
+        <lastmod>2015-01-12T14:18:38+02:00</lastmod>
     </url>
     <url>
         <loc>
             http://vigo.github.com/git-tips/ipucu/2013/01/10/gitconfig-konfigurasyon-dosyasi/
         </loc>
-        <lastmod>2014-11-16T13:04:32+02:00</lastmod>
+        <lastmod>2015-01-12T14:18:38+02:00</lastmod>
     </url>
     <url>
         <loc>http://vigo.github.com/git-tips/ipucu/2013/01/12/sha1-goruntulemek-kisa/</loc>
-        <lastmod>2014-11-16T13:04:32+02:00</lastmod>
+        <lastmod>2015-01-12T14:18:38+02:00</lastmod>
     </url>
     <url>
         <loc>http://vigo.github.com/git-tips/ipucu/2013/01/12/sha1-goruntulemek-uzun/</loc>
-        <lastmod>2014-11-16T13:04:32+02:00</lastmod>
+        <lastmod>2015-01-12T14:18:38+02:00</lastmod>
     </url>
     <url>
         <loc>
             http://vigo.github.com/git-tips/ipucu/2013/01/12/obje-ile-ilgili-detayli-bilgi-almak/
         </loc>
-        <lastmod>2014-11-16T13:04:32+02:00</lastmod>
+        <lastmod>2015-01-12T14:18:38+02:00</lastmod>
     </url>
     <url>
         <loc>http://vigo.github.com/git-tips/ipucu/2013/01/13/tig-git-icin-text-mode-arayuz/</loc>
-        <lastmod>2014-11-16T13:04:32+02:00</lastmod>
+        <lastmod>2015-01-12T14:18:38+02:00</lastmod>
     </url>
     <url>
         <loc>
             http://vigo.github.com/git-tips/ipucu/2013/01/13/git-config-icinden-bilgileri-okumak/
         </loc>
-        <lastmod>2014-11-16T13:04:32+02:00</lastmod>
+        <lastmod>2015-01-12T14:18:38+02:00</lastmod>
     </url>
     <url>
         <loc>http://vigo.github.com/git-tips/ipucu/2013/01/13/kisa-ve-oz-git-log/</loc>
-        <lastmod>2014-11-16T13:04:32+02:00</lastmod>
+        <lastmod>2015-01-12T14:18:38+02:00</lastmod>
     </url>
     <url>
         <loc>http://vigo.github.com/git-tips/ipucu/2013/01/13/git-config-ve-renklendirme/</loc>
-        <lastmod>2014-11-16T13:04:32+02:00</lastmod>
+        <lastmod>2015-01-12T14:18:38+02:00</lastmod>
     </url>
     <url>
         <loc>
             http://vigo.github.com/git-tips/ipucu/2013/01/14/author-ile-committer-arasindaki-fark/
         </loc>
-        <lastmod>2014-11-16T13:04:32+02:00</lastmod>
+        <lastmod>2015-01-12T14:18:38+02:00</lastmod>
     </url>
     <url>
         <loc>http://vigo.github.com/git-tips/ipucu/2013/01/14/git-log-ciktisini-formatlamak/</loc>
-        <lastmod>2014-11-16T13:04:32+02:00</lastmod>
+        <lastmod>2015-01-12T14:18:38+02:00</lastmod>
     </url>
     <url>
         <loc>
             http://vigo.github.com/git-tips/ipucu/2013/01/14/git-log-ve-less-ile-ilgili-sorun/
         </loc>
-        <lastmod>2014-11-16T13:04:32+02:00</lastmod>
+        <lastmod>2015-01-12T14:18:38+02:00</lastmod>
     </url>
     <url>
         <loc>
             http://vigo.github.com/git-tips/ipucu/2013/01/14/branch-merge-agac-yapisini-git-log-da-gormek/
         </loc>
-        <lastmod>2014-11-16T13:04:32+02:00</lastmod>
+        <lastmod>2015-01-12T14:18:38+02:00</lastmod>
     </url>
     <url>
         <loc>
             http://vigo.github.com/git-tips/ipucu/2013/01/16/belli-tarihler-arasindaki-loga-bakmak-slash-filtrelemek/
         </loc>
-        <lastmod>2014-11-16T13:04:32+02:00</lastmod>
+        <lastmod>2015-01-12T14:18:38+02:00</lastmod>
     </url>
     <url>
         <loc>
             http://vigo.github.com/git-tips/ipucu/2013/01/16/sayfalama-yapmadan-tum-logu-almak/
         </loc>
-        <lastmod>2014-11-16T13:04:32+02:00</lastmod>
+        <lastmod>2015-01-12T14:18:38+02:00</lastmod>
     </url>
     <url>
         <loc>http://vigo.github.com/git-tips/ipucu/2013/01/16/commitleri-sayalim/</loc>
-        <lastmod>2014-11-16T13:04:32+02:00</lastmod>
+        <lastmod>2015-01-12T14:18:38+02:00</lastmod>
     </url>
     <url>
         <loc>
             http://vigo.github.com/git-tips/ipucu/2013/01/20/ilgili-revizyonda-hangi-dosyalar-degisti/
         </loc>
-        <lastmod>2014-11-16T13:04:32+02:00</lastmod>
+        <lastmod>2015-01-12T14:18:38+02:00</lastmod>
     </url>
     <url>
         <loc>
             http://vigo.github.com/git-tips/ipucu/2013/01/22/git-rm-dosyayi-versiyon-kontrol-altindan-cikarmak/
         </loc>
-        <lastmod>2014-11-16T13:04:32+02:00</lastmod>
+        <lastmod>2015-01-12T14:18:38+02:00</lastmod>
     </url>
     <url>
         <loc>
             http://vigo.github.com/git-tips/ipucu/2013/01/22/git-tag-ile-versiyon-belirlemek-ya-da-taglemek/
         </loc>
-        <lastmod>2014-11-16T13:04:32+02:00</lastmod>
+        <lastmod>2015-01-12T14:18:38+02:00</lastmod>
     </url>
     <url>
         <loc>
             http://vigo.github.com/git-tips/ipucu/2013/01/25/diff-filter-ile-silinmis-tum-dosyalari-bulmak/
         </loc>
-        <lastmod>2014-11-16T13:04:32+02:00</lastmod>
+        <lastmod>2015-01-12T14:18:38+02:00</lastmod>
     </url>
     <url>
         <loc>http://vigo.github.com/git-tips/ipucu/2013/02/03/push-default-ve-ayari/</loc>
-        <lastmod>2014-11-16T13:04:32+02:00</lastmod>
+        <lastmod>2015-01-12T14:18:38+02:00</lastmod>
     </url>
     <url>
         <loc>
             http://vigo.github.com/git-tips/ipucu/2013/02/03/kontrol-disindaki-tum-dosyalari-eklemek/
         </loc>
-        <lastmod>2014-11-16T13:04:32+02:00</lastmod>
+        <lastmod>2015-01-12T14:18:38+02:00</lastmod>
     </url>
     <url>
         <loc>
             http://vigo.github.com/git-tips/ipucu/2013/02/03/modifiye-edilmis-tum-dosyalari-eklemek/
         </loc>
-        <lastmod>2014-11-16T13:04:32+02:00</lastmod>
+        <lastmod>2015-01-12T14:18:38+02:00</lastmod>
     </url>
     <url>
         <loc>
             http://vigo.github.com/git-tips/ipucu/2013/02/18/git-stash-anlik-mudahale-ya-da-zulalama/
         </loc>
-        <lastmod>2014-11-16T13:04:32+02:00</lastmod>
+        <lastmod>2015-01-12T14:18:38+02:00</lastmod>
     </url>
     <url>
         <loc>
             http://vigo.github.com/git-tips/ipucu/2013/02/18/istediginiz-revizyondan-branch-olusturmak/
         </loc>
-        <lastmod>2014-11-16T13:04:32+02:00</lastmod>
+        <lastmod>2015-01-12T14:18:38+02:00</lastmod>
     </url>
     <url>
         <loc>
             http://vigo.github.com/git-tips/ipucu/2013/02/20/git-clone-kullanarak-reponuzu-yedekleyin/
         </loc>
-        <lastmod>2014-11-16T13:04:32+02:00</lastmod>
+        <lastmod>2015-01-12T14:18:38+02:00</lastmod>
     </url>
     <url>
         <loc>
             http://vigo.github.com/git-tips/ipucu/2013/02/28/git-ls-remote-ile-uzaktaki-tagleri-listelemek/
         </loc>
-        <lastmod>2014-11-16T13:04:32+02:00</lastmod>
+        <lastmod>2015-01-12T14:18:38+02:00</lastmod>
     </url>
     <url>
         <loc>
             http://vigo.github.com/git-tips/ipucu/2013/02/28/git-whatchanged-ile-nelerin-degistigini-bulmak/
         </loc>
-        <lastmod>2014-11-16T13:04:32+02:00</lastmod>
+        <lastmod>2015-01-12T14:18:38+02:00</lastmod>
     </url>
     <url>
         <loc>http://vigo.github.com/git-tips/ipucu/2014/11/16/track-edilen-branch/</loc>
-        <lastmod>2014-11-16T13:04:32+02:00</lastmod>
+        <lastmod>2015-01-12T14:18:38+02:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://vigo.github.com/git-tips/ipucu/2015/01/12/hash-id-olmadan-checkout-yapmak/
+        </loc>
+        <lastmod>2015-01-12T14:36:04+02:00</lastmod>
     </url>
     <url>
         <loc>http://vigo.github.com/git-tips/404.html</loc>
-        <lastmod>2014-11-16T13:04:32+02:00</lastmod>
+        <lastmod>2014-11-16T13:07:09+02:00</lastmod>
     </url>
     <url>
         <loc>http://vigo.github.com/git-tips/hakkinda/</loc>
-        <lastmod>2014-11-16T13:04:32+02:00</lastmod>
+        <lastmod>2014-11-16T13:07:09+02:00</lastmod>
     </url>
     <url>
         <loc>http://vigo.github.com/git-tips/</loc>
-        <lastmod>2014-11-16T13:04:32+02:00</lastmod>
+        <lastmod>2015-01-12T14:36:04+02:00</lastmod>
     </url>
     <url>
         <loc>http://vigo.github.com/git-tips/ipucu/arsiv/</loc>
-        <lastmod>2014-11-16T13:04:32+02:00</lastmod>
+        <lastmod>2015-01-12T14:36:04+02:00</lastmod>
     </url>
     <url>
         <loc>http://vigo.github.com/git-tips/linkler/</loc>
-        <lastmod>2014-11-16T13:04:32+02:00</lastmod>
+        <lastmod>2014-11-16T13:07:09+02:00</lastmod>
     </url>
 </urlset>

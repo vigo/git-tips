@@ -5,12 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Etiket: rev-parse - Git Püf Noktaları</title>
+  <title>Hash ID olmadan checkout yapmak - Git Püf Noktaları</title>
   <meta name="author" content="Uğur Özyılmazel">
 
   
-  <meta name="description" content="Etiket: rev-parse">
-  
+  <meta name="description" content="Hash ID olmadan checkout yapmak...">
+  <meta name="keywords" content="branch, checkout, hash">
 
   <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://vigo.github.com/git-tipsipucu/etiket/rev-parse">
+  <link rel="canonical" href="http://vigo.github.com/git-tips/ipucu/2015/01/12/hash-id-olmadan-checkout-yapmak">
   <link href="/git-tips/favicon.png" rel="icon">
   <link href="/git-tips/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/git-tips/javascripts/modernizr-2.0.js"></script>
@@ -28,7 +28,7 @@
   
   
   
-    <link href="git-tips/atom.xml" rel="alternate" title="Git Püf Noktaları" type="application/atom+xml">
+    <link href="/git-tips/atom.xml" rel="alternate" title="Git Püf Noktaları" type="application/atom+xml">
   
 
   
@@ -71,7 +71,7 @@
 </header>
   <nav role="navigation"><ul class="subscription" data-subscription="rss">
   
-    <li><a href="rss.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+    <li><a href="/git-tips/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
   
   
   
@@ -96,71 +96,168 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Etiket: rev-parse</h1>
+    
+      <h1 class="entry-title">Hash ID olmadan checkout yapmak</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+
+<time datetime="2015-01-12T14:15:00+02:00" pubdate data-updated="true">12 Ocak Pazartesi, 2015, 14:15</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="tag">
 
 
+<div class="entry-content"><p>Kısa ya da uzun <strong>hash</strong> kullanmadan, log’da yazan <strong>commit</strong> mesajları
+içindeki metne göre <code>checkout</code> yapmak mümkün! Örneğin aşağıdaki gibi
+bir log durumu olsun:</p>
 
-  
-  <h2>2013</h2>
-
-<article>
-  
-<h1><a href="/git-tips/ipucu/2013/01/22/git-tag-ile-versiyon-belirlemek-ya-da-taglemek/">`git-tag` İle Versiyon Belirlemek ya da Tag’lemek</a></h1>
-<time datetime="2013-01-22T22:50:00+02:00" pubdate><span class='month'>Oca</span> <span class='day'>22</span> <span class='year'>2013</span></time>
-
-<footer>
-  <span class="categories">kategori <a class='category' href='/git-tips/ipucu/kategoriler/tag/'>Tag</a></span>
-</footer>
+<!-- more -->
 
 
-</article>
+<pre><code>$ git log --graph --decorate --oneline
 
+* 8643f71 (HEAD, origin/master, origin/HEAD, master) readme.md - update
+* ef7e0db git-add-push-all disabled
+* fef4371 prompt fixes
+* fb49e9e fix for non-interactive shell
+* 0f6f2cb fix
+* e3460e8 TextEdit tweaks
+* a75df2d ackrc added
+* 862543f wrong file deleted
+* 4fdbd74 screenshot added
+* 2a67e32 readme.md - update
+* caa8496 readme.md - update
+* e0fc16a ubuntu installation
+* b578f53 PS1 for Linux
+* 8c636ac ubuntu specific
+* 34662bc readme.md - update
+* a5eb0d9 osx tweaks
+* 459e1ee PS1 color tests
+* b77b4ff mini colorization on PS1
+* 2e4c6cd osx tweaks
+* b20e10f ls file colors
+* 6c248a6 'git push all' helper function
+* b68f65c py + rb http static servers + mac specific aliases
+* 55f1b53 bash completion fixes
+* 90120b3 bash completion for bundler
+* 58b5938 custom and default bash-completions
+* 345d5ab git_prompt unicode signs
+* fd11d79 soft-tab fix
+* e3f7fae gitignore fix
+* e8aa053 private/ load all
+* eadaf03 gitignore for private/ folder
+* 5fd8c77 mac specific aliases
+* 1be9857 PS1 works done
+* 785cbcc git_prompt ok
+* 5cd2461 git_prompt wip
+* 09ae283 wip
+* 4ac0c4d env + mac specifics
+* d06dd4e profile and bashrc
+* 85684ab Initial commit
+</code></pre>
 
+<p>Şimdi <code>a5eb0d9</code> numaralı hash’e gitmek için <code>git checkout a5eb0d9</code> yerine:</p>
 
-<article>
-  
-<h1><a href="/git-tips/ipucu/2013/01/12/sha1-goruntulemek-uzun/">SHA1 Görüntülemek (uzun)</a></h1>
-<time datetime="2013-01-12T23:24:00+02:00" pubdate><span class='month'>Oca</span> <span class='day'>12</span> <span class='year'>2013</span></time>
+<pre><code>git checkout :/"osx tweaks"
+</code></pre>
 
-<footer>
-  <span class="categories">kategori <a class='category' href='/git-tips/ipucu/kategoriler/log/'>Log</a></span>
-</footer>
+<p>yapabiliriz. Dikkat ettiyseniz içinde <strong>tweaks</strong> geçen birden fazla
+log mesajı var. Eğer;</p>
 
+<pre><code>git checkout :/"tweaks"
+</code></pre>
 
-</article>
+<p>dersek, bize en yakın olan, içinde <strong>tweaks</strong> geçen log’un bulunduğu
+revizyona checkout ederiz:</p>
 
+<pre><code>HEAD is now at e3460e8... TextEdit tweaks
+</code></pre>
 
-
-<article>
-  
-<h1><a href="/git-tips/ipucu/2013/01/12/sha1-goruntulemek-kisa/">SHA1 Görüntülemek (kısa)</a></h1>
-<time datetime="2013-01-12T23:12:00+02:00" pubdate><span class='month'>Oca</span> <span class='day'>12</span> <span class='year'>2013</span></time>
-
-<footer>
-  <span class="categories">kategori <a class='category' href='/git-tips/ipucu/kategoriler/log/'>Log</a></span>
-</footer>
-
-
-</article>
-
+<p>mesajını görürüz. Sonuç olarak <code>:/"ARANACAK KELİME"</code> şeklinde kullanabiliriz.
+Buradan da şunu anlıyoruz, commit mesajları ne kadar anlamlı ve düzgün
+yazılırsa o kadar faydalı oluyor :)</p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
+<span class="byline author vcard">Gönderen <span class="fn">Uğur Özyılmazel</span></span>
+
+      
+
+
+
+
+
+
+
+
+
+<time datetime="2015-01-12T14:15:00+02:00" pubdate data-updated="true">12 Ocak Pazartesi, 2015, 14:15</time>
+      
+
+<span class="categories">
   
+    <a class='category' href='/git-tips/ipucu/kategoriler/branch/'>branch</a>
+  
+</span>
+
+
+      
+
+<span class="tags">
+  
+    etiketler:
+  
+  
+    <a class='tag' href='/git-tips/ipucu/etiket/branch/'>branch</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://vigo.github.com/git-tips/ipucu/2015/01/12/hash-id-olmadan-checkout-yapmak/" data-via="GiT_Tips_TR" data-counturl="http://vigo.github.com/git-tips/ipucu/2015/01/12/hash-id-olmadan-checkout-yapmak/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/git-tips/ipucu/2014/11/16/track-edilen-branch/" title="Previous Post: Track edilen branch">&laquo; Track edilen branch</a>
+      
+      
+    </p>
+  </footer>
 </article>
 
 </div>
 
 <aside class="sidebar">
   
-    
-      <section>
+      
+        <section>
   <h1>Hakkında</h1>
   <p>
       Bu site, versiyon kontrol sistemi <strong>git</strong> ile ilgili 
@@ -201,7 +298,7 @@
 
 <section class="tag-cloud">
   <h1>En Popüler 30 Etiket</h1>
-  <span class='rank-12'><a href='/git-tips/ipucu/etiket/color/'>color</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/deleted-files/'>deleted files</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/git-help/'>git-help</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/browse/'>browse</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/short-status/'>short-status</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/count/'>count</a></span> <span class='rank-9'><a href='/git-tips/ipucu/etiket/format/'>format</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/filtre/'>filtre</a></span> <span class='rank-12'><a href='/git-tips/ipucu/etiket/git-alias/'>git-alias</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/git-bundle/'>git-bundle</a></span> <span class='rank-12'><a href='/git-tips/ipucu/etiket/git-show/'>git-show</a></span> <span class='rank-1'><a href='/git-tips/ipucu/etiket/git-log/'>git-log</a></span> <span class='rank-9'><a href='/git-tips/ipucu/etiket/rev-parse/'>rev-parse</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/gitignore/'>gitignore</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/cat-file/'>cat-file</a></span> <span class='rank-12'><a href='/git-tips/ipucu/etiket/git-status/'>git-status</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/git-clone/'>git-clone</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/git-add/'>git-add</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/git-rm/'>git-rm</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/git-stash/'>git-stash</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/git-notes/'>git-notes</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/git-ls-remote/'>git-ls-remote</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/tig/'>tig</a></span> <span class='rank-9'><a href='/git-tips/ipucu/etiket/git-branch/'>git-branch</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/utility/'>utility</a></span> <span class='rank-12'><a href='/git-tips/ipucu/etiket/branch/'>branch</a></span> <span class='rank-12'><a href='/git-tips/ipucu/etiket/git-tag/'>git-tag</a></span> <span class='rank-5'><a href='/git-tips/ipucu/etiket/git-config/'>git-config</a></span> 
+  <span class='rank-12'><a href='/git-tips/ipucu/etiket/branch/'>branch</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/git-ls-remote/'>git-ls-remote</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/count/'>count</a></span> <span class='rank-12'><a href='/git-tips/ipucu/etiket/git-status/'>git-status</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/git-stash/'>git-stash</a></span> <span class='rank-12'><a href='/git-tips/ipucu/etiket/git-tag/'>git-tag</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/git-rm/'>git-rm</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/filtre/'>filtre</a></span> <span class='rank-12'><a href='/git-tips/ipucu/etiket/color/'>color</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/git-help/'>git-help</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/short-status/'>short-status</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/cat-file/'>cat-file</a></span> <span class='rank-5'><a href='/git-tips/ipucu/etiket/git-config/'>git-config</a></span> <span class='rank-1'><a href='/git-tips/ipucu/etiket/git-log/'>git-log</a></span> <span class='rank-12'><a href='/git-tips/ipucu/etiket/git-show/'>git-show</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/git-add/'>git-add</a></span> <span class='rank-9'><a href='/git-tips/ipucu/etiket/rev-parse/'>rev-parse</a></span> <span class='rank-9'><a href='/git-tips/ipucu/etiket/git-branch/'>git-branch</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/tig/'>tig</a></span> <span class='rank-12'><a href='/git-tips/ipucu/etiket/git-alias/'>git-alias</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/git-notes/'>git-notes</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/git-bundle/'>git-bundle</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/deleted-files/'>deleted files</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/git-clone/'>git-clone</a></span> <span class='rank-9'><a href='/git-tips/ipucu/etiket/format/'>format</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/utility/'>utility</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/browse/'>browse</a></span> <span class='rank-15'><a href='/git-tips/ipucu/etiket/gitignore/'>gitignore</a></span> 
 </section>
 
 
@@ -244,8 +341,7 @@
 
 
 
-    
-  
+      
   
 </aside>
 
@@ -265,7 +361,10 @@
       var disqus_shortname = 'git-tips';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://vigo.github.com/git-tips/ipucu/2015/01/12/hash-id-olmadan-checkout-yapmak/';
+        var disqus_url = 'http://vigo.github.com/git-tips/ipucu/2015/01/12/hash-id-olmadan-checkout-yapmak/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

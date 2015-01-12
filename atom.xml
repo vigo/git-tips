@@ -4,7 +4,7 @@
   <title><![CDATA[Git Püf Noktaları]]></title>
   <link href="http://vigo.github.com/git-tips/atom.xml" rel="self"/>
   <link href="http://vigo.github.com/git-tips/"/>
-  <updated>2014-11-16T13:06:04+02:00</updated>
+  <updated>2015-01-12T14:36:55+02:00</updated>
   <id>http://vigo.github.com/git-tips/</id>
   <author>
     <name><![CDATA[Uğur Özyılmazel]]></name>
@@ -12,6 +12,83 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Hash ID olmadan checkout yapmak]]></title>
+    <link href="http://vigo.github.com/git-tips/ipucu/2015/01/12/hash-id-olmadan-checkout-yapmak/"/>
+    <updated>2015-01-12T14:15:00+02:00</updated>
+    <id>http://vigo.github.com/git-tips/ipucu/2015/01/12/hash-id-olmadan-checkout-yapmak</id>
+    <content type="html"><![CDATA[<p>Kısa ya da uzun <strong>hash</strong> kullanmadan, log’da yazan <strong>commit</strong> mesajları
+içindeki metne göre <code>checkout</code> yapmak mümkün! Örneğin aşağıdaki gibi
+bir log durumu olsun:</p>
+
+<!-- more -->
+
+
+<pre><code>$ git log --graph --decorate --oneline
+
+* 8643f71 (HEAD, origin/master, origin/HEAD, master) readme.md - update
+* ef7e0db git-add-push-all disabled
+* fef4371 prompt fixes
+* fb49e9e fix for non-interactive shell
+* 0f6f2cb fix
+* e3460e8 TextEdit tweaks
+* a75df2d ackrc added
+* 862543f wrong file deleted
+* 4fdbd74 screenshot added
+* 2a67e32 readme.md - update
+* caa8496 readme.md - update
+* e0fc16a ubuntu installation
+* b578f53 PS1 for Linux
+* 8c636ac ubuntu specific
+* 34662bc readme.md - update
+* a5eb0d9 osx tweaks
+* 459e1ee PS1 color tests
+* b77b4ff mini colorization on PS1
+* 2e4c6cd osx tweaks
+* b20e10f ls file colors
+* 6c248a6 'git push all' helper function
+* b68f65c py + rb http static servers + mac specific aliases
+* 55f1b53 bash completion fixes
+* 90120b3 bash completion for bundler
+* 58b5938 custom and default bash-completions
+* 345d5ab git_prompt unicode signs
+* fd11d79 soft-tab fix
+* e3f7fae gitignore fix
+* e8aa053 private/ load all
+* eadaf03 gitignore for private/ folder
+* 5fd8c77 mac specific aliases
+* 1be9857 PS1 works done
+* 785cbcc git_prompt ok
+* 5cd2461 git_prompt wip
+* 09ae283 wip
+* 4ac0c4d env + mac specifics
+* d06dd4e profile and bashrc
+* 85684ab Initial commit
+</code></pre>
+
+<p>Şimdi <code>a5eb0d9</code> numaralı hash’e gitmek için <code>git checkout a5eb0d9</code> yerine:</p>
+
+<pre><code>git checkout :/"osx tweaks"
+</code></pre>
+
+<p>yapabiliriz. Dikkat ettiyseniz içinde <strong>tweaks</strong> geçen birden fazla
+log mesajı var. Eğer;</p>
+
+<pre><code>git checkout :/"tweaks"
+</code></pre>
+
+<p>dersek, bize en yakın olan, içinde <strong>tweaks</strong> geçen log’un bulunduğu
+revizyona checkout ederiz:</p>
+
+<pre><code>HEAD is now at e3460e8... TextEdit tweaks
+</code></pre>
+
+<p>mesajını görürüz. Sonuç olarak <code>:/"ARANACAK KELİME"</code> şeklinde kullanabiliriz.
+Buradan da şunu anlıyoruz, commit mesajları ne kadar anlamlı ve düzgün
+yazılırsa o kadar faydalı oluyor :)</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Track edilen branch]]></title>
@@ -857,28 +934,6 @@ ad971c1 Uğur Özyılmazel Merge branch 'develop' (8 weeks ago | Thu Nov 15 14:0
 %w([&lt;w&gt;[,&lt;i1&gt;[,&lt;i2&gt;]]])
          : Default: İlk satır 76 karakter, 2. ve 3.satırlar 6 karakter girintilidir
 </code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[“Author” ile “Committer” arasındaki fark?]]></title>
-    <link href="http://vigo.github.com/git-tips/ipucu/2013/01/14/author-ile-committer-arasindaki-fark/"/>
-    <updated>2013-01-14T00:31:00+02:00</updated>
-    <id>http://vigo.github.com/git-tips/ipucu/2013/01/14/author-ile-committer-arasindaki-fark</id>
-    <content type="html"><![CDATA[<p>Git’in yazılma amaçlarından biri de <strong>e-posta</strong> ile gelen <strong>patch</strong>‘lerin
-kolayca sisteme entegre edilmesiydi.</p>
-
-<!-- more -->
-
-
-<p>Bu bakımdan patch’i yazıp yollayan kişi <strong>Author</strong>, patch’i monte eden yani
-“patchleyen” kişi de <strong>Committer</strong> oluyor. Log işlemleri ve log çıktısını
-format ederken karşımıza çıkacak bir durum bu.</p>
-
-<p>Author Name, Author Email ve Committer Name, Committer Email.</p>
-
-<p>Genelde web projelerinde pek bu tür patch işleri olmaz. Bu bakımdan da <strong>author</strong>
-ile <strong>committer</strong> aynı kişi gibi olur.</p>
 ]]></content>
   </entry>
   
